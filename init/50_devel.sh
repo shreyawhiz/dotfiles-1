@@ -25,6 +25,7 @@ if program_exists "npm"; then
     express
     forever
     grunt-cli
+    instant-markdown-d
     jshint
     less
     node-dev
