@@ -453,6 +453,18 @@ defaults write com.apple.appstore ShowDebugMenu -bool true
 defaults write com.runningwithcrayons.Alfred-Preferences appearance.theme -string "alfred.theme.dark"
 
 ###############################################################################
+# F.lux                                                                       #
+###############################################################################
+
+# Transition over an hour
+defaults write org.herf.Flux transitionSpeed -int 1
+
+# Sets location to Chicago
+defaults write org.herf.Flux location -string "60640"
+defaults write org.herf.Flux locationTextField -string "60640"
+defaults write org.herf.Flux locationType -string "Z"
+
+###############################################################################
 # Google Chrome & Google Chrome Canary                                        #
 ###############################################################################
 
@@ -480,7 +492,7 @@ defaults write org.pqrs.PCKeyboardHack sysctl '{ enable_capslock = 1; keycode_ca
 ###############################################################################
 
 for app in "Address Book" "Alfred 2" "Calendar" "Contacts" "Dashboard" "Dock" \
-  "Finder" "Safari" "SystemUIServer" "Twitter" "iCal" "iTunes"; do
+  "Flux" "Finder" "Safari" "SystemUIServer" "Twitter" "iCal" "iTunes"; do
   killall "$app" > /dev/null 2>&1
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
