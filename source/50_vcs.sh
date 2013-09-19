@@ -9,7 +9,6 @@ alias gcb='gc -b'
 alias gcd='git rev-parse 2>/dev/null && cd "./$(git rev-parse --show-cdup)"'
 alias gcl='git clone'
 alias gcm="git commit -m"
-unalias gco; function gco() { git checkout "${@:-master}"; } # Checkout master by default
 alias gd="git diff"
 alias gdc='gd --cached'
 alias gl='git log'
