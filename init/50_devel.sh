@@ -5,7 +5,7 @@ source $HOME/.dotfiles/source/50_devel.sh
 if ! program_exists "git-extras"; then
   notice "Installing Git Extras"
   (
-    cd "$HOME/.dotfiles/vendor/git-extras" && make install
+    cd "$HOME/.dotfiles/vendor/git-extras" && sudo make install
   )
 fi
 
