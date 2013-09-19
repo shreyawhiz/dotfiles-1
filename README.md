@@ -60,6 +60,8 @@ If ZSH is not installed, it (should) be installed by your system's package manag
 
 The prompt which is created by the `mortalscumbag` oh-my-zsh theme features Git status indicators, last exit code, and a badge to let you know if the current session was logged in over SSH. Here's an example of what that prompt looks like:
 
+**NOTE:** While ZSH might already be installed, a newer version will try to be installed by your system's package manager.
+
 ![ZSH Prompt](https://i.cloudup.com/9qTAguXk3d-2000x2000.png)
 
 ## Special Thanks
