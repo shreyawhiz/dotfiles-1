@@ -1,6 +1,14 @@
 # Load development environment
 source $HOME/.dotfiles/source/50_devel.sh
 
+# Install Git Extras
+if ! program_exists "git-extras"; then
+  notice "Installing Git Extras"
+  (
+    cd "$HOME/.dotfiles/vendor/git-extras" && make install
+  )
+fi
+
 # Install Node.js stable
 if [[ "$(declare -f nvm)" ]]; then
   nvm_stable=`curl -s http://nodejs.org/dist/latest/ | grep -o 'node-v.*\"' -m 1 | grep -o 'v[0-9]*\.[0-9]*\.[0-9]*'`
