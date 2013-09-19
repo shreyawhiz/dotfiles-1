@@ -34,7 +34,7 @@ It's hard to live without [Homebrew](http://brew.sh/) on OS X. It will be instal
 
 ### Git
 
-If Git is not installed, it (should) be installed by your system's package manager (Homebrew on OSX and APT on Ubuntu). To make the Git experience even better, [git-extras](https://github.com/visionmedia/git-extras) will also be installed. Lastly, a bunch of aliases [including my own](https://github.com/bentruyman/dotfiles/blob/master/source/50_vcs.sh) as well as those provided by an [oh-my-zsh plugin](http://jasonm23.github.io/oh-my-git-aliases.html) will be created.
+If Git is not installed, it should be installed by your system's package manager (Homebrew on OSX and APT on Ubuntu). To make the Git experience even better, [git-extras](https://github.com/visionmedia/git-extras) will also be installed. Lastly, a bunch of aliases [including my own](https://github.com/bentruyman/dotfiles/blob/master/source/50_vcs.sh) as well as those provided by an [oh-my-zsh plugin](http://jasonm23.github.io/oh-my-git-aliases.html) will be created.
 
 ### Node.js + nvm
 
@@ -72,5 +72,5 @@ My dotfiles are the result of inspiration or outright stealing from:
 
 ## License
 
-Copyright (c) 2013 Ben Truyman
+Copyright (c) 2013 Ben Truyman<br>
 Licensed under the [MIT license](https://github.com/bentruyman/dotfiles/blob/master/LICENSE-MIT).
