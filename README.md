@@ -56,7 +56,7 @@ The included [.tmux.conf](https://github.com/bentruyman/dotfiles/blob/master/lin
 
 ### ZSH + oh-my-zsh
 
-If ZSH is not installed, it (should) be installed by your system's package manager (Homebrew on OSX and APT on Ubuntu). [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) will also utilized for a [few plugins](https://github.com/robbyrussell/oh-my-zsh) and a theme. Granted, I don't use oh-my-zsh for a whole lot, and may remove it sometime in the future.
+If ZSH is not installed, it (should) be installed by your system's package manager (Homebrew on OSX and APT on Ubuntu). [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) will also utilized for a [few plugins](https://github.com/bentruyman/dotfiles/blob/master/link/.zshrc#L23) and a theme. Granted, I don't use oh-my-zsh for a whole lot, and may remove it sometime in the future.
 
 The prompt which is created by the `mortalscumbag` oh-my-zsh theme features Git status indicators, last exit code, and a badge to let you know if the current session was logged in over SSH. Here's an example of what that prompt looks like:
 
