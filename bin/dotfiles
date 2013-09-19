@@ -1,6 +1,36 @@
 #!/usr/bin/env bash
 
 #-------------------------------------------------------------------------------
+# Arguments Check
+#-------------------------------------------------------------------------------
+
+# Scripts with a prefix of "dotfiles-" will be listed and executed if the user,
+# for example, executes "dotfiles osx" to run "dotfiles-osx". Otherwise, show
+# a "help" message.
+platforms=($(compgen -c | grep "dotfiles-" | sed "s/dotfiles-//g"))
+
+if [[ $1 ]]; then
+  for ((i = 0; i < ${#platforms}; i++)); do
+    if [[ ${platforms[$i]} = $1 ]]; then
+      platform="dotfiles-$1"
+      break
+    fi
+  done
+  if [[ $platform ]]; then
+    "$platform"
+    exit 0
+  else
+    echo "Usage: $(basename "$0") [platform]"
+    echo
+    echo "Platforms available: $(echo $platforms | tr "\n" " ")"
+    echo
+    echo "See the README for documentation."
+    echo "https://github.com/bentruyman/dotfiles"
+    exit 1
+  fi
+fi
+
+#-------------------------------------------------------------------------------
 # Functions
 #-------------------------------------------------------------------------------
 
@@ -68,7 +98,7 @@ program_exists() {
   return 1
 }
 
-function to_install() {
+to_install() {
   local desired installed i desired_s installed_s remain
 
   # Convert args to arrays handling newline- and space-delimited lists
