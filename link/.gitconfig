@@ -1,0 +1,16 @@
+[user]
+	name = Ben Truyman
+	email = bentruyman@gmail.com
+[color]
+	ui = auto
+[core]
+  editor = /usr/bin/vim
+  excludesfile = ~/.gitignore
+[github]
+  user = bentruyman
+[alias]
+  purr = !"git pull ––rebase"
+  pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
+  ready = !"git rebase -i @{u}"
+  standup = !git-standup
+  st = !"git status -sb"
