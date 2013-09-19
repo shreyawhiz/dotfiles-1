@@ -446,6 +446,13 @@ defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 defaults write com.apple.appstore ShowDebugMenu -bool true
 
 ###############################################################################
+# Alfred 2                                                                    #
+###############################################################################
+
+# Set Alfred theme to dark
+defaults write com.runningwithcrayons.Alfred-Preferences appearance.theme -string "alfred.theme.dark"
+
+###############################################################################
 # Google Chrome & Google Chrome Canary                                        #
 ###############################################################################
 
@@ -466,15 +473,14 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 ###############################################################################
 
 # Maps Caps-Lock to Escape
-defaults write org.pqrs.PCKeyboardHack sysctl '{"enable_capslock" = 1;"keycode_capslock" = 53;}'
+defaults write org.pqrs.PCKeyboardHack sysctl '{ enable_capslock = 1; keycode_capslock = 53; }'
 
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in "Address Book" "Calendar" "Contacts" "Dashboard" "Dock" "Finder" \
-  "Mail" "Safari" "SizeUp" "SystemUIServer" "Terminal" "Transmission" \
-  "Twitter" "iCal" "iTunes"; do
+for app in "Address Book" "Alfred 2" "Calendar" "Contacts" "Dashboard" "Dock" \
+  "Finder" "Safari" "SystemUIServer" "Twitter" "iCal" "iTunes"; do
   killall "$app" > /dev/null 2>&1
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
