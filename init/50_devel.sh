@@ -1,6 +1,3 @@
-# Load development environment
-source $HOME/.dotfiles/source/50_devel.sh
-
 # Install Git Extras
 if ! program_exists "git-extras"; then
   notice "Installing Git Extras"
@@ -10,20 +7,8 @@ if ! program_exists "git-extras"; then
 fi
 
 # Install Node.js stable
-if [[ "$(declare -f nvm)" ]]; then
-  nvm_stable=`curl -s http://nodejs.org/dist/latest/ | grep -o 'node-v.*\"' -m 1 | grep -o 'v[0-9]*\.[0-9]*\.[0-9]*'`
-
-  # Check to see if the current version of node is the latest stable
-  if [[ "$(node --version 2>/dev/null)" != "$nvm_stable" ]]; then
-    notice "Installing Node.js $nvm_stable"
-    nvm install $nvm_stable
-  fi
-
-  # Alias the latest stable version
-  if [[ ! "$(nvm alias default | grep $nvm_stable 2> /dev/null)" ]]; then
-    notice "Updating nvm default alias to $nvm_stable"
-    nvm alias default $nvm_stable
-  fi
+if program_exists "n"; then
+  n stable
 fi
 
 # Install NPM global modules
@@ -74,6 +59,7 @@ if program_exists "fish"; then
 fi
 
 # Install Ruby stable
+PATH=$HOME/.dotfiles/vendor/rbenv/bin:$HOME/.dotfiles/vendor/ruby-build:$PATH
 if program_exists "rbenv"; then
   rbenv_stable="$(rbenv install --list | grep "1.9.3-p[0-9]" | sort -n | tail -1)"
   if [[ ! "$(rbenv versions | grep $rbenv_stable)" ]]; then
