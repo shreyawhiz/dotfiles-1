@@ -1,3 +1,3 @@
-if cat ostype | grep '^Ubuntu'
+if cat /etc/issue ^ /dev/null | grep '^Ubuntu'
   exit 1
 end

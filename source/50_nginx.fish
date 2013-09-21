@@ -2,18 +2,18 @@ set -U NGINX_DIR
 
 if [ (uname -s) = 'Darwin' ]
   set NGINX_DIR /usr/local/etc/nginx
-  alias nstart="sudo $NGINX_DIR/sbin/nginx"
-  alias nstop='sudo kill (cat $NGINX_DIR/logs/nginx.pid)'
+  alias nstart "sudo $NGINX_DIR/sbin/nginx"
+  alias nstop 'sudo kill (cat $NGINX_DIR/logs/nginx.pid)'
 end
 
-if cat ostype | grep '^Ubuntu'
+if cat /etc/issue ^ /dev/null | grep '^Ubuntu'
   set NGINX_DIR /etc/nginx
-  alias nstart="sudo service start nginx"
-  alias nstop="sudo service stop nginx"
+  alias nstart "sudo service start nginx"
+  alias nstop "sudo service stop nginx"
 end
 
-alias nedit="vim $NGINX_DIR/sites-available"
-alias nrestart="nstop && nstart"
+alias nedit "vim $NGINX_DIR/sites-available"
+alias nrestart "nstop and nstart"
 
 set -l sites_available $NGINX_DIR/sites-available
 set -l sites_enabled $NGINX_DIR/sites-enabled

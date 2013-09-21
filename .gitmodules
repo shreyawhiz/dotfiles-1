@@ -23,3 +23,6 @@
 [submodule "vendor/z"]
 	path = vendor/z
 	url = git://github.com/rupa/z.git
+[submodule "vendor/z-fish"]
+	path = vendor/z-fish
+	url = git://github.com/danielb2/z-fish.git
