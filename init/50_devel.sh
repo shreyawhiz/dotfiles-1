@@ -49,6 +49,17 @@ if program_exists "npm"; then
   fi
 fi
 
+# Install fish shell if it isn't already
+if ! program_exists "fish"; then
+  (
+    cd ~/.dotfiles/vendor/fish-shell
+    autoconf
+    ./configure
+    make
+    sudo make install
+  )
+fi
+
 # Set shell to fish
 if program_exists "fish"; then
   fish_location=$(which fish)
