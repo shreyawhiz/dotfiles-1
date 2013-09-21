@@ -9,6 +9,7 @@ sudo apt-get -qq upgrade
 # Install APT packages
 packages=(
   autoconf
+  bc
   build-essential
   colortail
   git-core
