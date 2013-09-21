@@ -6,7 +6,7 @@ if [ (uname -s) = 'Darwin' ]
   alias nstop "sudo kill (cat $NGINX_DIR/logs/nginx.pid)"
 end
 
-if cat /etc/issue ^ /dev/null | grep '^Ubuntu'
+if cat /etc/issue ^ /dev/null | grep '^Ubuntu' > /dev/null
   set NGINX_DIR /etc/nginx
   alias nstart 'sudo service start nginx'
   alias nstop 'sudo service stop nginx'
