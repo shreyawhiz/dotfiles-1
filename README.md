@@ -2,6 +2,8 @@
 
 My dotfiles and system bootstrap for OS X and Ubuntu.
 
+*(JUST MOVED TO FISH SHELL, SUPER UNSTABLE BRO)*
+
 ## Installation
 
 Ensure the curent user is an administrator and run:
