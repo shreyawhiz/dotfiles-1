@@ -8,11 +8,13 @@ sudo apt-get -qq upgrade
 
 # Install APT packages
 packages=(
+  autoconf
   build-essential
-  libssl-dev
   colortail
   git-core
   htop
+  libncurses5-dev
+  libssl-dev
   nmap
   telnet
   tree
