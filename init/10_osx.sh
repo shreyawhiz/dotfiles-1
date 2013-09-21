@@ -43,7 +43,6 @@ if brew cask &> /dev/null; then
     omni-focus
     spotify
     totalspaces
-    vagrant
     virtualbox
     woodhouse
   )

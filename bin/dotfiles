@@ -54,7 +54,12 @@ header_link() { notice "Linking files into home directory"; }
 test_link() { [[ "$2" -ef "$1" ]] && echo "same file"; }
 do_link() {
   c_list "Linking ~/$1."
-  ln -sf ${2#$HOME/} $HOME/
+
+  if [[ -d "$HOME/$1" ]]; then
+    rm -rf "$HOME/$1"
+  fi
+
+  ln -sf ${2#$HOME/} $HOME
 }
 
 task_do() {
@@ -190,4 +195,4 @@ fi
 
 popd &> /dev/null
 notice "Done!"
-exec `which zsh` -l
+exec `which fish` -l

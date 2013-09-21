@@ -49,15 +49,16 @@ if program_exists "npm"; then
   fi
 fi
 
-# Set shell to ZSH
-if program_exists "zsh"; then
-  if [[ ! "$(cat /etc/shells | grep `which zsh`)" ]]; then
-    which zsh | sudo tee -a /etc/shells
+# Set shell to fish
+if program_exists "fish"; then
+  fish_location=$(which fish)
+  if [[ ! "$(cat /etc/shells | grep "$fish_location")" ]]; then
+    echo $fish_location | sudo tee -a /etc/shells
   fi
 
-  if [[ "$SHELL" != `which zsh` ]]; then
-    notice "Changing shell to `which zsh`"
-    chsh -s `which zsh`
+  if [[ ! "echo $FISH_VERSION" ]]; then
+    notice "Changing shell to "$fish_location""
+    chsh -s "$fish_location"
   fi
 fi
 
