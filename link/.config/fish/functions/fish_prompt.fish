@@ -20,7 +20,7 @@ set -g __fish_git_prompt_color_untrackedfiles $fish_color_normal
 set -g __fish_git_prompt_color_cleanstate green bold
 
 function fish_prompt --description 'Write out the prompt'
-  #z --add "$PWD"
+  set -g current_branch (git rev-parse --abbrev-ref HEAD 2> /dev/null)
 
   set -l last_status $status
   set -l status_color
