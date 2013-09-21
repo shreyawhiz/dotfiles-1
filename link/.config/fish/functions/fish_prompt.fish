@@ -20,13 +20,13 @@ set -g __fish_git_prompt_color_untrackedfiles $fish_color_normal
 set -g __fish_git_prompt_color_cleanstate green bold
 
 function fish_prompt --description 'Write out the prompt'
-  set -g current_branch (git rev-parse --abbrev-ref HEAD 2> /dev/null)
-
   set -l last_status $status
   set -l status_color
   set -l identity (whoami)'@'(hostname)
   set -l git_prompt (__fish_git_prompt "|")
   set -l formatted_path ' : '(pwd | sed "s|$HOME|~|")
+
+  set -g current_branch (git rev-parse --abbrev-ref HEAD 2> /dev/null)
 
   if not set -q __fish_prompt_normal
     set -g __fish_prompt_normal (set_color normal)
