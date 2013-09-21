@@ -9,16 +9,16 @@ set PATH $PATH /usr/local/lib/python2.7/site-packages
 alias brewup 'brew update and brew upgrade'
 
 # DROID
-alias droid "say -v zarvox droid"
+alias droid 'say -v zarvox droid'
 
 # Recursively deletes .DS_Store files
-alias dsstore "find . -name '*.DS_Store' -type f -ls -delete"
+alias dsstore 'find . -name "*.DS_Store" -type f -ls -delete'
 
 # Flushes dns caches
-alias flushdns "dscacheutil -flushcache"
+alias flushdns 'dscacheutil -flushcache'
 
 # Opens current directory in Finder
-alias o "open ."
+alias o 'open .'
 
 # SSH into talos
-alias talos "ssh bentruyman@talos"
+alias talos 'ssh bentruyman@talos'
