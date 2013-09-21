@@ -1,5 +1,5 @@
 # Easier navigation
-alias .="pwd"
+alias .='pwd'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -12,21 +12,19 @@ alias fs="stat -f "%z bytes""
 alias k="l"
 alias l="ls -al"
 
-if [ "$(type -p tree)" ]; then
+if type -P tree
   alias ll='tree --dirsfirst -aLpughDFiC 1'
   alias lsd='ll -d'
 else
   alias ll='ls -al'
   alias lsd='CLICOLOR_FORCE=1 ll | grep --color=never "^d"'
-fi
+end
 
 # Creates a new directory and enter it
-function md() {
-  mkdir -p "$@" && cd "$@"
-}
+function md
+  mkdir -p $argv
+  cd $argv
+end
 
 # Initialize z
-source $HOME/.dotfiles/vendor/z/z.sh
-function precmd () {
-  z --add "$(pwd -P)"
-}
+source ~/.dotfiles/vendor/z-fish/z.fish

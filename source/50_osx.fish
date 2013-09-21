@@ -1,7 +1,9 @@
-[[ "$OSTYPE" =~ ^darwin ]] || return 1
+if [ (uname -s) != 'Darwin' ]
+  exit 1
+end
 
 # Paths
-export PATH="$PATH:/usr/local/lib/python2.7/site-packages"
+set PATH $PATH /usr/local/lib/python2.7/site-packages
 
 # Updates homebrew index and upgrades installed packages
 alias brewup='brew update && brew upgrade'
