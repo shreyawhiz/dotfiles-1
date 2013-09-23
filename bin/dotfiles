@@ -22,7 +22,7 @@ if [[ $1 ]]; then
   else
     echo "Usage: $(basename "$0") [platform]"
     echo
-    echo "Platforms available: $(echo $platforms | tr "\n" " ")"
+    echo "Platforms available: $(echo ${platforms[@]})"
     echo
     echo "See the README for documentation."
     echo "https://github.com/bentruyman/dotfiles"
