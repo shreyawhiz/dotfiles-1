@@ -6,7 +6,7 @@ end
 set PATH $PATH /usr/local/lib/python2.7/site-packages
 
 # Updates homebrew index and upgrades installed packages
-alias brewup 'brew update and brew upgrade'
+alias brewup 'brew update; and brew upgrade'
 
 # DROID
 alias droid 'say -v zarvox droid'
