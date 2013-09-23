@@ -7,9 +7,6 @@
 [submodule "vendor/git-extras"]
 	path = vendor/git-extras
 	url = git://github.com/visionmedia/git-extras.git
-[submodule "vendor/oh-my-zsh"]
-	path = vendor/oh-my-zsh
-	url = git://github.com/robbyrussell/oh-my-zsh
 [submodule "vendor/rbenv"]
 	path = vendor/rbenv
 	url = git://github.com/sstephenson/rbenv.git
