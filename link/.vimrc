@@ -267,6 +267,9 @@ map <leader>pp :setlocal paste!<cr>
 " Fast saving
 nmap <leader>w :w!<cr>
 
+" Fast save + quit
+nmap <leader>wq :wqa!<cr>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
