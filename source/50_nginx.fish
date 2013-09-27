@@ -13,7 +13,7 @@ if cat /etc/issue ^ /dev/null | grep '^Ubuntu' > /dev/null
 end
 
 alias nedit "vim $NGINX_DIR/sites-available"
-alias nrestart 'nstop and nstart'
+alias nrestart 'nstop; and nstart'
 
 set -l sites_available $NGINX_DIR/sites-available
 set -l sites_enabled $NGINX_DIR/sites-enabled
