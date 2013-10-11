@@ -96,7 +96,7 @@ NeoBundleCheck
 set background=dark
 
 " Draw a vertical ruler at column 80
-set colorcolumn=80
+execute "set colorcolumn=" . join(range(81,335), ',')
 
 " Highlight current line
 set cursorline
@@ -266,6 +266,9 @@ map <leader>pp :setlocal paste!<cr>
 
 " Fast saving
 nmap <leader>w :w!<cr>
+
+" Fast quitting
+nmap <leader>q :q<cr>
 
 " Fast save + quit
 nmap <leader>wq :wqa!<cr>
