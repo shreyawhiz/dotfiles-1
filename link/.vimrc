@@ -32,7 +32,7 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#rc(expand('~/.vim/bundle'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc'
@@ -47,6 +47,7 @@ NeoBundle 'corntrace/bufexplorer'
 NeoBundle 'dag/vim-fish'
 NeoBundle 'danheberden/vim-slantstatus'
 NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'garbas/vim-snipmate'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'groenewege/vim-less'
@@ -58,6 +59,7 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'leshill/vim-json'
 NeoBundle 'moll/vim-node'
 NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'othree/html5.vim'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'pgr0ss/vimux-ruby-test'
 NeoBundle 'rodjek/vim-puppet'
@@ -169,9 +171,9 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 
 " Highlight too-long lines
-autocmd BufRead,InsertEnter,InsertLeave * 2match LineLengthError /\%126v.*/
-highlight LineLengthError ctermbg=black guibg=black
-autocmd ColorScheme * highlight LineLengthError ctermbg=black guibg=black
+autocmd BufRead,InsertEnter,InsertLeave * 2match OverLength /\%126v.*/
+highlight OverLength ctermbg=black guibg=black
+autocmd ColorScheme * highlight OverLength ctermbg=black guibg=black
 
 " Set up highlight group & retain through colorscheme changes
 highlight ExtraWhitespace ctermbg=red guibg=red
