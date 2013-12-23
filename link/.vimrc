@@ -104,6 +104,9 @@ execute "set colorcolumn=" . join(range(81,335), ',')
 " Highlight current line
 set cursorline
 
+" Adds - as a word separator
+set iskeyword-=-
+
 " Don't redraw while executing macros (good performance config)
 set lazyredraw
 
