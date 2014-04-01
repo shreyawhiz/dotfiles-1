@@ -41,6 +41,7 @@ NeoBundle 'MarcWeber/vim-addon-mw-utils'
 NeoBundle 'ap/vim-css-color'
 NeoBundle 'benmills/vim-commadown'
 NeoBundle 'benmills/vimux'
+NeoBundle 'bentruyman/vimux-ruby-test'
 NeoBundle 'bkad/CamelCaseMotion'
 NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'corntrace/bufexplorer'
@@ -64,7 +65,6 @@ NeoBundle 'moll/vim-node'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'pgr0ss/vimux-ruby-test'
 NeoBundle 'rodjek/vim-puppet'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
@@ -253,10 +253,6 @@ set textwidth=0
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
 map k gk
-
-" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
-map <c-space> ?
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
