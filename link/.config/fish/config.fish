@@ -11,6 +11,6 @@ set -U LANG en_US.UTF-8
 set -U LANGUAGE en_US.UTF-8
 
 # Source files
-for file in ~/.dotfiles/source/*
+for file in ~/.dotfiles/source/**.fish
   source "$file"
 end
