@@ -24,23 +24,19 @@ if brew cask &> /dev/null; then
   casks=(
     adium
     alfred
-    app-zapper
+    appzapper
     audio-hijack-pro
     divvy
-    dropbox
-    expan-drive
-    f-lux
+    flux
     firefox
     geektool
     google-chrome
-    google-chrome-canary
-    google-drive
     handbrake
     imageoptim
     istat-menus
     iterm2
     kaleidoscope
-    omni-focus
+    omnifocus
     spotify
     totalspaces
     virtualbox
