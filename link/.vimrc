@@ -50,7 +50,6 @@ NeoBundle 'danheberden/vim-slantstatus'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'docunext/closetag.vim'
 NeoBundle 'garbas/vim-snipmate'
-NeoBundle 'godlygeek/tabular'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'heavenshell/vim-jsdoc'
@@ -69,11 +68,9 @@ NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'rodjek/vim-puppet'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'suan/vim-instant-markdown'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'tomtom/tlib_vim'
-NeoBundle 'tpope/vim-cucumber'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-ragtag'
@@ -85,7 +82,6 @@ NeoBundle 'vim-scripts/Align'
 NeoBundle 'vim-scripts/Crunch'
 NeoBundle 'vim-scripts/gitignore.vim'
 NeoBundle 'vim-scripts/tComment'
-NeoBundle 'vim-scripts/vim-startify'
 NeoBundle 'walm/jshint.vim'
 NeoBundle 'xolox/vim-misc'
 NeoBundle 'xolox/vim-notes'
@@ -219,8 +215,8 @@ autocmd BufNewFile,BufRead *.txt setlocal textwidth=78
 autocmd FileType ruby runtime ruby_mappings.vim
 
 if version >= 700
-    autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_us
-    autocmd FileType tex setlocal spell spelllang=en_us
+  autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_us
+  autocmd FileType tex setlocal spell spelllang=en_us
 endif
 
 augroup markdown
