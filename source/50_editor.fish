@@ -1,3 +1,3 @@
 # Use vim as default editor
-set -U EDITOR vim
+set -U EDITOR /usr/local/bin/vim
 set -U VISUAL $EDITOR
