@@ -125,9 +125,6 @@ set tm=500
 " Set line numbers
 set number
 
-" Show relative line numbers
-set rnu
-
 " Show ruler
 set ruler
 
