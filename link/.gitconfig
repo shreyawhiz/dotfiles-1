@@ -14,3 +14,5 @@
   ready = !"git rebase -i @{u}"
   standup = !git-standup
   st = !"git status -sb"
+[push]
+	default = simple
