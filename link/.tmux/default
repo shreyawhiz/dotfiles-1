@@ -1,3 +1,2 @@
-split-window -p 25
 split-window -h -p 40
 select-pane -t 0
