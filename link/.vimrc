@@ -274,8 +274,8 @@ nmap <leader>wq :wqa!<cr>
 " Plugin Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" JSHint
-map <silent> <LocalLeader>js :JSHint<CR>
+" ESLint
+let g:syntastic_javascript_checkers = ['eslint']
 
 " NERDTree
 let NERDTreeIgnore=['\.pyc', '\.o', '\.class', '\.lo', 'node_modules']
