@@ -22,25 +22,17 @@ fi
 # Install Homebrew Casks
 if brew cask &> /dev/null; then
   casks=(
-    adium
-    alfred
     appzapper
     audio-hijack-pro
     divvy
     flux
     firefox
-    geektool
     google-chrome
     handbrake
     imageoptim
-    istat-menus
-    iterm2
     kaleidoscope
-    omnifocus
     spotify
-    totalspaces
     virtualbox
-    woodhouse
   )
 
   list="$(to_install "${casks[*]}" "$(brew cask list)")"
@@ -63,8 +55,6 @@ if program_exists "brew"; then
     git
     git-extras
     lesspipe
-    mongodb
-    nginx
     nmap
     siege
     sl
@@ -72,7 +62,6 @@ if program_exists "brew"; then
     tree
     watch
     wget
-    wtf
     zsh
   )
 
