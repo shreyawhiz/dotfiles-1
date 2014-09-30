@@ -13,5 +13,6 @@
   ready = !"git rebase -i @{u}"
   standup = !git-standup
   st = !"git status -sb"
+  fc = !"git diff-tree --no-commit-id --name-only -r"
 [push]
 	default = simple
