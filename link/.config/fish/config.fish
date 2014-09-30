@@ -71,6 +71,7 @@ function tmn
 
   tmux new -s "$name"
 end
+alias vclean 'rm $HOME/.vim/swaps/*'
 
 # rbenv
 if test -d $RBENV_ROOT
