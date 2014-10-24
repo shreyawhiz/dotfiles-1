@@ -23,15 +23,8 @@ fi
 if brew cask &> /dev/null; then
   casks=(
     appzapper
-    audio-hijack-pro
     divvy
     flux
-    firefox
-    google-chrome
-    handbrake
-    imageoptim
-    kaleidoscope
-    spotify
     virtualbox
   )
 
@@ -47,16 +40,12 @@ if program_exists "brew"; then
   recipes=(
     ack
     cloc
-    cmatrix
     colortail
-    cowsay
-    elinks
-    fortune
     git
     git-extras
+    go
     lesspipe
     nmap
-    siege
     sl
     tmux
     tree
