@@ -6,11 +6,6 @@ if ! program_exists "git-extras"; then
   )
 fi
 
-# Install Node.js stable
-if program_exists "n"; then
-  n stable
-fi
-
 # Install NPM global modules
 if program_exists "npm"; then
   modules=(

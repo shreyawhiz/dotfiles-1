@@ -16,6 +16,3 @@
 [submodule "vendor/z-fish"]
 	path = vendor/z-fish
 	url = git://github.com/danielb2/z-fish.git
-[submodule "vendor/n"]
-	path = vendor/n
-	url = git://github.com/visionmedia/n.git
