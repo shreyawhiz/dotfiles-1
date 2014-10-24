@@ -280,7 +280,7 @@ nmap <leader>wq :wqa!<cr>
 let g:syntastic_javascript_checkers = ['eslint']
 
 " NERDTree
-let NERDTreeIgnore=['\.pyc', '\.o', '\.class', '\.lo', 'node_modules']
+let NERDTreeIgnore=['\.pyc', '\.o', '\.class', '\.lo', 'coverage', 'node_modules']
 let NERDTreeHijackNetrw = 0
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
