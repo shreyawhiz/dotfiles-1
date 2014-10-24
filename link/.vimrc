@@ -298,6 +298,9 @@ call slantstatus#Segment('', 246, 232)
 call slantstatus#Segment('%16.(%l/%L,%c%V%)', 249, 232) " Line #, Total Line, Column
 call slantstatus#Segment('%3p%%', 166, 229)              " % of file
 
+" Tagbar
+map <silent> <LocalLeader>s :Tagbar<CR>
+
 " TComment
 map <silent> <LocalLeader>cc :TComment<CR>
 
