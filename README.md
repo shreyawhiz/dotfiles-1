@@ -2,8 +2,6 @@
 
 My dotfiles and system bootstrap for OS X and Ubuntu.
 
-*(JUST MOVED TO FISH SHELL, SUPER UNSTABLE BRO)*
-
 ## Installation
 
 Ensure the curent user is an administrator and run:
@@ -30,6 +28,10 @@ Scripts located in the [`.dotfiles/bin`](https://github.com/bentruyman/dotfiles/
 
 ## What's Included?
 
+### Fish
+
+Because ZSH was too mainstream, I use the [fish shell](http://fishshell.com). Its scripting language isn't compatible with other Bourne shell environments, so don't expect your non-fish scripts to work.
+
 ### Homebrew
 
 It's hard to live without [Homebrew](http://brew.sh/) on OS X. It will be installed and used to install both [command-line](https://github.com/bentruyman/dotfiles/blob/master/init/10_osx.sh#L24) and [desktop](https://github.com/bentruyman/dotfiles/blob/master/init/10_osx.sh#L60) programs.
@@ -55,16 +57,6 @@ One thing to note, instead of using the popular Powerline plugin I opted for wha
 ### TMUX
 
 The included [.tmux.conf](https://github.com/bentruyman/dotfiles/blob/master/link/.tmux.conf) is fairly standard. One thing to note is that `^A` is the prefix instead of `^B` (similar to `screen`). The status bar, just like Vim, will require a modified font to be installed for proper rendering.
-
-### ZSH + oh-my-zsh
-
-If ZSH is not installed, it (should) be installed by your system's package manager (Homebrew on OSX and APT on Ubuntu). [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) will also utilized for a [few plugins](https://github.com/bentruyman/dotfiles/blob/master/link/.zshrc#L23) and a theme. Granted, I don't use oh-my-zsh for a whole lot, and may remove it sometime in the future.
-
-The prompt which is created by the `mortalscumbag` oh-my-zsh theme features Git status indicators, last exit code, and a badge to let you know if the current session was logged in over SSH. Here's an example of what that prompt looks like:
-
-**NOTE:** While ZSH might already be installed, a newer version will try to be installed by your system's package manager.
-
-![ZSH Prompt](https://i.cloudup.com/9qTAguXk3d-2000x2000.png)
 
 ## Special Thanks
 
