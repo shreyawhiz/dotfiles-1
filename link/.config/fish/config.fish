@@ -4,6 +4,7 @@ set -x EDITOR vim
 set -x GOPATH $HOME/go
 set -x LANG en_US.UTF-8
 set -x LC_ALL en_US.UTF-8
+set -x NVM_DIR $HOME/nvm
 set -x RBENV_ROOT $HOME/.dotfiles/vendor/rbenv
 set -x TERM screen-256color-bce
 set -x VISUAL $EDITOR
@@ -74,6 +75,12 @@ function tmn
   tmux new -s "$name"
 end
 alias vclean 'rm $HOME/.vim/swaps/*'
+
+# node.js
+if test ! -d $NVM_DIR
+  mkdir -p $NVM_DIR
+end
+. $HOME/.dotfiles/vendor/nvm-fish/nvm.fish
 
 # rbenv
 if test -d $RBENV_ROOT
