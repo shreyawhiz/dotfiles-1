@@ -15,12 +15,9 @@ fi
 if program_exists "npm"; then
   modules=(
     coffee-script
-    express
+    eslint
     forever
-    grunt-cli
     instant-markdown-d
-    jshint
-    less
     node-dev
     serve
     uglify-js
