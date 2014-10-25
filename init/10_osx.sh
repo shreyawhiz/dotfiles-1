@@ -39,6 +39,7 @@ fi
 if program_exists "brew"; then
   recipes=(
     ack
+    autoconf
     cloc
     colortail
     git
