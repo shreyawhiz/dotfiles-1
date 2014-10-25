@@ -4,7 +4,7 @@ is_osx || return 1
 # Install Homebrew
 if ! program_exists "brew"; then
   notice "Installing Homebrew"
-  true | /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+  true | /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 if program_exists "brew"; then
