@@ -19,3 +19,6 @@
 [submodule "vendor/nvm-fish"]
 	path = vendor/nvm-fish
 	url = https://github.com/Alex7Kom/nvm-fish.git
+[submodule "link/.tmux/plugins/tpm"]
+	path = link/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
