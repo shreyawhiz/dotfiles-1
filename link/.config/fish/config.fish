@@ -6,7 +6,6 @@ set -x LANG en_US.UTF-8
 set -x LC_ALL en_US.UTF-8
 set -x NVM_DIR $HOME/nvm
 set -x RBENV_ROOT $HOME/.dotfiles/vendor/rbenv
-set -x TERM screen-256color-bce
 set -x VISUAL $EDITOR
 
 # Paths
