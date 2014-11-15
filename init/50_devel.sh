@@ -51,6 +51,7 @@ if program_exists "fish"; then
 fi
 
 # Install Ruby stable
+PATH=$HOME/.dotfiles/vendor/rbenv/bin:$HOME/.dotfiles/vendor/ruby-build:$PATH
 if program_exists "rbenv"; then
   eval "$(rbenv init -)"
   rbenv_stable="$(rbenv install --list | grep "2.0.0-p[0-9]" | sort -n | tail -1)"
