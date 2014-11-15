@@ -195,3 +195,7 @@ fi
 
 popd &> /dev/null
 notice "Done!"
+
+if [ $(basename $SHELL) != "fish" ]; then
+  exec $fish_location -l
+fi

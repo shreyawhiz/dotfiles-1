@@ -47,7 +47,6 @@ if program_exists "fish"; then
   if [ $SHELL != $fish_location ]; then
     notice "Changing shell to "$fish_location""
     sudo chsh -s "$fish_location" $USER
-    exec $fish_location -l
   fi
 fi
 
