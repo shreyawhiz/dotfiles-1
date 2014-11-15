@@ -54,7 +54,7 @@ fi
 # Install Ruby stable
 PATH=$HOME/.dotfiles/vendor/rbenv/bin:$HOME/.dotfiles/vendor/ruby-build:$PATH
 if program_exists "rbenv"; then
-  rbenv_stable="$(rbenv install --list | grep "1.9.3-p[0-9]" | sort -n | tail -1)"
+  rbenv_stable="$(rbenv install --list | grep "2.0.0-p[0-9]" | sort -n | tail -1)"
   if [[ ! "$(rbenv versions | grep $rbenv_stable)" ]]; then
     rbenv install $rbenv_stable
     rbenv global $rbenv_stable
