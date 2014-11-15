@@ -19,7 +19,6 @@ packages=(
   nmap
   telnet
   tree
-  zsh
 )
 
 list=()
