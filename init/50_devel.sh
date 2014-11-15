@@ -44,7 +44,7 @@ if program_exists "fish"; then
     echo $fish_location | sudo tee -a /etc/shells
   fi
 
-  if [[ ! "echo $FISH_VERSION" ]]; then
+  if [ $SHELL != $fish_location ]; then
     notice "Changing shell to "$fish_location""
     sudo chsh -s "$fish_location" $USER
     exec $fish_location -l
