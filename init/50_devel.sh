@@ -46,7 +46,8 @@ if program_exists "fish"; then
 
   if [[ ! "echo $FISH_VERSION" ]]; then
     notice "Changing shell to "$fish_location""
-    chsh -s "$fish_location"
+    sudo chsh -s "$fish_location" $USER
+    exec $(which fish) -l
   fi
 fi
 

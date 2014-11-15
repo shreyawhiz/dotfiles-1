@@ -195,4 +195,3 @@ fi
 
 popd &> /dev/null
 notice "Done!"
-exec `which fish` -l
