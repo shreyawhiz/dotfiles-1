@@ -2,6 +2,7 @@
 
 rsync \
   --exclude ".git/" \
+  --exclude ".gitmodules" \
   --exclude "apt.sh" \
   --exclude "bootstrap.sh" \
   --exclude "brew.sh" \
