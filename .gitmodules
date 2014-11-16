@@ -13,3 +13,6 @@
 [submodule ".vendor/z-fish"]
 	path = .vendor/z-fish
 	url = https://github.com/sjl/z-fish.git
+[submodule ".vim/autoload/plug.vim"]
+	path = .vim/autoload/plug.vim
+	url = https://github.com/junegunn/vim-plug.git

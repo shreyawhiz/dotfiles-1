@@ -28,78 +28,64 @@ set incsearch
 " NeoBundle
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
+call plug#begin('~/.vim/plugged')
 
-call neobundle#begin(expand('~/.vim/bundle'))
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'airblade/vim-gitgutter'
+Plug 'ap/vim-css-color'
+Plug 'benmills/vim-commadown'
+Plug 'benmills/vimux'
+Plug 'bentruyman/vimux-ruby-test', { 'for': 'ruby' }
+Plug 'bling/vim-airline'
+Plug 'bkad/CamelCaseMotion'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'chriskempson/base16-vim'
+Plug 'corntrace/bufexplorer'
+Plug 'dag/vim-fish', { 'for': 'fish' }
+Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
+Plug 'docunext/closetag.vim'
+Plug 'edkolev/promptline.vim'
+Plug 'edkolev/tmuxline.vim'
+Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile' }
+Plug 'garbas/vim-snipmate'
+Plug 'groenewege/vim-less', { 'for': 'less' }
+Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
+Plug 'heavenshell/vim-jsdoc'
+Plug 'jgdavey/vim-turbux'
+Plug 'jimmyhchan/dustjs.vim'
+Plug 'jtratner/vim-flavored-markdown'
+Plug 'justinmk/vim-gtfo'
+Plug 'juvenn/mustache.vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'kien/ctrlp.vim'
+Plug 'leshill/vim-json', { 'for': 'json' }
+Plug 'majutsushi/tagbar'
+Plug 'mattn/emmet-vim'
+Plug 'moll/vim-node'
+Plug 'myhere/vim-nodejs-complete'
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'rodjek/vim-puppet'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'Shougo/neocomplete.vim'
+Plug 'terryma/vim-expand-region'
+Plug 'tomtom/tlib_vim'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-ragtag'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+Plug 'vim-scripts/Align'
+Plug 'vim-scripts/Crunch'
+Plug 'vim-scripts/gitignore.vim'
+Plug 'vim-scripts/tComment'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-notes'
 
-NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/vimproc.vim', {
-\   'build' : {
-\     'linux' : 'make',
-\     'mac' : 'make -f make_mac.mak'
-\   }
-\ }
-
-NeoBundle 'MarcWeber/vim-addon-mw-utils'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'ap/vim-css-color'
-NeoBundle 'benmills/vim-commadown'
-NeoBundle 'benmills/vimux'
-NeoBundle 'bentruyman/vimux-ruby-test'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'bkad/CamelCaseMotion'
-NeoBundle 'cakebaker/scss-syntax.vim'
-NeoBundle 'chriskempson/base16-vim'
-NeoBundle 'corntrace/bufexplorer'
-NeoBundle 'dag/vim-fish'
-NeoBundle 'digitaltoad/vim-jade'
-NeoBundle 'docunext/closetag.vim'
-NeoBundle 'edkolev/promptline.vim'
-NeoBundle 'edkolev/tmuxline.vim'
-NeoBundle 'ekalinin/Dockerfile.vim'
-NeoBundle 'garbas/vim-snipmate'
-NeoBundle 'groenewege/vim-less'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'heavenshell/vim-jsdoc'
-NeoBundle 'jgdavey/vim-turbux'
-NeoBundle 'jimmyhchan/dustjs.vim'
-NeoBundle 'jtratner/vim-flavored-markdown'
-NeoBundle 'justinmk/vim-gtfo'
-NeoBundle 'juvenn/mustache.vim'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'leshill/vim-json'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'moll/vim-node'
-NeoBundle 'myhere/vim-nodejs-complete'
-NeoBundle 'othree/html5.vim'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'rodjek/vim-puppet'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'terryma/vim-expand-region'
-NeoBundle 'tomtom/tlib_vim'
-NeoBundle 'tpope/vim-endwise'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-ragtag'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'tpope/vim-repeat'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'vim-scripts/Align'
-NeoBundle 'vim-scripts/Crunch'
-NeoBundle 'vim-scripts/gitignore.vim'
-NeoBundle 'vim-scripts/tComment'
-NeoBundle 'walm/jshint.vim'
-NeoBundle 'xolox/vim-misc'
-NeoBundle 'xolox/vim-notes'
-
-call neobundle#end()
-NeoBundleCheck
+call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User Interface
