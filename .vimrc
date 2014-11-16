@@ -35,21 +35,23 @@ endif
 call neobundle#begin(expand('~/.vim/bundle'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/vimproc.vim', { 'build' : { 'mac' : 'make -f make_mac.mak' } }
 
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
-NeoBundle 'Valloric/YouCompleteMe'
+" NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'ap/vim-css-color'
 NeoBundle 'benmills/vim-commadown'
 NeoBundle 'benmills/vimux'
 NeoBundle 'bentruyman/vimux-ruby-test'
+NeoBundle 'bling/vim-airline'
 NeoBundle 'bkad/CamelCaseMotion'
 NeoBundle 'cakebaker/scss-syntax.vim'
+NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'corntrace/bufexplorer'
 NeoBundle 'dag/vim-fish'
-NeoBundle 'danheberden/vim-slantstatus'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'docunext/closetag.vim'
+NeoBundle 'edkolev/tmuxline.vim'
 NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'garbas/vim-snipmate'
 NeoBundle 'groenewege/vim-less'
@@ -72,6 +74,7 @@ NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'rodjek/vim-puppet'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'tomtom/tlib_vim'
 NeoBundle 'tpope/vim-endwise'
@@ -163,7 +166,7 @@ set wrap
 
 " Enable syntax highlighting
 syntax on
-colorscheme hybrid
+colorscheme base16-default
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
@@ -277,8 +280,16 @@ nmap <leader>wq :wqa!<cr>
 " Plugin Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Airline
+let g:airline_theme = 'base16'
+let g:airline_powerline_fonts = 1
+
 " ESLint
 let g:syntastic_javascript_checkers = ['eslint']
+
+" neocomplete
+let g:neocomplete#enable_at_startup = 1
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " NERDTree
 let NERDTreeIgnore=['\.pyc', '\.o', '\.class', '\.lo', 'coverage', 'node_modules']
@@ -286,18 +297,6 @@ let NERDTreeHijackNetrw = 0
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
-
-" slantstatus
-call slantstatus#Segment('\ %{mode()}\ ', 26, 253)      " mode
-call slantstatus#Segment('%-3.3n', 244, 255)            " buffer number
-call slantstatus#Segment('', 241, 18)
-call slantstatus#Segment('\ %f', 237, 253)              " filename
-call slantstatus#Segment('switch', 0, 0)                " right-side
-call slantstatus#Segment('', 239, 232)
-call slantstatus#Segment('', 243, 232)
-call slantstatus#Segment('', 246, 232)
-call slantstatus#Segment('%16.(%l/%L,%c%V%)', 249, 232) " Line #, Total Line, Column
-call slantstatus#Segment('%3p%%', 166, 229)              " % of file
 
 " Tagbar
 map <silent> <LocalLeader>s :Tagbar<CR>

@@ -10,3 +10,6 @@
 [submodule ".vendor/nvm-fish"]
 	path = .vendor/nvm-fish
 	url = git@github.com:yjpark/nvm-fish.git
+[submodule ".config/base16-shell"]
+	path = .config/base16-shell
+	url = git@github.com:chriskempson/base16-shell.git

@@ -44,6 +44,7 @@ function alias_and_complete --argument-names alias command
 end
 
 # Utilities
+alias bs 'bash $HOME/dotfiles/bootstrap.sh'
 alias df 'df -h'
 alias fs 'stat -f "%z bytes"'
 alias_and_complete g 'git'
