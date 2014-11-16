@@ -1,6 +1,6 @@
 # Dotfiles
 
-My dotfiles and system bootstrap for OS X and Ubuntu.
+![Screenshot of my shell prompt](http://i.imgur.com/FFkkPCJ.png)
 
 ## Installation
 
