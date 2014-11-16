@@ -22,6 +22,7 @@ brew install \
   imagemagick --with-webp \
   moreutils \
   rename \
+  the_silver_searcher \
   tmux \
   tree \
   vim \
