@@ -38,7 +38,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc.vim', { 'build' : { 'mac' : 'make -f make_mac.mak' } }
 
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
-" NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'ap/vim-css-color'
 NeoBundle 'benmills/vim-commadown'
 NeoBundle 'benmills/vimux'
