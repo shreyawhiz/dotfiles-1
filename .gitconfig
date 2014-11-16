@@ -1,18 +1,19 @@
 [user]
-	name = Ben Truyman
-[color]
-	ui = auto
-[core]
-  editor = /usr/local/bin/vim
-  excludesfile = ~/.gitignore
-[github]
-  user = bentruyman
+  name = Ben Truyman
+
 [alias]
-  purr = !"git pull ––rebase"
   pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
   ready = !"git rebase -i @{u}"
-  standup = !git-standup
-  st = !"git status -sb"
   fc = !"git diff-tree --no-commit-id --name-only -r"
+
+[branch]
+  autosetuprebase = always
+
+[color]
+  ui = auto
+
+[github]
+  user = bentruyman
+
 [push]
-	default = simple
+  default = simple
