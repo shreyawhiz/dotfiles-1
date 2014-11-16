@@ -1,0 +1,8 @@
+split-window -h -p 40
+send-keys 'mocha --watch --recursive --reporter progress' 'C-m'
+split-window -v -p 20
+send-keys 'node' 'C-m'
+send-keys 'var main = require("./");'
+send-keys 'C-m' 'C-l' 'main' 'C-m'
+select-pane -t 0
+send-keys 'vim' 'C-m' '\nt'
