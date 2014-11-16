@@ -419,7 +419,7 @@ fi;
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in "Address Book" "Alfred 2" "Calendar" "Contacts" "Dashboard" "Dock" \
+for app in "Address Book" "Calendar" "Contacts" "Dashboard" "Dock" \
   "Flux" "Finder" "Safari" "SystemUIServer" "iCal" "iTunes"; do
   killall "$app" > /dev/null 2>&1
 done
