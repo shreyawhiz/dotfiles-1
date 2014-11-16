@@ -108,7 +108,7 @@ NeoBundleCheck
 set background=dark
 
 " Draw a vertical ruler at column 80
-execute "set colorcolumn=" . join(range(81,335), ',')
+" execute "set colorcolumn=" . join(range(81,335), ',')
 
 " Highlight current line
 set cursorline
@@ -287,6 +287,7 @@ nmap <leader>wq :wqa!<cr>
 
 " Airline
 let g:airline_theme = 'base16'
+let g:airline#extensions#tmuxline#enabled = 0
 let g:airline_powerline_fonts = 1
 
 " ESLint
@@ -308,6 +309,9 @@ map <silent> <LocalLeader>s :Tagbar<CR>
 
 " TComment
 map <silent> <LocalLeader>cc :TComment<CR>
+
+" tmuxline
+let g:tmuxline_theme = 'powerline'
 
 " Vimux
 let g:VimuxUseNearestPane = 1
