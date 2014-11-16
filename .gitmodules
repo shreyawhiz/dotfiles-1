@@ -1,12 +1,15 @@
+[submodule ".tmux/plugins/tmux-resurrect"]
+	path = .tmux/plugins/tmux-resurrect
+	url = https://github.com/tmux-plugins/tmux-resurrect.git
 [submodule ".tmux/plugins/tpm"]
 	path = .tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
+[submodule ".vim/bundle/neobundle.vim"]
+	path = .vim/bundle/neobundle.vim
+	url = https://github.com/Shougo/neobundle.vim.git
 [submodule ".vendor/nvm-fish"]
 	path = .vendor/nvm-fish
 	url = https://github.com/yjpark/nvm-fish.git
 [submodule ".vendor/z-fish"]
 	path = .vendor/z-fish
 	url = https://github.com/sjl/z-fish.git
-[submodule ".vim/bundle/neobundle.vim"]
-	path = .vim/bundle/neobundle.vim
-	url = https://github.com/Shougo/neobundle.vim.git
