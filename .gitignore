@@ -1,6 +1,1 @@
-/backups
-link/.config/fish/fish_history
-link/.config/fish/fishd.*
-link/.vim/.netrwhist
-link/.vim/bundle/*
-!link/.vim/bundle/neobundle.vim
+.DS_Store
