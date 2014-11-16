@@ -5,7 +5,6 @@ set -x GOPATH $HOME/go
 set -x LANG en_US.UTF-8
 set -x LC_ALL en_US.UTF-8
 set -x NVM_DIR $HOME/nvm
-set -x RBENV_ROOT $HOME/.dotfiles/vendor/rbenv
 set -x VISUAL $EDITOR
 
 # Paths
@@ -79,18 +78,18 @@ alias vclean 'rm $HOME/.vim/swaps/*'
 if test ! -d $NVM_DIR
   mkdir -p $NVM_DIR
 end
-. $HOME/.dotfiles/vendor/nvm-fish/nvm.fish
+. $HOME/.vendor/nvm-fish/nvm.fish
 
 # rbenv
 if test -d $RBENV_ROOT
-  add_path $HOME/.dotfiles/vendor/rbenv/bin
-  add_path $HOME/.dotfiles/vendor/ruby-build/bin
+  add_path $HOME/.vendor/rbenv/bin
+  add_path $HOME/.vendor/ruby-build/bin
   add_path $HOME/.rbenv/shims
   rbenv rehash >/dev/null ^&1
 end
 
 # z
-. ~/.dotfiles/vendor/z-fish/z.fish
+. ~/.vendor/z-fish/z.fish
 
 # OSX-specific
 if test (uname -s) = 'Darwin'
@@ -99,8 +98,4 @@ if test (uname -s) = 'Darwin'
   alias brewup 'brew update; and brew upgrade'
   alias dsstore 'find . -name "*.DS_Store" -type f -ls -delete'
   alias o 'open .'
-end
-
-for file in $HOME/.dotfiles/source/machine-specific/*
-  . $file
 end

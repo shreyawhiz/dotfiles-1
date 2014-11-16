@@ -4,3 +4,9 @@
 [submodule ".vim/bundle/neobundle.vim"]
 	path = .vim/bundle/neobundle.vim
 	url = git@github.com:Shougo/neobundle.vim.git
+[submodule ".vendor/z-fish"]
+	path = .vendor/z-fish
+	url = git@github.com:sjl/z-fish.git
+[submodule ".vendor/nvm-fish"]
+	path = .vendor/nvm-fish
+	url = git@github.com:yjpark/nvm-fish.git
