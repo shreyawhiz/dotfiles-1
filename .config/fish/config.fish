@@ -80,14 +80,6 @@ if test ! -d $NVM_DIR
 end
 . $HOME/.vendor/nvm-fish/nvm.fish
 
-# rbenv
-if test -d $RBENV_ROOT
-  add_path $HOME/.vendor/rbenv/bin
-  add_path $HOME/.vendor/ruby-build/bin
-  add_path $HOME/.rbenv/shims
-  rbenv rehash >/dev/null ^&1
-end
-
 # z
 . ~/.vendor/z-fish/z.fish
 
