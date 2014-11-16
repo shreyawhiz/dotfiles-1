@@ -4,10 +4,10 @@ sudo -v
 
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-apt-get update
-apt-get upgrade
+sudo apt-get update
+sudo apt-get upgrade
 
-apt-get install \
+sudo apt-get install \
   autoconf \
   bc \
   build-essential \
