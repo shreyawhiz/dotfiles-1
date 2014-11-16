@@ -11,6 +11,7 @@ apt-get install \
   autoconf \
   bc \
   build-essential \
+  fish \
   git-core \
   htop \
   libncurses5-dev \

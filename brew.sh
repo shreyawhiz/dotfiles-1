@@ -15,6 +15,7 @@ fi
 brew install \
   cloc \
   coreutils \
+  fish \
   git \
   git-extras \
   go \
