@@ -2,11 +2,16 @@
   name = Ben Truyman
 
 [alias]
-  pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
-  ready = !"git rebase -i @{u}"
+  # Lists the files changed given a hash/path
   fc = !"git diff-tree --no-commit-id --name-only -r"
 
+  # Lists all local branches, tags, or remotes
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+
 [branch]
+  # Rebases automatically when pulling
   autosetuprebase = always
 
 [color]
