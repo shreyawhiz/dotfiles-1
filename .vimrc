@@ -143,6 +143,9 @@ set showmatch
 " Override 'ignorecase' if search pattern containers uppercase characters
 set smartcase
 
+" Lowers timeout length between commands
+set timeoutlen=250
+
 " Optimize for fast terminals
 set ttyfast
 
