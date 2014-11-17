@@ -80,6 +80,7 @@ Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'vim-scripts/Align'
 Plug 'vim-scripts/Crunch'
+Plug 'vim-scripts/directionalWindowResizer'
 Plug 'vim-scripts/gitignore.vim'
 Plug 'vim-scripts/tComment'
 Plug 'xolox/vim-misc'
