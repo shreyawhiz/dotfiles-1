@@ -386,9 +386,9 @@ defaults write com.apple.appstore ShowDebugMenu -bool true
 # Transition over an hour
 defaults write org.herf.Flux transitionSpeed -int 1
 
-# Sets location to Chicago
-defaults write org.herf.Flux location -string "60640"
-defaults write org.herf.Flux locationTextField -string "60640"
+# Sets location to Emeryville
+defaults write org.herf.Flux location -string "94608"
+defaults write org.herf.Flux locationTextField -string "94608"
 defaults write org.herf.Flux locationType -string "Z"
 
 ###############################################################################
