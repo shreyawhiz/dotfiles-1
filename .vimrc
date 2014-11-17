@@ -267,7 +267,8 @@ nmap <leader>wq :wqa!<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Airline
-let g:airline_theme = 'hybrid'
+let g:airline_theme = 'bubblegum'
+let g:airline#extensions#promptline#snapshot_file = "~/dotfiles/.promptline.sh"
 let g:airline#extensions#promptline#enabled = 0
 let g:airline#extensions#tmuxline#enabled = 0
 let g:airline_powerline_fonts = 1
