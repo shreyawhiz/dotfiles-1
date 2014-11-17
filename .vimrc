@@ -30,12 +30,9 @@ set incsearch
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'MarcWeber/vim-addon-mw-utils'
+" Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-css-color'
-Plug 'benmills/vim-commadown'
-Plug 'benmills/vimux'
-Plug 'bentruyman/vimux-ruby-test', { 'for': 'ruby' }
 Plug 'bling/vim-airline'
 Plug 'bkad/CamelCaseMotion'
 Plug 'cakebaker/scss-syntax.vim'
@@ -47,11 +44,9 @@ Plug 'docunext/closetag.vim'
 Plug 'edkolev/promptline.vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile' }
-Plug 'garbas/vim-snipmate'
 Plug 'groenewege/vim-less', { 'for': 'less' }
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
 Plug 'heavenshell/vim-jsdoc'
-Plug 'jgdavey/vim-turbux'
 Plug 'jimmyhchan/dustjs.vim'
 Plug 'jtratner/vim-flavored-markdown'
 Plug 'justinmk/vim-gtfo'
@@ -60,21 +55,18 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'kien/ctrlp.vim'
 Plug 'leshill/vim-json', { 'for': 'json' }
 Plug 'majutsushi/tagbar'
-Plug 'mattn/emmet-vim'
 Plug 'moll/vim-node'
 Plug 'myhere/vim-nodejs-complete'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
-Plug 'rodjek/vim-puppet'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'Shougo/neocomplete.vim'
 Plug 'terryma/vim-expand-region'
-Plug 'tomtom/tlib_vim'
+" Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-ragtag'
-Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
