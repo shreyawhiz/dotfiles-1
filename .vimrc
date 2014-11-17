@@ -279,6 +279,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : ""
 
 " NERDTree
 let NERDTreeIgnore=['\.pyc', '\.o', '\.class', '\.lo', 'coverage', 'node_modules']
