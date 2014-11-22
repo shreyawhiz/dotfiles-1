@@ -25,10 +25,12 @@ set ignorecase
 set incsearch
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" NeoBundle
+" Plug
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-call plug#begin('~/.vim/plugged')
+let g:plug_home = '~/.vim/plugged'
+
+call plug#begin()
 
 Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-css-color'
@@ -77,6 +79,11 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
 
 call plug#end()
+
+" Install plugins if this is the first run
+if !isdirectory(expand(g:plug_home))
+  PlugInstall
+endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User Interface
