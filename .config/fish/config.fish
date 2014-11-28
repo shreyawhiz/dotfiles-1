@@ -7,6 +7,9 @@ set -x LC_ALL en_US.UTF-8
 set -x NVM_DIR $HOME/nvm
 set -x VISUAL $EDITOR
 
+# Docker
+set -x DOCKER_HOST tcp://192.168.69.10:2375
+
 # Paths
 function add_path --argument-names path
   test -d $path; and set PATH $path $PATH
