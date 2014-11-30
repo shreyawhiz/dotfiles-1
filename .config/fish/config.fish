@@ -85,6 +85,14 @@ if test ! -d $NVM_DIR
 end
 . $HOME/.vendor/nvm-fish/nvm.fish
 
+function npms
+  npm search --registry=https://registry.npmjs.org $argv
+end
+
+function npm-stable
+  npms $argv | grep -E '2014-[0-9]{2}-[0-9]{2}' | grep -E '[1-9]+\.[0-9]+\.[0-9]+' | sed -e 's/ *$//'
+end
+
 # z
 . ~/.vendor/z-fish/z.fish
 
