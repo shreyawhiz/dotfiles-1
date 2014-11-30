@@ -282,9 +282,12 @@ let g:airline_powerline_fonts = 1
 " ESLint
 let g:syntastic_javascript_checkers = ['eslint']
 
+" JSDOC
+nmap <silent> <C-m> <Plug>(jsdoc)
+
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr> <TAB>   pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : ""
 
 " NERDTree
