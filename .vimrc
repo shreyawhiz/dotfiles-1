@@ -196,7 +196,7 @@ set encoding=utf-8 nobomb
 set noeol
 
 " Ignore certain files
-set wildignore+=*.pyc,*.o,*.class,*.lo,.git,*/node_modules/*,*/vendor/*
+set wildignore+=*.pyc,*.o,*.class,*.lo,.git,*/coverage/*,*/node_modules/*,*/vendor/*
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " File-specific
