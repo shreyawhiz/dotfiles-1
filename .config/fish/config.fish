@@ -9,7 +9,7 @@ set -x NVM_DIR $HOME/nvm
 set -x VISUAL $EDITOR
 
 # Docker
-set -x DOCKER_HOST tcp://192.168.69.10:2375
+set -x DOCKER_HOST tcp://192.168.99.10:2375
 
 # Paths
 function add_path --argument-names path
