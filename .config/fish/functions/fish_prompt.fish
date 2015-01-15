@@ -18,6 +18,7 @@ function fish_prompt
   set -l prefix '$ ' $normal
 
   # fish git prompt settings
+  set -g __fish_git_prompt_char_dirtystate '+'
   set -g __fish_git_prompt_char_stagedstate '•'
   set -g __fish_git_prompt_char_stateseparator '|'
   set -g __fish_git_prompt_color_branch yellow
@@ -25,6 +26,7 @@ function fish_prompt
   set -g __fish_git_prompt_color_upstream_behind red
   set -g __fish_git_prompt_hide_untrackedfiles 1
   set -g __fish_git_prompt_show_informative_status 1
+  set -g __fish_git_prompt_showcolorhints 1
   set -g __fish_git_prompt_showdirtystate 'yes'
   set -g __fish_git_prompt_showstashstate 'yes'
   set -g __fish_git_prompt_showuntrackedfiles 'yes'
