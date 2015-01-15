@@ -6,6 +6,7 @@ set -x GOPATH $HOME/go
 set -x LANG en_US.UTF-8
 set -x LC_ALL en_US.UTF-8
 set -x NVM_DIR $HOME/nvm
+set -x RBENV_DIR $HOME/.rbenv
 set -x VISUAL $EDITOR
 
 # Docker
@@ -91,6 +92,13 @@ end
 
 function npm-stable
   npms $argv | grep -E '2014-[0-9]{2}-[0-9]{2}' | grep -E '[1-9]+\.[0-9]+\.[0-9]+' | sed -e 's/ *$//'
+end
+
+# rbenv
+if hash rbenv 2> /dev/null; and test -d $RBENV_DIR
+  set PATH $HOME/.rbenv/bin $PATH
+  set PATH $HOME/.rbenv/shims $PATH
+  rbenv rehash >/dev/null ^&1
 end
 
 # z
