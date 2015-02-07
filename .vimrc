@@ -43,7 +43,7 @@ Plug 'corntrace/bufexplorer'
 Plug 'dag/vim-fish', { 'for': 'fish' }
 Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
 Plug 'docunext/closetag.vim'
-Plug 'edkolev/promptline.vim'
+Plug 'edkolev/tmuxline.vim'
 Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile' }
 Plug 'groenewege/vim-less', { 'for': 'less' }
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
