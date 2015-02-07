@@ -274,8 +274,7 @@ nmap <leader>wq :wqa!<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Airline
-let g:airline_theme = 'bubblegum'
-let g:airline#extensions#promptline#snapshot_file = "~/dotfiles/.promptline.sh"
+let g:airline_theme = 'base16'
 let g:airline_powerline_fonts = 1
 
 " ESLint
@@ -295,16 +294,6 @@ let NERDTreeHijackNetrw = 0
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
-
-" Promptline
-let g:promptline_theme = 'airline'
-let g:promptline_preset = {
-  \ 'a'    : [ promptline#slices#host() ],
-  \ 'b'    : [ promptline#slices#user() ],
-  \ 'c'    : [ promptline#slices#cwd() ],
-  \ 'y'    : [ promptline#slices#vcs_branch() ],
-  \ 'z'    : [ promptline#slices#git_status() ],
-  \ 'warn' : [ promptline#slices#last_exit_code() ]}
 
 " Tagbar
 map <silent> <LocalLeader>s :Tagbar<CR>
