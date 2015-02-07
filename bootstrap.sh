@@ -8,4 +8,4 @@ rsync \
   --exclude "brew.sh" \
   --exclude "LICENSE-MIT" \
   --exclude "README.md" \
-  -avh --no-perms . ~;
+  -avh --no-perms . $HOME;
