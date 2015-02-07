@@ -37,7 +37,6 @@ Plug 'ap/vim-css-color'
 Plug 'bling/vim-airline'
 Plug 'bkad/CamelCaseMotion'
 Plug 'cakebaker/scss-syntax.vim'
-Plug 'chase/vim-ansible-yaml'
 Plug 'chriskempson/base16-vim'
 Plug 'corntrace/bufexplorer'
 Plug 'dag/vim-fish', { 'for': 'fish' }
