@@ -291,7 +291,7 @@ inoremap <expr> <TAB>   pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : ""
 
 " NERDTree
-let NERDTreeIgnore=['\.pyc', '\.o', '\.class', '\.lo', 'coverage', 'node_modules', 'tmp']
+let NERDTreeIgnore=['\.pyc', '\.o', '\.class', '\.lo', 'code', 'coverage', 'node_modules', 'tmp']
 let NERDTreeHijackNetrw = 0
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
