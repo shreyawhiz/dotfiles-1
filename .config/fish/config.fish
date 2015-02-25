@@ -10,7 +10,7 @@ set -x RBENV_DIR $HOME/.rbenv
 set -x VISUAL $EDITOR
 
 # Docker
-set -x DOCKER_HOST tcp://192.168.99.10:2375
+set -x DOCKER_HOST tcp://127.0.0.1:2375
 
 # Paths
 function add_path --argument-names path
