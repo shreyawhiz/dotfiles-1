@@ -1,6 +1,6 @@
 # Dotfiles
 
-![Screenshot of my shell prompt](http://i.imgur.com/NvInkCz.png)
+![Screenshot of my shell prompt](http://i.imgur.com/D316FKM.png)
 
 ## Installation
 
