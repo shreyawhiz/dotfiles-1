@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 sudo -v
 
@@ -30,9 +31,9 @@ brew install \
   wget
 
 brew cask install \
-  appzapper \
-  divvy \
   flux \
+  seil \
+  vagrant \
   virtualbox
 
 brew cleanup
