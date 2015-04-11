@@ -20,6 +20,7 @@ plugins=(
   per-directory-history
   sudo
   vagrant
+  z
 )
 
 # General
