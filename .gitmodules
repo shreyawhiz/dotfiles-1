@@ -7,12 +7,12 @@
 [submodule ".vim/bundle/neobundle.vim"]
 	path = .vim/bundle/neobundle.vim
 	url = https://github.com/Shougo/neobundle.vim.git
-[submodule ".vendor/z-fish"]
-	path = .vendor/z-fish
-	url = https://github.com/sjl/z-fish.git
 [submodule ".vim/autoload/plug.vim"]
 	path = .vim/autoload/plug.vim
 	url = https://github.com/junegunn/vim-plug.git
-[submodule ".vendor/nvm-fish"]
-	path = .vendor/nvm-fish
-	url = git@github.com:Alex7Kom/nvm-fish.git
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule ".vendor/nvm"]
+	path = .vendor/nvm
+	url = https://github.com/creationix/nvm.git

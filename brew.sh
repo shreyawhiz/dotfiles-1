@@ -16,7 +16,6 @@ fi
 brew install \
   cloc \
   coreutils \
-  fish \
   git \
   git-extras \
   go \
@@ -28,7 +27,8 @@ brew install \
   tree \
   vim \
   watch \
-  wget
+  wget \
+  zsh
 
 brew cask install \
   flux \
