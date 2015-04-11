@@ -4,7 +4,23 @@ export ZSH=$HOME/.oh-my-zsh
 #
 ZSH_THEME='mortalscumbag'
 DISABLE_AUTO_UPDATE='true'
-plugins=(docker git)
+plugins=(
+  brew
+  brew-cask
+  docker
+  encode64
+  extract
+  git
+  gitfast
+  jsontools
+  node
+  npm
+  nvm
+  osx
+  per-directory-history
+  sudo
+  vagrant
+)
 
 # General
 
