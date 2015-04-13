@@ -1,7 +1,8 @@
 export ZSH=$HOME/.oh-my-zsh
 
 # oh-my-zsh
-#
+
+ZSH_CUSTOM=$HOME/.zsh
 ZSH_THEME='mortalscumbag'
 DISABLE_AUTO_UPDATE='true'
 plugins=(
@@ -21,6 +22,7 @@ plugins=(
   sudo
   vagrant
   z
+  zsh-syntax-highlighting
 )
 
 # General
