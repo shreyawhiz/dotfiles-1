@@ -28,9 +28,7 @@ set incsearch
 " Plug
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:plug_home = '~/.vim/plugged'
-
-call plug#begin()
+call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-css-color'
@@ -60,7 +58,6 @@ Plug 'moll/vim-node'
 Plug 'myhere/vim-nodejs-complete'
 Plug 'othree/html5.vim'
 Plug 'othree/yajs.vim'
-" Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'Shougo/neocomplete.vim'
