@@ -32,7 +32,6 @@ export EDITOR=vim
 
 export EDITOR=vim
 export GOPATH=$HOME/go
-export NVM_DIR=$HOME/.vendor/nvm
 export VISUAL=$EDITOR
 
 # Docker
@@ -45,7 +44,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Node.js
 
-. $HOME/.vendor/nvm/nvm.sh
+$HOME/.nvm/nvm.sh
 
 npms() {
   npm search --registry=https://registry.npmjs.org $argv
