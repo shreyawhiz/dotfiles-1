@@ -3,6 +3,8 @@
 # ~/.init/osx — http://mths.be/osx
 
 # Ask for the administrator password upfront
+set -e
+
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
@@ -13,7 +15,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Install fonts
-cp "$HOME/.init/fonts/*" "$HOME/Library/Fonts"
+cp "$HOME/.init/fonts/"* "$HOME/Library/Fonts"
 
 # Set standby delay to 24 hours (default is 1 hour)
 sudo pmset -a standbydelay 86400
