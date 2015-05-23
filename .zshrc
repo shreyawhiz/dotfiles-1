@@ -42,6 +42,12 @@ export DOCKER_HOST=tcp://127.0.0.1:2375
 
 source $ZSH/oh-my-zsh.sh
 
+# Docker
+
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/bentruyman/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+
 # Node.js
 
 $HOME/.nvm/nvm.sh
