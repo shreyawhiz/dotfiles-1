@@ -16,6 +16,7 @@ fi
 brew install \
   cloc \
   coreutils \
+  fasd \
   git \
   git-extras \
   go \
