@@ -6,8 +6,4 @@
   if [[ -s "$zcompdump" && (! -s "${zcompdump}.zwc" || "$zcompdump" -nt "${zcompdump}.zwc") ]]; then
     zcompile "$zcompdump"
   fi
-
-  # Node.js
-
-  source $HOME/.nvm/nvm.sh
 } &!
