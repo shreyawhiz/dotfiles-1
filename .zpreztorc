@@ -1,0 +1,43 @@
+# Color output
+
+zstyle ':prezto:*:*' color 'yes'
+
+# Load Modules
+
+zstyle ':prezto:load' pmodule \
+  'completion' \
+  'environment' \
+  'fasd' \
+  'git' \
+  'history' \
+  'history-substring-search' \
+  'node' \
+  'osx' \
+  'spectrum' \
+  'syntax-highlighting' \
+  'prompt' \
+  'tmux' \
+  'utility'
+
+# Module Settings
+
+zstyle ':prezto:module:prompt' theme 'sorin'
+
+# Paths
+
+typeset -gU cdpath fpath mailpath path
+
+path=(
+  $HOME/bin
+  /usr/local/bin
+  $path
+)
+
+# Temporary Files
+
+if [[ ! -d "$TMPDIR" ]]; then
+  export TMPDIR="/tmp/$LOGNAME"
+  mkdir -p -m 700 "$TMPDIR"
+fi
+
+TMPPREFIX="${TMPDIR%/}/zsh"

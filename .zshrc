@@ -1,56 +1,26 @@
-export ZSH=$HOME/.oh-my-zsh
+if [[ -s "$HOME/.zprezto/init.zsh" ]]; then
+  source "$HOME/.zprezto/init.zsh"
+fi
 
-# oh-my-zsh
+# Directory
 
-ZSH_CUSTOM=$HOME/.zsh
-ZSH_THEME='mortalscumbag'
-DISABLE_AUTO_UPDATE='true'
-plugins=(
-  brew
-  brew-cask
-  docker
-  encode64
-  extract
-  git
-  gitfast
-  jsontools
-  node
-  npm
-  nvm
-  osx
-  per-directory-history
-  sudo
-  vagrant
-  z
-  zsh-syntax-highlighting
-)
+setopt AUTO_CD
+setopt AUTO_NAME_DIRS
+setopt EXTENDED_GLOB
 
-# General
+# Miscellaneous
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export EDITOR=vim
-
-export EDITOR=vim
-export GOPATH=$HOME/go
-export VISUAL=$EDITOR
-
-# Docker
-
-export DOCKER_HOST=tcp://127.0.0.1:2375
-
-# Initialize oh-my-zsh
-
-source $ZSH/oh-my-zsh.sh
-
-# Docker
-
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/bentruyman/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
+alias bs='~/dotfiles/bootstrap.sh && source ~/.zshrc'
+alias fs='stat -f '%z bytes''
+alias ga='git add -Av'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gst='git status'
+alias l='ls -al'
+alias md='mkdir -p $argv; cd $argv'
+alias vclean='rm $HOME/.vim/swaps/*'
 
 # Node.js
-
-$HOME/.nvm/nvm.sh
 
 npms() {
   npm search --registry=https://registry.npmjs.org $argv
@@ -60,13 +30,16 @@ npm-stable() {
   npms $argv | grep -E '2014-[0-9]{2}-[0-9]{2}' | grep -E '[1-9]+\.[0-9]+\.[0-9]+' | sed -e 's/ *$//'
 }
 
-# Miscellaneous
+# OSX-specific
 
-alias bs="~/dotfiles/bootstrap.sh && source ~/.zshrc"
-alias fs='stat -f "%z bytes"'
-alias ga='git add -Av'
-alias glog='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --'
-alias md='mkdir -p $argv; cd $argv'
+if [ $(uname -s) = 'Darwin' ]; then
+  alias brewup='brew update; and brew upgrade'
+  alias dsstore='find . -name "*.DS_Store" -type f -ls -delete'
+  alias o='open .'
+fi
+
+# tmux
+
 alias tma='tmux attach -t'
 alias tmk='tmux kill-session -t'
 alias tml='tmux list-sessions'
@@ -80,11 +53,3 @@ tmn() {
 
   tmux new -s "$name"
 }
-alias vclean='rm $HOME/.vim/swaps/*'
-
-# OSX-specific
-if [ $(uname -s) = 'Darwin' ]; then
-  alias brewup='brew update; and brew upgrade'
-  alias dsstore='find . -name "*.DS_Store" -type f -ls -delete'
-  alias o='open .'
-fi
