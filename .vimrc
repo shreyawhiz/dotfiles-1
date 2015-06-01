@@ -43,11 +43,11 @@ Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
 Plug 'docunext/closetag.vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile' }
+Plug 'gabrielelana/vim-markdown'
 Plug 'groenewege/vim-less', { 'for': 'less' }
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
 Plug 'heavenshell/vim-jsdoc'
 Plug 'jimmyhchan/dustjs.vim'
-Plug 'jtratner/vim-flavored-markdown'
 Plug 'justinmk/vim-gtfo'
 Plug 'juvenn/mustache.vim'
 Plug 'kchmck/vim-coffee-script'
@@ -60,6 +60,7 @@ Plug 'othree/html5.vim'
 Plug 'othree/yajs.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
+Plug 'shime/vim-livedown'
 Plug 'Shougo/neocomplete.vim'
 Plug 'terryma/vim-expand-region'
 Plug 'tpope/vim-endwise'
@@ -214,11 +215,6 @@ if version >= 700
   autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_us
   autocmd FileType tex setlocal spell spelllang=en_us
 endif
-
-augroup markdown
-  au!
-  au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
-augroup END
 
 " Autoremove trailing spaces when saving the buffer
 autocmd FileType ruby,c,cpp,java,php,html autocmd BufWritePre <buffer> :%s/\s\+$//e
