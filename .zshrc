@@ -17,7 +17,10 @@ alias gd='git diff'
 alias gdc='git diff --cached'
 alias gst='git status'
 alias l='ls -al'
-alias md='mkdir -p $argv; cd $argv'
+md() {
+  mkdir -p "$argv"
+  cd "$argv"
+}
 alias vclean='rm $HOME/.vim/swaps/*'
 
 # Node.js
