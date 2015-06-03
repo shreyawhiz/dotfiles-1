@@ -2,26 +2,30 @@ if [[ -s "$HOME/.zprezto/init.zsh" ]]; then
   source "$HOME/.zprezto/init.zsh"
 fi
 
-# Directory
+# Directories/Files
 
 setopt AUTO_CD
 setopt AUTO_NAME_DIRS
 setopt EXTENDED_GLOB
 
-# Miscellaneous
-
-alias bs='~/dotfiles/bootstrap.sh && source ~/.zshrc'
-alias fs='stat -f '%z bytes''
-alias ga='git add -Av'
-alias gd='git diff'
-alias gdc='git diff --cached'
-alias gst='git status'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 alias l='ls -al'
 md() {
   mkdir -p "$argv"
   cd "$argv"
 }
-alias vclean='rm $HOME/.vim/swaps/*'
+
+# Dotfiles
+
+alias bs='~/dotfiles/bootstrap.sh && source ~/.zshrc'
+
+# Git
+
+alias ga='git add -Av'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gst='git status'
 
 # Node.js
 
@@ -56,3 +60,7 @@ tmn() {
 
   tmux new -s "$name"
 }
+
+# vim
+
+alias vclean='rm $HOME/.vim/swaps/*'
