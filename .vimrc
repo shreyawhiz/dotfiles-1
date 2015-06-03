@@ -55,7 +55,6 @@ Plug 'kien/ctrlp.vim'
 Plug 'leshill/vim-json', { 'for': 'json' }
 Plug 'majutsushi/tagbar'
 Plug 'moll/vim-node'
-Plug 'myhere/vim-nodejs-complete'
 Plug 'othree/html5.vim'
 Plug 'othree/yajs.vim'
 Plug 'scrooloose/nerdtree'
