@@ -7,6 +7,7 @@ fi
 setopt AUTO_CD
 setopt AUTO_NAME_DIRS
 setopt EXTENDED_GLOB
+setopt RMSTARSILENT
 
 alias ...='cd ../..'
 alias ....='cd ../../..'
