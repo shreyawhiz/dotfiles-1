@@ -48,10 +48,10 @@ Plug 'groenewege/vim-less', { 'for': 'less' }
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
 Plug 'heavenshell/vim-jsdoc'
 Plug 'jimmyhchan/dustjs.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'justinmk/vim-gtfo'
 Plug 'juvenn/mustache.vim'
 Plug 'kchmck/vim-coffee-script'
-Plug 'kien/ctrlp.vim'
 Plug 'leshill/vim-json', { 'for': 'json' }
 Plug 'majutsushi/tagbar'
 Plug 'moll/vim-node'
@@ -64,6 +64,7 @@ Plug 'Shougo/neocomplete.vim'
 Plug 'terryma/vim-expand-region'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'

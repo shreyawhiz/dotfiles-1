@@ -21,6 +21,10 @@ md() {
 
 alias bs='~/dotfiles/bootstrap.sh && source ~/.zshrc'
 
+# FZF
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Git
 
 alias ga='git add -Av'
