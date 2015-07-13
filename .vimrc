@@ -195,7 +195,14 @@ set encoding=utf-8 nobomb
 set noeol
 
 " Ignore certain files
-set wildignore+=*.pyc,*.o,*.class,*.lo,.git,*/coverage/*,*/node_modules/*,*/vendor/*
+set wildignore+=
+      \.git,
+      \*/coverage/*,
+      \*/dist/*,
+      \*/jspm_packages/*,
+      \*/node_modules/*,
+      \*/tmp/*
+      \*/vendor/*
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " File-specific
@@ -284,7 +291,14 @@ inoremap <expr> <TAB>   pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : ""
 
 " NERDTree
-let NERDTreeIgnore=['\.pyc', '\.o', '\.class', '\.lo', 'code', 'coverage', 'node_modules', 'tmp']
+let NERDTreeIgnore=[
+      \'coverage',
+      \'dist',
+      \'jspm_packages',
+      \'node_modules',
+      \'tmp',
+      \'vendor'
+      \]
 let NERDTreeHijackNetrw = 0
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
