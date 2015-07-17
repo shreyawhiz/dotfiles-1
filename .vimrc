@@ -282,6 +282,10 @@ let g:airline_powerline_fonts = 1
 " ESLint
 let g:syntastic_javascript_checkers = ['eslint']
 
+" FZF
+let g:fzf_height = 25
+map <C-p> :FZF<CR>
+
 " JSDOC
 nmap <silent> <C-m> <Plug>(jsdoc)
 
