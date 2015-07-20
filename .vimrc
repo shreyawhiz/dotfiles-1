@@ -61,6 +61,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'shime/vim-livedown'
 Plug 'Shougo/neocomplete.vim'
+Plug 'svermeulen/vim-easyclip'
 Plug 'terryma/vim-expand-region'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
@@ -278,6 +279,9 @@ nmap <leader>wq :wqa!<cr>
 " Airline
 let g:airline_theme = 'base16'
 let g:airline_powerline_fonts = 1
+
+" EasyClip
+let g:EasyClipShareYanks = 1
 
 " ESLint
 let g:syntastic_javascript_checkers = ['eslint']
