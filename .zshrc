@@ -16,6 +16,7 @@ md() {
   mkdir -p "$argv"
   cd "$argv"
 }
+unalias rm
 
 # Dotfiles
 
