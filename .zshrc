@@ -56,6 +56,9 @@ if [ $(uname -s) = 'Darwin' ]; then
   alias o='open .'
 fi
 
+# terminal-notifier
+alias terminal-notifier='reattach-to-user-namespace terminal-notifier'
+
 # tmux
 
 alias tma='tmux attach -t'
