@@ -24,7 +24,12 @@ alias bs='~/dotfiles/bootstrap.sh && source ~/.zshrc'
 
 # FZF
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [ -f ~/.fzf.zsh ]; then
+  source ~/.fzf.zsh
+  # Respect source control ignores
+  export FZF_DEFAULT_COMMAND='ag -l -g ""'
+  export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+fi
 
 # Git
 

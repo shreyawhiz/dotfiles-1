@@ -31,6 +31,7 @@ set incsearch
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
+Plug 'albfan/nerdtree-git-plugin'
 Plug 'ap/vim-css-color'
 Plug 'bling/vim-airline'
 Plug 'bkad/CamelCaseMotion'
