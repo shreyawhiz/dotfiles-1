@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 rsync \
+  --exclude "/.fzf/" \
   --exclude "/.git/" \
   --exclude "/.gitmodules" \
   --exclude "/apt.sh" \
