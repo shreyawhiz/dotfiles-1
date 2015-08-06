@@ -1,5 +1,5 @@
 [submodule ".tmux/plugins/tpm"]
-	path = .tmux/plugins/tpm
+	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
 [submodule ".vim/bundle/neobundle.vim"]
 	path = .vim/bundle/neobundle.vim
@@ -8,23 +8,23 @@
 	path = .vim/autoload/plug.vim
 	url = https://github.com/junegunn/vim-plug.git
 [submodule ".nvm"]
-	path = .nvm
+	path = nvm
 	url = https://github.com/creationix/nvm.git
 [submodule ".zsh/plugins/zsh-syntax-highlighting"]
-	path = .zsh/plugins/zsh-syntax-highlighting
+	path = zsh/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
 [submodule ".zprezto"]
-	path = .zprezto
+	path = zprezto
 	url = https://github.com/sorin-ionescu/prezto.git
 [submodule ".tmux/plugins/tmux-resurrect"]
-	path = .tmux/plugins/tmux-resurrect
+	path = tmux/plugins/tmux-resurrect
 	url = https://github.com/tmux-plugins/tmux-resurrect.git
 [submodule ".tmux/plugins/tmux-continuum"]
-	path = .tmux/plugins/tmux-continuum
+	path = tmux/plugins/tmux-continuum
 	url = https://github.com/tmux-plugins/tmux-continuum.git
 [submodule ".tmux/plugins/tmux-urlview"]
-	path = .tmux/plugins/tmux-urlview
+	path = tmux/plugins/tmux-urlview
 	url = https://github.com/tmux-plugins/tmux-urlview.git
 [submodule ".fzf"]
-	path = .fzf
+	path = fzf
 	url = https://github.com/junegunn/fzf.git
