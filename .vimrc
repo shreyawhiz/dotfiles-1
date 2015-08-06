@@ -39,7 +39,6 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'chase/vim-ansible-yaml'
 Plug 'chriskempson/base16-vim'
 Plug 'corntrace/bufexplorer'
-Plug 'dag/vim-fish', { 'for': 'fish' }
 Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
 Plug 'docunext/closetag.vim'
 Plug 'edkolev/tmuxline.vim'
