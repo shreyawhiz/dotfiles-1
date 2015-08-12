@@ -4,9 +4,7 @@
 
 ## Installation
 
-```
-git clone --recursive https://github.com/bentruyman/dotfiles.git && cd dotfiles && source bootstrap.sh
-```
+    git clone --recursive https://github.com/bentruyman/dotfiles.git && cd dotfiles && source bootstrap.sh
 
 ## Special Thanks
 
@@ -18,5 +16,5 @@ My dotfiles are the result of inspiration or outright stealing from:
 
 ## License
 
-Copyright (c) 2014 Ben Truyman<br>
+Copyright (c) 2015 Ben Truyman<br>
 Licensed under the [MIT license](https://github.com/bentruyman/dotfiles/blob/master/LICENSE-MIT).

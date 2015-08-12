@@ -27,6 +27,7 @@ echo "  __| | ___ _| |_ _| |__ _| | _____  ___ "
 echo " / _  |/ _ (_   _|_   __) | || ___ |/___)"
 echo "( (_| | |_| || |_  | |  | | || ____|___ |"
 echo " \____|\___/  \__) |_|  |_|\_)_____|___/ "
+echo "                       by: Ben Truyman   "
 
 # Backup
 e_header "Backing up dotfiles"
