@@ -4,7 +4,9 @@
 
 ## Installation
 
-    git clone --recursive https://github.com/bentruyman/dotfiles.git && cd dotfiles && source bootstrap.sh
+```
+git clone --recursive https://github.com/bentruyman/dotfiles.git && cd dotfiles && source bootstrap.sh
+```
 
 ## Special Thanks
 
