@@ -9,6 +9,8 @@ alpine() {
 iex() {
   docker run --rm -it \
     -v $(pwd):/data/app \
+    -v $HOME/.hex:/root/.hex \
+    -v $HOME/.mix:/root/.mix \
     -w /data/app \
     bentruyman/elixir-dev iex "$@"
 }
@@ -16,6 +18,8 @@ iex() {
 mix() {
   docker run --rm -it \
     -v $(pwd):/data/app \
+    -v $HOME/.hex:/root/.hex \
+    -v $HOME/.mix:/root/.mix \
     -w /data/app \
     bentruyman/elixir-dev mix "$@"
 }
