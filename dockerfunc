@@ -2,6 +2,10 @@
 
 # Docker command helpers
 
+alpine() {
+  docker run --rm -it bentruyman/alpine "$@"
+}
+
 iex() {
   docker run --rm -it \
     -v $(pwd):/data/app \
