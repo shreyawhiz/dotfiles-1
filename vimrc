@@ -43,6 +43,7 @@ Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
 Plug 'docunext/closetag.vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile' }
+Plug 'elixir-lang/vim-elixir'
 Plug 'gabrielelana/vim-markdown'
 Plug 'groenewege/vim-less', { 'for': 'less' }
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
@@ -71,6 +72,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'vim-scripts/Align'
+Plug 'vim-scripts/bash-support.vim'
 Plug 'vim-scripts/Crunch'
 Plug 'vim-scripts/directionalWindowResizer'
 Plug 'vim-scripts/gitignore.vim'
