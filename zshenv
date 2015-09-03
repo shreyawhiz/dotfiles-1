@@ -11,11 +11,13 @@ fi
 
 # Docker
 
-source "$HOME/.dockerfunc"
-DOCKER_HOST=tcp://192.168.99.101:2376
-DOCKER_MACHINE_NAME=default
-DOCKER_TLS_VERIFY=1
-DOCKER_CERT_PATH=/Users/bentruyman/.docker/machine/machines/default
+if hash docker 2> /dev/null && hash docker-machine 2> /dev/null; then
+  if [[ $(docker-machine status default) != "Running" ]]; then
+    docker-machine start default &> /dev/null
+  fi
+  source "$HOME/.dockerfunc"
+  eval "$(docker-machine env default)"
+fi
 
 # Editors
 
