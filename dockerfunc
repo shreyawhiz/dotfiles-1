@@ -12,7 +12,7 @@ iex() {
     -v $HOME/.hex:/root/.hex \
     -v $HOME/.mix:/root/.mix \
     -w /data/app \
-    bentruyman/elixir-dev iex "$@"
+    bentruyman/elixir-phoenix-dev iex "$@"
 }
 
 mix() {
@@ -21,7 +21,7 @@ mix() {
     -v $HOME/.hex:/root/.hex \
     -v $HOME/.mix:/root/.mix \
     -w /data/app \
-    bentruyman/elixir-dev mix "$@"
+    bentruyman/elixir-phoenix-dev mix "$@"
 }
 
 node() {
