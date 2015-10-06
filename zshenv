@@ -9,16 +9,6 @@ if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
 fi
 
-# Docker
-
-if hash docker 2> /dev/null && hash docker-machine 2> /dev/null; then
-  if [[ $(docker-machine status default) != "Running" ]]; then
-    docker-machine start default &> /dev/null
-  fi
-  source "$HOME/.dockerfunc"
-  eval "$(docker-machine env default)"
-fi
-
 # Editors
 
 export EDITOR='vim'
