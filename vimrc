@@ -49,9 +49,11 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile' }
 Plug 'elixir-lang/vim-elixir'
 Plug 'gabrielelana/vim-markdown'
+Plug 'geekjuice/vim-mocha', { 'for': 'javascript' }
 Plug 'groenewege/vim-less', { 'for': 'less' }
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
 Plug 'heavenshell/vim-jsdoc'
+Plug 'janko-m/vim-test'
 Plug 'jimmyhchan/dustjs.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'justinmk/vim-gtfo'
@@ -63,11 +65,10 @@ Plug 'moll/vim-node'
 Plug 'othree/html5.vim'
 Plug 'othree/yajs.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
 Plug 'shime/vim-livedown'
-Plug 'Shougo/neocomplete.vim'
 Plug 'svermeulen/vim-easyclip'
 Plug 'terryma/vim-expand-region'
+Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-obsession'
@@ -84,6 +85,18 @@ Plug 'vim-scripts/nginx.vim'
 Plug 'vim-scripts/tComment'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
+
+" vim plugins
+if !has('nvim')
+  Plug 'scrooloose/syntastic'
+endif
+
+" neovim plugins
+if has('nvim')
+  Plug 'benekastah/neomake'
+  Plug 'kassio/neoterm'
+  Plug 'Shougo/deoplete.nvim'
+endif
 
 call plug#end()
 
@@ -288,6 +301,9 @@ nmap <leader>wq :wqa!<cr>
 let g:airline_theme = 'base16'
 let g:airline_powerline_fonts = 1
 
+" deoplete
+let g:deoplete#enable_at_startup = 1
+
 " EasyClip
 let g:EasyClipShareYanks = 1
 
@@ -306,6 +322,11 @@ let g:neocomplete#enable_at_startup = 1
 inoremap <expr> <TAB>   pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : ""
 
+" neomake
+if has('nvim')
+  autocmd! BufWritePost * Neomake
+endif
+
 " NERDTree
 let NERDTreeIgnore=[
       \'coverage',
@@ -320,11 +341,18 @@ map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 
-" Tagbar
-map <silent> <LocalLeader>s :Tagbar<CR>
-
 " TComment
 map <silent> <LocalLeader>cc :TComment<CR>
+
+" vim-test
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
+
+let g:test#strategy = 'neoterm'
+let test#javascript#mocha#options = '--compilers js:node_modules/tool-time/lib/babel_wrapper.js -R min -b'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Functions
