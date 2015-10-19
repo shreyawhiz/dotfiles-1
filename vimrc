@@ -196,7 +196,9 @@ if exists("&undodir")
 endif
 
 " Use UTF-8 encoding without BOM
-set encoding=utf-8 nobomb
+if &encoding == ''
+  set encoding=utf-8 nobomb
+endif
 
 " Don't add empty newlines at the end of files
 set noeol
@@ -334,3 +336,14 @@ function! Trim()
 endfunction
 command! -nargs=0 Trim :call Trim()
 nnoremap <silent> <Leader>cw :Trim<CR>
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Development
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Reload vimrc when changed
+augroup myvimrc
+    au!
+    au BufWritePost .nvimrc,.vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END
