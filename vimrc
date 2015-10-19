@@ -28,7 +28,11 @@ set incsearch
 " Plug
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-call plug#begin('~/.vim/plugged')
+if !has("nvim")
+  call plug#begin('~/.vim/plugged')
+else
+  call plug#begin('~/.nvim/plugged')
+endif
 
 Plug 'airblade/vim-gitgutter'
 Plug 'albfan/nerdtree-git-plugin'
