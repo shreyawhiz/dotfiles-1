@@ -332,6 +332,9 @@ if has('nvim')
   autocmd! BufWritePost * Neomake
 endif
 
+" neoterm
+let g:neoterm_size = 30
+
 " NERDTree
 let NERDTreeIgnore=[
       \'coverage',
@@ -356,8 +359,14 @@ nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
-let g:test#strategy = 'neoterm'
 let test#javascript#mocha#options = '--compilers js:node_modules/tool-time/lib/babel_wrapper.js -R min -b'
+
+function! TestStrategy(cmd)
+  execute 'T '.a:cmd
+endfunction
+
+let g:test#custom_strategies = {'test_strategy': function('TestStrategy')}
+let g:test#strategy = 'test_strategy'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Functions
