@@ -160,7 +160,7 @@ set showmatch
 set smartcase
 
 " Lowers timeout length between commands
-set timeoutlen=250
+set timeoutlen=500
 
 " Optimize for fast terminals
 set ttyfast
