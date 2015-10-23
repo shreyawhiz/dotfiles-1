@@ -310,8 +310,14 @@ let g:EasyClipShareYanks = 1
 let g:syntastic_javascript_checkers = ['eslint']
 
 " FZF
-let g:fzf_height = 25
-map <C-p> :FZF<CR>
+if !has('nvim')
+  let g:fzf_height = 20
+  map <C-p> :FZF<CR>
+else
+  map <C-p> :call fzf#run({
+  \ 'sink': 'e',
+  \ 'window': 'topleft 20new'})<CR>
+endif
 
 " JSDOC
 nmap <silent> <C-m> <Plug>(jsdoc)
