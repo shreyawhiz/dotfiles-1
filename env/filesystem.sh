@@ -12,7 +12,7 @@ md() {
   cd "$argv"
 }
 
-unalias rm
+unalias rm 2> /dev/null
 
 if [ -f ~/.fzf.zsh ]; then
   source ~/.fzf.zsh
