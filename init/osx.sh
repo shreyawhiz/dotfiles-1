@@ -15,7 +15,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Install fonts
-cp "$HOME/.init/fonts/"* "$HOME/Library/Fonts"
+cp "$HOME/dotfiles/init/fonts/"* "$HOME/Library/Fonts"
 
 # Set standby delay to 24 hours (default is 1 hour)
 sudo pmset -a standbydelay 86400
@@ -390,7 +390,7 @@ defaults write com.apple.terminal StringEncodings -array 4
 TERM_PROFILE='base16-default.dark';
 CURRENT_PROFILE="$(defaults read com.apple.terminal 'Default Window Settings')";
 if [ "${CURRENT_PROFILE}" != "${TERM_PROFILE}" ]; then
-  open "${HOME}/.init/files/${TERM_PROFILE}.terminal";
+  open "${HOME}/dotfiles/init/files/${TERM_PROFILE}.terminal";
   sleep 1; # Wait a bit to make sure the theme is loaded
   defaults write com.apple.terminal 'Default Window Settings' -string "${TERM_PROFILE}";
   defaults write com.apple.terminal 'Startup Window Settings' -string "${TERM_PROFILE}";
