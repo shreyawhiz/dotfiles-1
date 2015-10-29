@@ -12,6 +12,8 @@ fi
 brew install \
   cloc \
   coreutils \
+  docker \
+  docker-machine \
   git \
   git-extras \
   go \
