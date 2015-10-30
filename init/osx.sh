@@ -397,6 +397,23 @@ if [ "${CURRENT_PROFILE}" != "${TERM_PROFILE}" ]; then
 fi;
 
 ###############################################################################
+# Shell
+###############################################################################
+
+ZSH_BIN=$(command -v zsh 2> /dev/null)
+
+# Add ZSH to list of valid shells
+if [[ "$ZSH_BIN" && $(grep -L "$ZSH_BIN" /etc/shells) ]]; then
+  echo "$ZSH_BIN" | sudo tee -a /etc/shells &> /dev/null
+fi
+
+# Change shell to ZSH
+if [[ "$SHELL" != "$ZSH_BIN" ]]; then
+  sudo chsh -s "$ZSH_BIN" "$USER"
+  env "$ZSH_BIN"
+fi
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
