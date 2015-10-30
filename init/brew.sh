@@ -31,6 +31,7 @@ brew install \
 brew cask install \
   flux \
   seil \
+  spotify \
   vagrant \
   virtualbox
 
