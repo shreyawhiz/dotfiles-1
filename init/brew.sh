@@ -19,6 +19,7 @@ brew install \
   go \
   imagemagick --with-webp \
   moreutils \
+  nvm \
   rename \
   the_silver_searcher \
   tmux \
