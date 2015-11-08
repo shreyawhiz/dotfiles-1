@@ -360,7 +360,7 @@ nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
-let test#javascript#mocha#options = '--compilers js:node_modules/tool-time/lib/babel_wrapper.js -R min -b'
+let test#javascript#mocha#options = '-R min -b'
 
 function! TestStrategy(cmd)
   execute 'T '.a:cmd
