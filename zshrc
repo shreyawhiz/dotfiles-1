@@ -6,3 +6,8 @@ fi
 for file in "$HOME"/.env/*.sh; do
   source $file
 done
+
+# Source private environment scripts
+for file in "$HOME"/.env-priv/*.sh; do
+  source $file
+done
