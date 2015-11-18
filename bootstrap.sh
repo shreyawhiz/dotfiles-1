@@ -1,24 +1,86 @@
 #!/usr/bin/env bash
 set -e
 
-dotfiles_dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-all_files=$( ls . )
-ignored_files="
-  LICENSE-MIT
-  README.md
-  backups
-  bootstrap.sh
-  init
-"
-dotfiles=$( echo $all_files $ignored_files | tr ' ' '\n' | sort | uniq -u )
-timestamp=$( date +%s )
+_did_backup=
+_copy_count=0
+_link_count=0
+ARROW='>'
+
+dotfiles_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+timestamp=$(date +%s)
 backup_dir="$dotfiles_dir/backups/$timestamp"
 
-backup=
-link=
+# TODO: D.R.Y. up the copy_file and link_file functions
 
-function e_header()   { echo -e "\n\033[1m$@\033[0m"; }
-function e_success()  { echo -e " \033[1;32m✔\033[0m  $@"; }
+copy_file() {
+  local src_file=$(get_src_path $1)
+  local dest_file=$(get_dest_path $1)
+
+  if ! files_are_same "$src_file" "$dest_file"; then
+    file_exists "$dest_file" && backup_file "$dest_file"
+    cp "$src_file" "$dest_file"
+    ((_copy_count++))
+    report_install "$src_file" "$dest_file"
+  fi
+}
+
+link_file() {
+  local src_file=$(get_src_path $1)
+  local dest_file=$(get_dest_path $1)
+
+  if ! files_are_linked "$src_file" "$dest_file"; then
+    file_exists "$dest_file" && backup_file "$dest_file"
+    ln -sf "$src_file" "$dest_file"
+    ((_link_count++))
+    report_install "$src_file" "$dest_file"
+  fi
+}
+
+get_src_path() {
+  echo "$dotfiles_dir/$1"
+}
+
+get_dest_path() {
+  echo "$HOME/.$1"
+}
+
+backup_file() {
+  local file=$1
+  _did_backup=1
+
+  [[ -d $backup_dir ]] || mkdir -p "$backup_dir"
+  mv "$file" "$backup_dir"
+}
+
+did_backup() {
+  [[ -z _did_backup ]]
+}
+
+file_exists() {
+  [[ -f "$1" ]]
+}
+
+files_are_same() {
+  [[ ! -L "$2" ]] && cmp --silent "$1" "$2"
+}
+
+files_are_linked() {
+  if [[ ! -L "$2" ]] || [[ $(readlink "$2") != "$1" ]]; then
+    return 1
+  fi
+}
+
+report_header() {
+  echo -e "\n\033[1m$@\033[0m";
+}
+
+report_success() {
+  echo -e " \033[1;32m✔\033[0m  $@";
+}
+
+report_install() {
+  report_success "$1 $ARROW $2"
+}
 
 # Introduction
 echo "     _               ___ _ _             "
@@ -29,33 +91,32 @@ echo "( (_| | |_| || |_  | |  | | || ____|___ |"
 echo " \____|\___/  \__) |_|  |_|\_)_____|___/ "
 echo "                       by: Ben Truyman   "
 
-# Backup
-e_header "Backing up dotfiles"
-for file in $dotfiles; do
-  if [[ -f "$HOME/.$file" && ! -L "$HOME/.$file" ]]; then
-    [[ -e "$backup_dir" ]] || mkdir -p "$backup_dir"
-    backup=1
-    e_success "$HOME/.$file"
-    mv "$HOME/.$file" "$backup_dir"
-  fi
-done
+# Install
+report_header "Copying files..."
+copy_file "gitconfig"
+echo "$_copy_count files copied"
 
-if [[ -z "$backup" ]]; then
-  e_success "Nothing to backup"
-fi
+report_header "Linking files..."
+link_file "config"
+link_file "env"
+link_file "env-priv"
+link_file "fzf"
+link_file "hushlogin"
+link_file "nvim"
+link_file "tmux.conf"
+link_file "vim"
+link_file "vimrc"
+link_file "zlogin"
+link_file "zprezto"
+link_file "zpreztorc"
+link_file "zprofile"
+link_file "zsh"
+link_file "zshenv"
+link_file "zshrc"
+echo "$_link_count files linked"
 
-# Link
-e_header "Linking dotfiles"
-for file in $dotfiles; do
-  if [[ ! -L $HOME/.$file ]] || [[ $(readlink "$HOME/.$file") != "$dotfiles_dir/$file" ]]; then
-    link=1
-    e_success "$dotfiles_dir/$file -> $HOME/.$file"
-    ln -fs "$dotfiles_dir/$file" "$HOME/.$file"
-  fi
-done
+# Backup Results
+did_backup && report_header "Backed up some files to: $backup_dir"
 
-if [[ -z "$link" ]]; then
-  e_success "Nothing to link"
-fi
-
-e_header "Done!"
+# Fin
+report_header "Done!"
