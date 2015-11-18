@@ -31,7 +31,7 @@ set incsearch
 if !has("nvim")
   call plug#begin('~/.vim/plugged')
 else
-  call plug#begin('~/.nvim/plugged')
+  call plug#begin('~/config/nvim/plugged')
 endif
 
 Plug 'airblade/vim-gitgutter'
@@ -388,5 +388,5 @@ nnoremap <silent> <Leader>cw :Trim<CR>
 " Reload vimrc when changed
 augroup myvimrc
     au!
-    au BufWritePost .nvimrc,.vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc,init.vim so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END

@@ -1,5 +1,5 @@
 /vim/plugged
-/nvim/.netrwhist
-/nvim/plugged
-/nvim/shada
-/nvim/spell
+/config/nvim/.netrwhist
+/config/nvim/plugged
+/config/nvim/shada
+/config/nvim/spell
