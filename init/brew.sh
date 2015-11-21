@@ -36,4 +36,7 @@ brew cask install \
   vagrant \
   virtualbox
 
+brew tap neovim/neovim
+brew install --HEAD neovim
+
 brew cleanup
