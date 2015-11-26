@@ -57,7 +57,7 @@ did_backup() {
 }
 
 file_exists() {
-  [[ -f "$1" ]]
+  [[ -f "$1" ]] || [[ -d "$1" ]]
 }
 
 files_are_same() {
