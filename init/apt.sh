@@ -5,6 +5,8 @@ sudo -v
 
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+sudo add-apt-repository -y ppa:pi-rho/dev
+
 sudo apt-get update
 sudo apt-get upgrade
 
