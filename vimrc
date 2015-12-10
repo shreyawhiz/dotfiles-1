@@ -41,7 +41,6 @@ Plug 'bling/vim-airline'
 Plug 'bkad/CamelCaseMotion'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'chase/vim-ansible-yaml'
-Plug 'chriskempson/base16-vim'
 Plug 'corntrace/bufexplorer'
 Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
 Plug 'docunext/closetag.vim'
@@ -83,6 +82,7 @@ Plug 'vim-scripts/Crunch'
 Plug 'vim-scripts/gitignore.vim'
 Plug 'vim-scripts/nginx.vim'
 Plug 'vim-scripts/tComment'
+Plug 'w0ng/vim-hybrid'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
 
@@ -179,7 +179,7 @@ set wrap
 
 " Enable syntax highlighting
 syntax on
-colorscheme base16-default
+colorscheme hybrid
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
@@ -298,7 +298,7 @@ nmap <leader>wq :wqa!<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Airline
-let g:airline_theme = 'base16'
+let g:airline_theme = 'hybrid'
 let g:airline_powerline_fonts = 1
 
 " deoplete
