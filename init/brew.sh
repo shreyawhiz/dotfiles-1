@@ -9,7 +9,12 @@ if ! brew cask &> /dev/null; then
   brew install brew-cask 2> /dev/null
 fi
 
+brew tap choppsv3/eerm24
+brew tap neovim/neovim
+
 brew install \
+  choppsv1/term24/tmux \
+  choppsv1/term24/vim \
   cloc \
   coreutils \
   docker \
@@ -22,12 +27,13 @@ brew install \
   nvm \
   rename \
   the_silver_searcher \
-  tmux \
   tree \
-  vim \
   watch \
   wget \
   zsh
+
+brew install --HEAD \
+  neovim
 
 brew cask install \
   flux \
@@ -35,8 +41,5 @@ brew cask install \
   spotify \
   vagrant \
   virtualbox
-
-brew tap neovim/neovim
-brew install --HEAD neovim
 
 brew cleanup

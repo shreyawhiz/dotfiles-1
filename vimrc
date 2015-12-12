@@ -93,6 +93,7 @@ endif
 
 " neovim plugins
 if has('nvim')
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
   Plug 'benekastah/neomake'
   Plug 'kassio/neoterm'
   Plug 'Shougo/deoplete.nvim'
@@ -298,7 +299,7 @@ nmap <leader>wq :wqa!<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Airline
-let g:airline_theme = 'hybrid'
+let g:airline_theme = 'hybridline'
 let g:airline_powerline_fonts = 1
 
 " deoplete
