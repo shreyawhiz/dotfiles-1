@@ -7,14 +7,16 @@ _link_count=0
 ARROW='>'
 
 dotfiles_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
-timestamp=$(date +%s)
-backup_dir="$dotfiles_dir/backups/$timestamp"
+backup_dir="$dotfiles_dir/backups/$(date +%s)"
 
 # TODO: D.R.Y. up the copy_file and link_file functions
 
 copy_file() {
-  local src_file=$(get_src_path $1)
-  local dest_file=$(get_dest_path $1)
+  local src_file
+  local dest_file
+
+  src_file=$(get_src_path "$1")
+  dest_file=$(get_dest_path "$1")
 
   if ! files_are_same "$src_file" "$dest_file"; then
     file_exists "$dest_file" && backup_file "$dest_file"
@@ -25,8 +27,11 @@ copy_file() {
 }
 
 link_file() {
-  local src_file=$(get_src_path $1)
-  local dest_file=$(get_dest_path $1)
+  local src_file
+  local dest_file
+
+  src_file=$(get_src_path "$1")
+  dest_file=$(get_dest_path "$1")
 
   if ! files_are_linked "$src_file" "$dest_file"; then
     file_exists "$dest_file" && backup_file "$dest_file"
@@ -71,11 +76,11 @@ files_are_linked() {
 }
 
 report_header() {
-  echo -e "\n\033[1m$@\033[0m";
+  echo -e "\n\033[1m$*\033[0m";
 }
 
 report_success() {
-  echo -e " \033[1;32m✔\033[0m  $@";
+  echo -e " \033[1;32m✔\033[0m  $*";
 }
 
 report_install() {
