@@ -1,3 +1,5 @@
+/config/configstore
+/config/nvim/.init.vim*
 /config/nvim/.netrwhist
 /config/nvim/plugged
 /config/nvim/shada
