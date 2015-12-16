@@ -47,7 +47,6 @@ Plug 'docunext/closetag.vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile' }
 Plug 'elixir-lang/vim-elixir'
-Plug 'gabrielelana/vim-markdown'
 Plug 'geekjuice/vim-mocha', { 'for': 'javascript' }
 Plug 'groenewege/vim-less', { 'for': 'less' }
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
@@ -71,6 +70,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-repeat'
@@ -323,6 +323,9 @@ endif
 
 " JSDOC
 nmap <silent> <C-m> <Plug>(jsdoc)
+
+" vim-markdown
+let g:markdown_fenced_languages = ['html', 'css', 'javascript', 'bash=sh']
 
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
