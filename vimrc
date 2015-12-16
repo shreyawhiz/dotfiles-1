@@ -5,25 +5,6 @@
 " Make Vim more useful
 set nocompatible
 
-" Enable filetype plugins
-filetype plugin on
-filetype indent on
-
-" Uses bash as shell and prevents PATH variable from being prefixed
-set shell=bash\ --norc
-
-" Allow backspace in insert mode
-set backspace=indent,eol,start
-
-" Hide buffers instead of closing them
-set hidden
-
-" Ignore case when searching
-set ignorecase
-
-" Show search matches while typing
-set incsearch
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plug
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -74,6 +55,7 @@ Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'vim-scripts/Align'
@@ -114,7 +96,7 @@ endif
 set background=dark
 
 " Draw a vertical ruler at column 80
-" execute "set colorcolumn=" . join(range(81,335), ',')
+execute "set colorcolumn=" . join(range(81,335), ',')
 
 " Highlight current line
 set cursorline
@@ -131,20 +113,14 @@ set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 " Show whitespace
 set list
 
-" For regular expressions turn magic on
-set magic
-
 " Disables annoying sound on errors
 set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
 
-" Set line numbers
+" Show line numbers
 set number
-
-" Show ruler
-set ruler
 
 " Minimum of 5 lines above and below cursor must be visible
 set scrolloff=5
@@ -152,24 +128,17 @@ set scrolloff=5
 " Don't show short message when starting Vim
 set shortmess=atI
 
-" Show the (partial) command as it’s being typed
-set showcmd
-
 " Show matching brackets
 set showmatch
 
 " Override 'ignorecase' if search pattern containers uppercase characters
 set smartcase
 
-" Lowers timeout length between commands
-set timeoutlen=500
-
 " Optimize for fast terminals
 set ttyfast
 
 " Enables autocomplete menu
 set wildmode=longest:full
-set wildmenu
 
 " Wrap long lines
 set wrap
@@ -178,8 +147,7 @@ set wrap
 " Colors and Fonts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Enable syntax highlighting
-syntax on
+" Set colorscheme
 colorscheme hybrid
 
 " Use Unix as the standard file type
@@ -189,14 +157,12 @@ set ffs=unix,dos,mac
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 
-" Highlight too-long lines
-autocmd BufRead,InsertEnter,InsertLeave * 2match OverLength /\%126v.*/
-highlight OverLength ctermbg=black guibg=black
-autocmd ColorScheme * highlight OverLength ctermbg=black guibg=black
+" Highlight lines longer than 120 characters
+autocmd BufRead,InsertEnter,InsertLeave * 2match OverLength /\%120v.*/
+highlight OverLength ctermbg=red guibg=#5f0000 guifg=#cc6666
 
-" Set up highlight group & retain through colorscheme changes
-highlight ExtraWhitespace ctermbg=red guibg=red
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+" Highlight trailing whitespace
+highlight ExtraWhitespace ctermbg=red guibg=#5f0000 guifg=#cc6666
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Files, Backups, and Undo
@@ -207,11 +173,6 @@ set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 if exists("&undodir")
   set undodir=~/.vim/undo
-endif
-
-" Use UTF-8 encoding without BOM
-if &encoding == ''
-  set encoding=utf-8 nobomb
 endif
 
 " Don't add empty newlines at the end of files
@@ -231,23 +192,10 @@ set wildignore+=
 " File-specific
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-compiler ruby
-
-autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
-autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
-
-autocmd FileType tex setlocal textwidth=78
-autocmd BufNewFile,BufRead *.txt setlocal textwidth=78
-
-autocmd FileType ruby runtime ruby_mappings.vim
-
-if version >= 700
-  autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_us
-  autocmd FileType tex setlocal spell spelllang=en_us
-endif
+autocmd FileType markdown setlocal spell spelllang=en_us
 
 " Autoremove trailing spaces when saving the buffer
-autocmd FileType ruby,c,cpp,java,php,html autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType css,html,javascript,markdown autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Indentation
@@ -391,6 +339,6 @@ nnoremap <silent> <Leader>cw :Trim<CR>
 
 " Reload vimrc when changed
 augroup myvimrc
-    au!
-    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc,init.vim so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+  au!
+  au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc,init.vim so $MYVIMRC
 augroup END
