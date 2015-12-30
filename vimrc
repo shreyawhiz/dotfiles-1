@@ -12,7 +12,7 @@ set nocompatible
 if !has("nvim")
   call plug#begin('~/.vim/plugged')
 else
-  call plug#begin('~/config/nvim/plugged')
+  call plug#begin('~/.config/nvim/plugged')
 endif
 
 Plug 'airblade/vim-gitgutter'
