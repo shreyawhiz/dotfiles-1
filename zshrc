@@ -14,3 +14,5 @@ done
 for file in "$HOME"/.env-priv/*.sh; do
   source $file
 done
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
