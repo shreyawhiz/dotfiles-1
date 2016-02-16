@@ -28,6 +28,7 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile' }
 Plug 'elixir-lang/vim-elixir'
 Plug 'geekjuice/vim-mocha', { 'for': 'javascript' }
+Plug 'gilsondev/searchtasks.vim'
 Plug 'groenewege/vim-less', { 'for': 'less' }
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
 Plug 'heavenshell/vim-jsdoc'
@@ -313,7 +314,7 @@ nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
-let test#javascript#mocha#options = '-R min -b'
+let test#javascript#mocha#options = '--recursive -R spec -b'
 
 function! TestStrategy(cmd)
   execute 'T '.a:cmd
