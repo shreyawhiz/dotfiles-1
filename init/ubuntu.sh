@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-sudo -v
-
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+[[ "$(head -1 < /etc/lsb-release 2> /dev/null)" =~ Ubuntu ]] || return 1
 
 sudo add-apt-repository -y ppa:pi-rho/dev
 
