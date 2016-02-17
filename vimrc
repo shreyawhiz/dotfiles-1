@@ -134,7 +134,8 @@ set shortmess=atI
 " Show matching brackets
 set showmatch
 
-" Override 'ignorecase' if search pattern containers uppercase characters
+" Allow for both case sensitive and insensitive searching based on the pattern
+set ignorecase
 set smartcase
 
 " Optimize for fast terminals
