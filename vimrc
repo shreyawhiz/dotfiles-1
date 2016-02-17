@@ -40,6 +40,7 @@ Plug 'juvenn/mustache.vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'leshill/vim-json', { 'for': 'json' }
 Plug 'majutsushi/tagbar'
+Plug 'mhinz/vim-startify'
 Plug 'moll/vim-node'
 Plug 'othree/html5.vim'
 Plug 'othree/yajs.vim'
@@ -303,6 +304,9 @@ let NERDTreeHijackNetrw = 0
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
+
+" Startify
+let g:startify_list_order = ['dir', 'files', 'bookmarks']
 
 " TComment
 map <silent> <LocalLeader>cc :TComment<CR>
