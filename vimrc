@@ -70,6 +70,7 @@ Plug 'vim-scripts/tComment'
 Plug 'w0ng/vim-hybrid'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
+Plug 'ryanoasis/vim-devicons' " Must load last
 
 " vim plugins
 if !has('nvim')
