@@ -27,6 +27,7 @@ Plug 'docunext/closetag.vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile' }
 Plug 'elixir-lang/vim-elixir'
+Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'geekjuice/vim-mocha', { 'for': 'javascript' }
 Plug 'gilsondev/searchtasks.vim'
 Plug 'groenewege/vim-less', { 'for': 'less' }
@@ -38,7 +39,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'justinmk/vim-gtfo'
 Plug 'juvenn/mustache.vim'
 Plug 'kchmck/vim-coffee-script'
-Plug 'leshill/vim-json', { 'for': 'json' }
 Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-startify'
 Plug 'moll/vim-node'
