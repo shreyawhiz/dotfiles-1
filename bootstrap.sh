@@ -21,7 +21,7 @@ copy_file() {
   if ! files_are_same "$src_file" "$dest_file"; then
     file_exists "$dest_file" && backup_file "$dest_file"
     cp "$src_file" "$dest_file"
-    ((_copy_count++))
+    _copy_count=$((_copy_count + 1))
     report_install "$src_file" "$dest_file"
   fi
 }
@@ -36,7 +36,7 @@ link_file() {
   if ! files_are_linked "$src_file" "$dest_file"; then
     file_exists "$dest_file" && backup_file "$dest_file"
     ln -sf "$src_file" "$dest_file"
-    ((_link_count++))
+    _link_count=$((_link_count + 1))
     report_install "$src_file" "$dest_file"
   fi
 }
