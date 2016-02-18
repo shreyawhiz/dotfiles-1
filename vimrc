@@ -258,6 +258,11 @@ let g:airline_powerline_fonts = 1
 " deoplete
 let g:deoplete#enable_at_startup = 1
 
+" vim-devicons
+let g:DevIconsEnableFoldersOpenClose = 1
+let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+
 " EasyClip
 let g:EasyClipShareYanks = 1
 
