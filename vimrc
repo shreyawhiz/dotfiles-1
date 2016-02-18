@@ -80,7 +80,7 @@ endif
 " neovim plugins
 if has('nvim')
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  Plug 'benekastah/neomake', { 'commit': 'cfd24b0' }
+  Plug 'benekastah/neomake'
   Plug 'kassio/neoterm'
   Plug 'Shougo/deoplete.nvim'
 endif
