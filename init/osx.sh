@@ -418,31 +418,11 @@ defaults write org.herf.Flux locationTextField -string "94608"
 defaults write org.herf.Flux locationType -string "Z"
 
 ###############################################################################
-# Seil                                                              #
+# Seil                                                                        #
 ###############################################################################
 
 # Maps Caps-Lock to Escape
 defaults write org.pqrs.Seil sysctl '{ enable_capslock = 1; keycode_capslock = 53; }'
-
-###############################################################################
-# Terminal.app                                                                #
-###############################################################################
-
-# Remove scrollbar
-defaults write com.apple.Terminal AppleShowScrollbars WhenScrolling
-
-# Only use UTF-8 in Terminal.app
-defaults write com.apple.terminal StringEncodings -array 4
-
-# Use a modified version of the Solarized Dark theme by default in Terminal.app
-TERM_PROFILE='base16-default.dark';
-CURRENT_PROFILE="$(defaults read com.apple.terminal 'Default Window Settings')";
-if [ "${CURRENT_PROFILE}" != "${TERM_PROFILE}" ]; then
-  open "${HOME}/dotfiles/init/files/${TERM_PROFILE}.terminal";
-  sleep 1; # Wait a bit to make sure the theme is loaded
-  defaults write com.apple.terminal 'Default Window Settings' -string "${TERM_PROFILE}";
-  defaults write com.apple.terminal 'Startup Window Settings' -string "${TERM_PROFILE}";
-fi;
 
 ###############################################################################
 # Shell
