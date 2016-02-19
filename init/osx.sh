@@ -447,6 +447,8 @@ fi
 
 for app in "Address Book" "Calendar" "Contacts" "Dashboard" "Dock" \
   "Flux" "Finder" "Safari" "SystemUIServer" "iCal" "iTunes"; do
+  set +e
   killall "$app" > /dev/null 2>&1
+  set -e
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
