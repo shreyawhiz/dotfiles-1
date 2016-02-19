@@ -21,12 +21,10 @@ if ! brew cask &> /dev/null; then
   brew install brew-cask 2> /dev/null
 fi
 
-brew tap choppsv3/eerm24
+brew tap caskroom/versions
 brew tap neovim/neovim
 
 brew install \
-  choppsv1/term24/tmux \
-  choppsv1/term24/vim \
   cloc \
   coreutils \
   docker \
@@ -44,11 +42,15 @@ brew install \
   wget \
   zsh
 
-brew install --HEAD \
-  neovim
+# Only install nvim if it's never been installed (requires manual updating)
+if hash nvim 2> /dev/null; then
+  brew install --HEAD \
+    neovim
+fi
 
 brew cask install \
   flux \
+  iterm2-nightly \
   seil \
   spotify \
   vagrant \
