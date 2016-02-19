@@ -3,6 +3,12 @@ set -e
 
 [[ "$OSTYPE" =~ ^darwin ]] || return 1
 
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep sudo privileges alive during script lifetime
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 ###############################################################################
 # Homebrew
 ###############################################################################
