@@ -417,6 +417,13 @@ defaults write org.herf.Flux location -string "94608"
 defaults write org.herf.Flux locationTextField -string "94608"
 defaults write org.herf.Flux locationType -string "Z"
 
+
+###############################################################################
+# iTerm                                                                       #
+###############################################################################
+
+open "${HOME}/dotfiles/init/files/hybrid.itermcolors"
+
 ###############################################################################
 # Seil                                                                        #
 ###############################################################################
