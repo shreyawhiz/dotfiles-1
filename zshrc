@@ -15,4 +15,8 @@ for file in "$HOME"/.env-priv/*.sh; do
   source $file
 done
 
+# Load fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Load nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"

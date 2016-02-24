@@ -1,5 +1,8 @@
-export NVM_DIR="/usr/local/opt/nvm"
-. "$NVM_DIR/nvm.sh"
+if [[ $(uname -s) = 'Darwin' ]]; then
+  export NVM_DIR="/usr/local/opt/nvm"
+else
+  export NVM_DIR="$HOME/.nvm"
+fi
 
 npms() {
   npm search --registry=https://registry.npmjs.org $argv
