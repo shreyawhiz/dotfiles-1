@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-[[ "$(head -1 < /etc/lsb-release 2> /dev/null)" =~ Ubuntu ]] || return 1
+[[ "$(cat /etc/lsb-release 2> /dev/null | head -1 2> /dev/null)" =~ Ubuntu ]] || return 1
 
 LINUXBREW="$HOME/.linuxbrew/bin/brew"
 
