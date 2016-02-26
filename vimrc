@@ -99,8 +99,6 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User Interface
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set background color to dark
-set background=dark
 
 " Draw a vertical ruler at column 80
 execute "set colorcolumn=" . join(range(81,335), ',')
@@ -160,6 +158,9 @@ set wrap
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors and Fonts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Set background color to dark
+set background=dark
 
 " Set colorscheme
 colorscheme hybrid
