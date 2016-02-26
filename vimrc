@@ -19,6 +19,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-css-color'
 Plug 'bkad/CamelCaseMotion'
 Plug 'cakebaker/scss-syntax.vim'
+Plug 'cespare/vim-toml'
 Plug 'chase/vim-ansible-yaml'
 Plug 'corntrace/bufexplorer'
 Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
