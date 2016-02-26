@@ -83,6 +83,7 @@ endif
 
 " neovim plugins
 if has('nvim')
+  let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
   Plug 'benekastah/neomake'
   Plug 'kassio/neoterm'
   Plug 'Shougo/deoplete.nvim'
