@@ -16,7 +16,6 @@ else
 endif
 
 Plug 'airblade/vim-gitgutter'
-Plug 'albfan/nerdtree-git-plugin'
 Plug 'ap/vim-css-color'
 Plug 'bkad/CamelCaseMotion'
 Plug 'cakebaker/scss-syntax.vim'
@@ -70,6 +69,7 @@ Plug 'vim-scripts/tComment'
 Plug 'w0ng/vim-hybrid'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons' " Must load last
 
 " vim plugins
