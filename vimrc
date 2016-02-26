@@ -173,8 +173,8 @@ set ffs=unix,dos,mac
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 
-" Highlight lines longer than 120 characters
-autocmd BufRead,InsertEnter,InsertLeave * 2match OverLength /\%120v.*/
+" Highlight lines longer than 100 characters
+autocmd BufRead,InsertEnter,InsertLeave * 2match OverLength /\%100v.*/
 highlight OverLength ctermbg=red guibg=#5f0000 guifg=#cc6666
 
 " Highlight trailing whitespace
