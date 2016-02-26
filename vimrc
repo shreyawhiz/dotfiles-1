@@ -158,6 +158,20 @@ set wrap
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors and Fonts
+"
+"   Hybrid Color Palette
+"   BACKGROUND: #1D1F21
+"   FOREGROUND: #C5C8C6
+"
+"   BLACK: #282A2E #373B41
+"   RED: #A54242 #CC6666
+"   GREEN: #8C9440 #B5BD68
+"   YELLOW: #DE935F #F0C674
+"   BLUE: #5F819D #81A2BE
+"   MAGENTA: #85678F #B294BB
+"   CYAN: #5E8D87 #8ABEB7
+"   WHITE: #707880 #C5C8C6
+"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Set background color to dark
