@@ -107,6 +107,9 @@ set clipboard=unnamed
 " Highlight current line
 set cursorline
 
+" Hide buffers instead of closing them
+set hidden
+
 " Adds - as a word separator
 set iskeyword-=-
 
