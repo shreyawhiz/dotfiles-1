@@ -95,12 +95,14 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User Interface
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " Set background color to dark
 set background=dark
 
 " Draw a vertical ruler at column 80
 execute "set colorcolumn=" . join(range(81,335), ',')
+
+" Set clipboard to system
+set clipboard=unnamed
 
 " Highlight current line
 set cursorline
