@@ -23,6 +23,7 @@ Plug 'chase/vim-ansible-yaml'
 Plug 'corntrace/bufexplorer'
 Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
 Plug 'docunext/closetag.vim'
+Plug 'easymotion/vim-easymotion'
 Plug 'edkolev/tmuxline.vim'
 Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile' }
 Plug 'elixir-lang/vim-elixir'
