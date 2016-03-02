@@ -9,12 +9,12 @@ dclean() {
 }
 
 denv() {
-  eval "$(cat $DOCKER_ENV)"
+  eval "$(cat "$DOCKER_ENV")"
 }
 
 dstart() {
   docker-machine start $DOCKER_MACHINE_NAME
-  docker-machine env $DOCKER_MACHINE_NAME > $DOCKER_ENV
+  docker-machine env "$DOCKER_MACHINE_NAME" > "$DOCKER_ENV"
   denv
 }
 
@@ -39,18 +39,18 @@ dshell() {
 
 iex() {
   docker run --rm -it \
-    -v $(pwd):/data/app \
-    -v $HOME/.hex:/root/.hex \
-    -v $HOME/.mix:/root/.mix \
+    -v "$(pwd)":/data/app \
+    -v "$HOME/.hex":/root/.hex \
+    -v "$HOME/.mix":/root/.mix \
     -w /data/app \
     bentruyman/elixir-phoenix-dev iex "$@"
 }
 
 mix() {
   docker run --rm -it \
-    -v $(pwd):/data/app \
-    -v $HOME/.hex:/root/.hex \
-    -v $HOME/.mix:/root/.mix \
+    -v "$(pwd)":/data/app \
+    -v "$HOME/.hex":/root/.hex \
+    -v "$HOME/.mix":/root/.mix \
     -w /data/app \
     bentruyman/elixir-phoenix-dev mix "$@"
 }
@@ -69,18 +69,18 @@ alpine() {
 
 iex() {
   docker run --rm -it \
-    -v $(pwd):/data/app \
-    -v $HOME/.hex:/root/.hex \
-    -v $HOME/.mix:/root/.mix \
+    -v "$(pwd)":/data/app \
+    -v "$HOME/.hex":/root/.hex \
+    -v "$HOME/.mix":/root/.mix \
     -w /data/app \
     bentruyman/elixir-phoenix-dev iex "$@"
 }
 
 mix() {
   docker run --rm -it \
-    -v $(pwd):/data/app \
-    -v $HOME/.hex:/root/.hex \
-    -v $HOME/.mix:/root/.mix \
+    -v "$(pwd)":/data/app \
+    -v "$HOME/.hex":/root/.hex \
+    -v "$HOME/.mix":/root/.mix \
     -w /data/app \
     bentruyman/elixir-phoenix-dev mix "$@"
 }
