@@ -2,6 +2,10 @@
 " General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Map leader to <Space>
+let mapleader = "\<Space>"
+let maplocalleader = "\<Space>"
+
 " Make Vim more useful
 set nocompatible
 
