@@ -399,6 +399,16 @@ endfunction
 command! -nargs=0 Trim :call Trim()
 nnoremap <silent> <Leader>cw :Trim<CR>
 
+" Search & Replace functions (uses vim-over):
+function! VisualFindAndReplace()
+  :OverCommandLine%s/
+endfunction
+function! VisualFindAndReplaceWithSelection() range
+  :'<,'>OverCommandLine s/
+endfunction
+nnoremap <Leader>fr :call VisualFindAndReplace()<CR>
+xnoremap <Leader>fr :call VisualFindAndReplaceWithSelection()<CR>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Development
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
