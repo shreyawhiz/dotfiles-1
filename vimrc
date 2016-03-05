@@ -33,6 +33,7 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile' }
 Plug 'elixir-lang/vim-elixir'
 Plug 'elzr/vim-json', { 'for': 'json' }
+Plug 'fatih/vim-go'
 Plug 'geekjuice/vim-mocha', { 'for': 'javascript' }
 Plug 'gilsondev/searchtasks.vim'
 Plug 'groenewege/vim-less', { 'for': 'less' }
@@ -308,6 +309,15 @@ else
   \ 'sink': 'e',
   \ 'window': 'topleft 20new'})<CR>
 endif
+
+" vim-go
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go nmap <leader>rt <Plug>(go-run-tab)
+au FileType go nmap <Leader>rs <Plug>(go-run-split)
+au FileType go nmap <Leader>rv <Plug>(go-run-vertical)
 
 " JSDOC
 nmap <silent> <C-m> <Plug>(jsdoc)
