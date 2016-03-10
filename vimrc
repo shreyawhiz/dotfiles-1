@@ -377,6 +377,8 @@ call NERDTreeHighlightFile('bashrc', 'Gray', 'none', '#373B41', 'none')
 call NERDTreeHighlightFile('bashprofile', 'Gray', 'none', '#373B41', 'none')
 
 " Startify
+let g:startify_change_to_dir = 0
+let g:startify_change_to_vcs_root = 1
 let g:startify_list_order = ['dir', 'files', 'bookmarks']
 
 " TComment
