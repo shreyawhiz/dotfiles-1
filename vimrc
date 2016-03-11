@@ -231,7 +231,8 @@ set wildignore+=
 autocmd FileType markdown setlocal spell spelllang=en_us
 
 " Autoremove trailing spaces when saving the buffer
-autocmd FileType css,html,javascript,markdown autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType css,html,javascript,markdown
+      \ autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Indentation
@@ -353,7 +354,9 @@ map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
-  exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+  exec 'autocmd FileType nerdtree highlight ' . a:extension .
+        \' ctermbg='. a:bg .' ctermfg='. a:fg .
+        \' guibg='. a:guibg .' guifg='. a:guifg
   exec 'autocmd FileType nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
 endfunction
 
