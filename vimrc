@@ -254,8 +254,8 @@ set textwidth=0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Treat long lines as break lines (useful when moving around in them)
-map j gj
-map k gk
+noremap j gj
+noremap k gk
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
@@ -268,16 +268,16 @@ autocmd BufReadPost *
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Toggle paste mode on and off
-map <leader>pp :setlocal paste!<cr>
+noremap <leader>pp :setlocal paste!<cr>
 
 " Fast saving
-nmap <leader>w :w!<cr>
+nnoremap <leader>w :w!<cr>
 
 " Fast quitting
-nmap <leader>q :q<cr>
+nnoremap <leader>q :q<cr>
 
 " Fast save + quit
-nmap <leader>wq :wqa!<cr>
+nnoremap <leader>wq :wqa!<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin Settings
@@ -304,21 +304,21 @@ let g:syntastic_javascript_checkers = ['eslint']
 " FZF
 if !has('nvim')
   let g:fzf_height = 20
-  map <C-p> :FZF<CR>
+  noremap <C-p> :FZF<CR>
 else
-  map <C-p> :call fzf#run({
+  noremap <C-p> :call fzf#run({
   \ 'sink': 'e',
   \ 'window': 'topleft 20new'})<CR>
 endif
 
 " vim-go
-au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap <leader>c <Plug>(go-coverage)
-au FileType go nmap <leader>rt <Plug>(go-run-tab)
-au FileType go nmap <Leader>rs <Plug>(go-run-split)
-au FileType go nmap <Leader>rv <Plug>(go-run-vertical)
+au FileType go nnoremap <leader>r <Plug>(go-run)
+au FileType go nnoremap <leader>b <Plug>(go-build)
+au FileType go nnoremap <leader>t <Plug>(go-test)
+au FileType go nnoremap <leader>c <Plug>(go-coverage)
+au FileType go nnoremap <leader>rt <Plug>(go-run-tab)
+au FileType go nnoremap <Leader>rs <Plug>(go-run-split)
+au FileType go nnoremap <Leader>rv <Plug>(go-run-vertical)
 
 " JSDOC
 nmap <silent> <C-m> <Plug>(jsdoc)
@@ -349,9 +349,9 @@ let NERDTreeIgnore=[
       \'vendor'
       \]
 let NERDTreeHijackNetrw = 0
-map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
-map <silent> <LocalLeader>nr :NERDTree<CR>
-map <silent> <LocalLeader>nf :NERDTreeFind<CR>
+noremap <silent> <LocalLeader>nt :NERDTreeToggle<CR>
+noremap <silent> <LocalLeader>nr :NERDTree<CR>
+noremap <silent> <LocalLeader>nf :NERDTreeFind<CR>
 
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
   exec 'autocmd FileType nerdtree highlight ' . a:extension .
@@ -385,14 +385,14 @@ let g:startify_change_to_vcs_root = 1
 let g:startify_list_order = ['dir', 'files', 'bookmarks']
 
 " TComment
-map <silent> <LocalLeader>cc :TComment<CR>
+noremap <silent> <LocalLeader>cc :TComment<CR>
 
 " vim-test
-nmap <silent> <leader>t :TestNearest<CR>
-nmap <silent> <leader>T :TestFile<CR>
-nmap <silent> <leader>a :TestSuite<CR>
-nmap <silent> <leader>l :TestLast<CR>
-nmap <silent> <leader>g :TestVisit<CR>
+nnoremap <silent> <leader>t :TestNearest<CR>
+nnoremap <silent> <leader>T :TestFile<CR>
+nnoremap <silent> <leader>a :TestSuite<CR>
+nnoremap <silent> <leader>l :TestLast<CR>
+nnoremap <silent> <leader>g :TestVisit<CR>
 
 let test#javascript#mocha#options = '--recursive -R spec -b'
 
