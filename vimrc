@@ -364,7 +364,13 @@ au FileType go nnoremap <Leader>rv <Plug>(go-run-vertical)
 nmap <silent> <C-m> <Plug>(jsdoc)
 
 " vim-markdown
-let g:markdown_fenced_languages = ['html', 'css', 'javascript', 'bash=sh']
+let g:markdown_fenced_languages = [
+      \ 'bash=sh',
+      \ 'css',
+      \ 'html',
+      \ 'javascript',
+      \ 'json',
+      \ 'yaml']
 
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
