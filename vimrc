@@ -184,6 +184,26 @@ set wrap
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Set colors for neovim's terminal emulator
+if has('nvim')
+  let g:terminal_color_0  = "#282A2E"
+  let g:terminal_color_1  = "#A54242"
+  let g:terminal_color_2  = "#8C9440"
+  let g:terminal_color_3  = "#DE935F"
+  let g:terminal_color_4  = "#5F819D"
+  let g:terminal_color_5  = "#85678F"
+  let g:terminal_color_6  = "#5E8D87"
+  let g:terminal_color_7  = "#373B41"
+  let g:terminal_color_8  = "#cc6666"
+  let g:terminal_color_9  = "#B5BD68"
+  let g:terminal_color_10 = "#F0C674"
+  let g:terminal_color_11 = "#81A2E"
+  let g:terminal_color_12 = "#B294BB"
+  let g:terminal_color_13 = "#8ABEB7"
+  let g:terminal_color_14 = "#C5C8C6"
+  let g:terminal_color_15 = "#C5C8C6"
+endif
+
 " Set background color to dark
 set background=dark
 
