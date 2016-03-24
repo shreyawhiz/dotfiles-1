@@ -277,6 +277,11 @@ set textwidth=0
 " Navigation
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Temporary workaround for: https://github.com/neovim/neovim/issues/2048
+if has("nvim")
+  nmap <BS> <C-W>h
+endif
+
 " Treat long lines as break lines (useful when moving around in them)
 noremap j gj
 noremap k gk
@@ -286,6 +291,12 @@ autocmd BufReadPost *
   \ if line("'\"") > 0 && line("'\"") <= line("$") |
   \   exe "normal! g`\"" |
   \ endif
+
+" Easier split navigation
+noremap <C-j> <C-W>j
+noremap <C-k> <C-W>k
+noremap <C-h> <C-W>h
+noremap <C-l> <C-W>l
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Miscellaneous
