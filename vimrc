@@ -302,6 +302,11 @@ noremap <C-l> <C-W>l
 " Miscellaneous
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Exit out of neovim terminals easier
+if has('nvim')
+  tnoremap <Leader><ESC> <C-\><C-n>
+endif
+
 " Toggle paste mode on and off
 noremap <leader>pp :setlocal paste!<cr>
 
