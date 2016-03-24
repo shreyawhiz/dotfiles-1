@@ -153,6 +153,10 @@ set showmatch
 set ignorecase
 set smartcase
 
+" Open split below and to the right
+set splitbelow
+set splitright
+
 " Optimize for fast terminals
 set ttyfast
 
