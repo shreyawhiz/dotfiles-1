@@ -9,6 +9,7 @@ ARROW='>'
 dotfiles_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 backup_dir="$dotfiles_dir/backups/$(date +%s)"
 
+# TODO: parse flags like --exclude=[file....] to prevent syncing certain files
 # TODO: D.R.Y. up the copy_file and link_file functions
 
 copy_file() {
@@ -87,6 +88,7 @@ report_install() {
   report_success "$1 $ARROW $2"
 }
 
+# TODO: add flag to prevent ascii art
 # Introduction
 echo "     _               ___ _ _             "
 echo "    | |       _     / __|_) |            "
