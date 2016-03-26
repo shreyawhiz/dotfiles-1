@@ -25,6 +25,7 @@ brew tap caskroom/versions
 brew tap neovim/neovim
 
 brew install \
+  ccat \
   cloc \
   coreutils \
   docker \
