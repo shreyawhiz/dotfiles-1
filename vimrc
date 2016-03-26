@@ -48,6 +48,7 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-startify'
 Plug 'moll/vim-node'
+Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 Plug 'osyo-manga/vim-over'
 Plug 'othree/html5.vim'
 Plug 'othree/yajs.vim'
@@ -80,6 +81,7 @@ Plug 'w0ng/vim-hybrid'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'zchee/deoplete-go', { 'do': 'make' }
 Plug 'ryanoasis/vim-devicons' " Must load last
 
 " vim plugins
@@ -329,6 +331,8 @@ let g:airline_powerline_fonts = 1
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
+inoremap <expr> <TAB>   pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : ""
 
 " vim-devicons
 let g:DevIconsEnableFoldersOpenClose = 1
@@ -352,13 +356,24 @@ else
 endif
 
 " vim-go
-au FileType go nnoremap <leader>r <Plug>(go-run)
-au FileType go nnoremap <leader>b <Plug>(go-build)
-au FileType go nnoremap <leader>t <Plug>(go-test)
-au FileType go nnoremap <leader>c <Plug>(go-coverage)
-au FileType go nnoremap <leader>rt <Plug>(go-run-tab)
-au FileType go nnoremap <Leader>rs <Plug>(go-run-split)
-au FileType go nnoremap <Leader>rv <Plug>(go-run-vertical)
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go nmap <leader>rt <Plug>(go-run-tab)
+au FileType go nmap <Leader>rs <Plug>(go-run-split)
+au FileType go nmap <Leader>rv <Plug>(go-run-vertical)
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <Leader>e <Plug>(go-rename)
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 
 " JSDOC
 nmap <silent> <C-m> <Plug>(jsdoc)
@@ -371,11 +386,6 @@ let g:markdown_fenced_languages = [
       \ 'javascript',
       \ 'json',
       \ 'yaml']
-
-" neocomplete
-let g:neocomplete#enable_at_startup = 1
-inoremap <expr> <TAB>   pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : ""
 
 " neomake
 if has('nvim')
@@ -429,6 +439,9 @@ call NERDTreeHighlightFile('bashprofile', 'Gray', 'none', '#373B41', 'none')
 let g:startify_change_to_dir = 0
 let g:startify_change_to_vcs_root = 1
 let g:startify_list_order = ['dir', 'files', 'bookmarks']
+
+" Tagbar
+nnoremap <leader>tb :TagbarToggle<CR>
 
 " TComment
 noremap <silent> <LocalLeader>cc :TComment<CR>
