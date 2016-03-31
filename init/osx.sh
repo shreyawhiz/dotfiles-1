@@ -45,7 +45,7 @@ brew install \
   zsh
 
 # Only install nvim if it's never been installed (requires manual updating)
-if hash nvim 2> /dev/null; then
+if ! hash nvim 2> /dev/null; then
   brew install --HEAD \
     neovim
 fi
