@@ -38,6 +38,7 @@ brew install \
   nvm \
   rename \
   the_silver_searcher \
+  tmux \
   tree \
   watch \
   wget \
