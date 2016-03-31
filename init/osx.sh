@@ -53,7 +53,6 @@ fi
 brew cask install \
   flux \
   iterm2-nightly \
-  seil \
   spotify \
   vagrant \
   virtualbox
