@@ -46,6 +46,7 @@ Plug 'justinmk/vim-gtfo'
 Plug 'juvenn/mustache.vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'majutsushi/tagbar'
+Plug 'markcornick/vim-bats'
 Plug 'mhinz/vim-startify'
 Plug 'moll/vim-node'
 Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
