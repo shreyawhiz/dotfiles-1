@@ -255,6 +255,9 @@ set wildignore+=
 " File-specific
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Highlight Jenkinsfile as groovy
+au BufRead,BufNewFile Jenkinsfile set filetype=groovy
+
 autocmd FileType markdown setlocal spell spelllang=en_us
 
 " Autoremove trailing spaces when saving the buffer
