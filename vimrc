@@ -475,6 +475,7 @@ let g:test#strategy = 'test_strategy'
 " Trim trailing whitespace
 function! Trim()
   %s/\s*$//
+  ''
 endfunction
 command! -nargs=0 Trim :call Trim()
 nnoremap <silent> <Leader>cw :Trim<CR>
