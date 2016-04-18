@@ -388,6 +388,7 @@ nmap <silent> <C-m> <Plug>(jsdoc)
 let g:markdown_fenced_languages = [
       \ 'bash=sh',
       \ 'css',
+      \ 'dockerfile',
       \ 'html',
       \ 'javascript',
       \ 'json',
