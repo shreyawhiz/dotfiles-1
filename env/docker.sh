@@ -5,21 +5,6 @@ dclean() {
   docker rmi $(docker images --filter dangling=true -q 2> /dev/null) 2> /dev/null
 }
 
-denv() {
-  eval "$(cat "$DOCKER_ENV")"
-}
-
-dstart() {
-  docker-machine start $DOCKER_MACHINE_NAME
-  docker-machine env "$DOCKER_MACHINE_NAME" > "$DOCKER_ENV"
-  denv
-}
-
-dstop() {
-  docker-machine stop $DOCKER_MACHINE_NAME
-  rm "$HOME/.dockerenv"
-}
-
 # Docker executables
 
 alpine() {
