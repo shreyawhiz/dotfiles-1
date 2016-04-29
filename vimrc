@@ -40,6 +40,7 @@ Plug 'groenewege/vim-less', { 'for': 'less' }
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
 Plug 'heavenshell/vim-jsdoc'
 Plug 'janko-m/vim-test'
+Plug 'jiangmiao/auto-pairs'
 Plug 'jimmyhchan/dustjs.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'justinmk/vim-gtfo'
