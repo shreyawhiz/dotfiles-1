@@ -35,7 +35,6 @@ brew install \
   go \
   imagemagick --with-webp \
   moreutils \
-  nvm \
   rename \
   the_silver_searcher \
   tmux \
@@ -58,6 +57,14 @@ brew cask install \
   virtualbox
 
 brew cleanup
+
+###############################################################################
+# Node.js
+###############################################################################
+
+if ! hash nvm 2> /dev/null; then
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
+fi
 
 ###############################################################################
 # General UI/UX                                                               #
