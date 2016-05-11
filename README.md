@@ -20,5 +20,5 @@ My dotfiles are the result of inspiration or outright stealing from:
 
 ## License
 
-Copyright (c) 2015 Ben Truyman<br>
+Copyright (c) 2016 Ben Truyman<br>
 Licensed under the [MIT license](https://github.com/bentruyman/dotfiles/blob/master/LICENSE-MIT).
