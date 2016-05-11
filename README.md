@@ -1,5 +1,7 @@
 # Dotfiles
 
+[![Build Status](https://travis-ci.org/bentruyman/dotfiles.svg?branch=master)](https://travis-ci.org/bentruyman/dotfiles)
+
 ![Screenshot of my shell prompt](https://cloud.githubusercontent.com/assets/85315/9562704/cfcbebca-4e28-11e5-80ea-2b92d41c7416.png)
 
 ## Installation
