@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/bentruyman/dotfiles.svg?branch=master)](https://travis-ci.org/bentruyman/dotfiles)
 
-![Screenshot of my shell prompt](https://cloud.githubusercontent.com/assets/85315/9562704/cfcbebca-4e28-11e5-80ea-2b92d41c7416.png)
+![Screenshot of my shell prompt](https://cloud.githubusercontent.com/assets/85315/15190505/10d8e504-1765-11e6-9841-afab3d554cf6.png)
 
 ## Installation
 
