@@ -12,4 +12,5 @@ code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
 alias brewup='brew update && brew upgrade'
 alias dsstore='find . -name "*.DS_Store" -type f -ls -delete'
+alias flushdns="sudo killall -HUP mDNSResponder"
 alias o='open .'
