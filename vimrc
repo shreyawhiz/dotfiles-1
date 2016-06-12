@@ -96,6 +96,7 @@ if has('nvim')
   let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
   Plug 'benekastah/neomake'
+  Plug 'carlitux/deoplete-ternjs'
   Plug 'kassio/neoterm'
   Plug 'Shougo/deoplete.nvim'
 endif
@@ -339,6 +340,10 @@ let g:airline_powerline_fonts = 1
 let g:deoplete#enable_at_startup = 1
 inoremap <expr> <TAB>   pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : ""
+
+" deoplete-ternjs
+let g:tern_request_timeout = 1
+let g:tern_show_signature_in_pum = 0
 
 " vim-devicons
 let g:DevIconsEnableFoldersOpenClose = 1
