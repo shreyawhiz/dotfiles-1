@@ -14,3 +14,8 @@ alias brewup='brew update && brew upgrade'
 alias dsstore='find . -name "*.DS_Store" -type f -ls -delete'
 alias flushdns="sudo killall -HUP mDNSResponder"
 alias o='open .'
+
+if [[ -s /usr/local/opt/bind/sbin/named ]]; then
+  alias redns='sudo launchctl unload /Library/LaunchDaemons/homebrew.mxcl.bind.plist \
+    && sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.bind.plist'
+fi
