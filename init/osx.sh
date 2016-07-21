@@ -32,8 +32,6 @@ brew install \
   ccat \
   cloc \
   coreutils \
-  docker \
-  docker-machine \
   git \
   git-extras \
   go \
