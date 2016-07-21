@@ -53,7 +53,7 @@ Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/sy
 Plug 'osyo-manga/vim-over'
 Plug 'othree/html5.vim'
 Plug 'othree/yajs.vim'
-Plug 'pangloss/vim-javascript', { 'branch': 'develop' }
+Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree'
 Plug 'shime/vim-livedown'
 Plug 'svermeulen/vim-easyclip'
