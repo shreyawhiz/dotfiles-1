@@ -68,7 +68,7 @@ brew cleanup
 ###############################################################################
 
 if [[ ! -s "$NVM_DIR/nvm.sh" ]]; then
-  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.3/install.sh | bash
 fi
 
 ###############################################################################
