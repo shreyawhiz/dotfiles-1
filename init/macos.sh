@@ -54,6 +54,7 @@ fi
 
 brew cask install \
   flux \
+  google-chrome \
   iterm2-nightly \
   seil \
   spotify \
