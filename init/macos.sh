@@ -37,6 +37,7 @@ brew install \
   go \
   imagemagick --with-webp \
   moreutils \
+  python3 \
   rename \
   the_silver_searcher \
   tmux \
@@ -47,8 +48,8 @@ brew install \
 
 # Only install nvim if it's never been installed (requires manual updating)
 if ! hash nvim 2> /dev/null; then
-  brew install --HEAD \
-    neovim
+  brew install --HEAD neovim
+  pip3 install neovim
 fi
 
 brew cask install \
