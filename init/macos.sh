@@ -419,11 +419,11 @@ defaults write org.herf.Flux locationType -string "Z"
 # iTerm                                                                       #
 ###############################################################################
 
-# Install hybrid theme if it doesn't already exist
-ITERM_THEME=hybrid
-if [[ ! -z $(defaults read com.googlecode.iterm2 "Custom Color Presets" | grep -q "${ITERM_THEME} =") ]]; then
-  open "${HOME}/dotfiles/init/files/${ITERM_THEME}.itermcolors"
-fi
+# Install hybrid theme
+open "${HOME}/dotfiles/init/files/hybrid.itermcolors"
+
+# Install hack nerd font
+open "${HOME}/dotfiles/init/files/Knack Regular Nerd Font Complete.ttf"
 
 ###############################################################################
 # Seil                                                                        #
