@@ -18,7 +18,7 @@ These dotfiles add/configure the following:
 - iTerm2
 - Neovim
 - node/nvm
-- OS X
+- macOS
 - tmux
 - zsh
 
@@ -55,6 +55,19 @@ information won't accidentally be committed.
 
 Contains scripts that should initialize certain platforms after the dotfiles
 have been installed.
+
+### Manual Steps
+
+Due to automation limitations, some system provisioning steps must be completed
+manually.
+
+#### macOS
+
+To configure macOS, run the `init/macos.sh` script.
+
+#### Ubuntu
+
+To configure Ubuntu, run the `init/ubuntu.sh` script.
 
 ## Special Thanks
 
