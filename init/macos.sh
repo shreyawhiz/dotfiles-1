@@ -37,7 +37,11 @@ brew install \
   go \
   imagemagick --with-webp \
   moreutils \
+<<<<<<< 850e16001ed38908024b19666dc7162359aa4bef
   python3 \
+=======
+  python \
+>>>>>>> [vim] fixes neovim install to include python support
   rename \
   the_silver_searcher \
   tmux \
@@ -48,8 +52,13 @@ brew install \
 
 # Only install nvim if it's never been installed (requires manual updating)
 if ! hash nvim 2> /dev/null; then
+<<<<<<< 850e16001ed38908024b19666dc7162359aa4bef
   brew install --HEAD neovim
   pip3 install neovim
+=======
+  brew install --HEAD \
+    neovim --with-python
+>>>>>>> [vim] fixes neovim install to include python support
 fi
 
 brew cask install \
