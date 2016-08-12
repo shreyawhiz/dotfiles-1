@@ -45,6 +45,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install --no-update-rc' 
 Plug 'justinmk/vim-gtfo'
 Plug 'juvenn/mustache.vim'
 Plug 'kchmck/vim-coffee-script'
+Plug 'leafgarland/typescript-vim'
 Plug 'majutsushi/tagbar'
 Plug 'markcornick/vim-bats'
 Plug 'mhinz/vim-startify'
@@ -96,6 +97,7 @@ if has('nvim')
   Plug 'benekastah/neomake'
   Plug 'carlitux/deoplete-ternjs'
   Plug 'kassio/neoterm'
+  Plug 'mhartington/deoplete-typescript'
   Plug 'Shougo/deoplete.nvim'
 endif
 
