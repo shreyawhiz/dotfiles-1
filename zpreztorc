@@ -5,18 +5,19 @@ zstyle ':prezto:*:*' color 'yes'
 # Load Modules
 
 zstyle ':prezto:load' pmodule \
-  'completion' \
   'environment' \
+  'autosuggestions' \
+  'editor' \
   'fasd' \
   'git' \
   'history' \
-  'history-substring-search' \
+  'homebrew' \
   'osx' \
   'spectrum' \
-  'syntax-highlighting' \
+  'syntax-highlighting' 'history-substring-search' \
   'prompt' \
   'tmux' \
-  'utility'
+  'utility' 'completion'
 
 # Module Settings
 
