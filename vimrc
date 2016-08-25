@@ -116,8 +116,8 @@ endif
 " Draw a vertical ruler at column 80
 execute "set colorcolumn=" . join(range(81,335), ',')
 
-" Set clipboard to system (disabled for now due to issues on macOS Sierra)
-" set clipboard=unnamed
+" Set clipboard to system
+set clipboard=unnamed
 
 " Highlight current line
 set cursorline
