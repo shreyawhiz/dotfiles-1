@@ -4,6 +4,8 @@ else
   export NVM_DIR="$HOME/.nvm"
 fi
 
+alias npmp='npm --always-auth false --registry https://registry.npmjs.com'
+
 npms() {
   npm search --registry=https://registry.npmjs.org $argv
 }
