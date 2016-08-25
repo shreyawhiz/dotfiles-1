@@ -45,7 +45,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install --no-update-rc' 
 Plug 'justinmk/vim-gtfo'
 Plug 'juvenn/mustache.vim'
 Plug 'kchmck/vim-coffee-script'
-Plug 'leafgarland/typescript-vim'
+Plug 'leafgarland/typescript-vim' | Plug 'ianks/vim-tsx'
 Plug 'majutsushi/tagbar'
 Plug 'markcornick/vim-bats'
 Plug 'mhinz/vim-startify'
@@ -251,6 +251,7 @@ set wildignore+=
       \*/jspm_packages/*,
       \*/node_modules/*,
       \*/tmp/*
+      \*/typings/*,
       \*/vendor/*
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -410,12 +411,13 @@ let g:neoterm_size = 30
 
 " NERDTree
 let NERDTreeIgnore=[
-      \'coverage',
-      \'dist',
-      \'jspm_packages',
-      \'node_modules',
-      \'tmp',
-      \'vendor'
+      \'^coverage$',
+      \'^dist$',
+      \'^jspm_packages$',
+      \'^node_modules$',
+      \'^tmp$',
+      \'^typings$',
+      \'^vendor$'
       \]
 let NERDTreeHijackNetrw = 0
 noremap <silent> <LocalLeader>nt :NERDTreeToggle<CR>
