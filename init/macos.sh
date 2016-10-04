@@ -38,6 +38,7 @@ brew install \
   imagemagick --with-webp \
   moreutils \
   python3 \
+  reattach-to-user-namespace \
   rename \
   the_silver_searcher \
   tmux \
