@@ -283,9 +283,9 @@ noremap k gk
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
-  \ if line("'\"") > 0 && line("'\"") <= line("$") |
-  \   exe "normal! g`\"" |
-  \ endif
+      \ if line("'\"") > 0 && line("'\"") <= line("$") |
+      \   exe "normal! g`\"" |
+      \ endif
 
 " Easier split navigation
 noremap <C-j> <C-W>j
