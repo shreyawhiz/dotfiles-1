@@ -297,6 +297,9 @@ noremap <C-l> <C-W>l
 " Miscellaneous
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Enter command-line mode easier
+nmap ; :
+
 " Exit out of neovim terminals easier
 tnoremap <Leader><ESC> <C-\><C-n>
 
