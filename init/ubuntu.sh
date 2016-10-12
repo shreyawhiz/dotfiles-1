@@ -19,6 +19,7 @@ sudo apt-get install -y \
   bc \
   build-essential \
   curl \
+  emacs \
   git \
   git-core \
   libbz2-dev \

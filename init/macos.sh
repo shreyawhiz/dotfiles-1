@@ -32,6 +32,7 @@ brew install \
   ccat \
   cloc \
   coreutils \
+  emacs \
   git \
   git-extras \
   go \
