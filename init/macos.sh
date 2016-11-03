@@ -27,6 +27,7 @@ fi
 
 brew tap caskroom/versions
 brew tap neovim/neovim
+brew tap railwaycat/emacsmacport
 
 brew install \
   ccat \
@@ -55,6 +56,7 @@ if ! hash nvim 2> /dev/null; then
 fi
 
 brew cask install \
+  emacs-mac \
   flux \
   google-chrome \
   iterm2-nightly \
