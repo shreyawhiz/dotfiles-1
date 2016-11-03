@@ -60,7 +60,6 @@ brew cask install \
   flux \
   google-chrome \
   iterm2-nightly \
-  seil \
   spotify \
   vagrant \
   virtualbox
@@ -422,13 +421,6 @@ open "${HOME}/dotfiles/init/files/hybrid.itermcolors"
 
 # Install hack nerd font
 open "${HOME}/dotfiles/init/files/Knack Regular Nerd Font Complete.ttf"
-
-###############################################################################
-# Seil                                                                        #
-###############################################################################
-
-# Maps Caps-Lock to Escape
-defaults write org.pqrs.Seil sysctl '{ enable_capslock = 1; keycode_capslock = 53; }'
 
 ###############################################################################
 # Shell
