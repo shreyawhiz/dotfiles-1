@@ -14,6 +14,3 @@ done
 for file in "$HOME"/.env-priv/*.sh; do
   source $file
 done
-
-# Load nvm
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
