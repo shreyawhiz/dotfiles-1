@@ -101,7 +101,7 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Draw a vertical ruler at column 80
-execute "set colorcolumn=" . join(range(81,335), ',')
+set colorcolumn=81
 
 " Set clipboard to system
 set clipboard=unnamed
