@@ -74,8 +74,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'triglav/vim-visual-increment',
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'vim-scripts/Align'
 Plug 'vim-scripts/Crunch'
@@ -287,10 +285,6 @@ nnoremap <leader>wq :wqa!<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Airline
-let g:airline_theme = 'hybridline'
-let g:airline_powerline_fonts = 1
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
