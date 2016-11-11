@@ -33,7 +33,8 @@
    dotspacemacs-additional-packages '(
      all-the-icons
      dracula-theme
-     evil-smartparens)
+     evil-smartparens
+     nvm)
    dotspacemacs-excluded-packages '()
    dotspacemacs-delete-orphan-packages t))
 
