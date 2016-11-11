@@ -14,7 +14,6 @@
      evil-commentary
      go
      html
-     jabber
      javascript
      (markdown :variables markdown-live-preview-envine 'vmd)
      nginx
@@ -34,7 +33,6 @@
    dotspacemacs-additional-packages '(
      all-the-icons
      dracula-theme
-     escreen
      evil-smartparens)
    dotspacemacs-excluded-packages '()
    dotspacemacs-delete-orphan-packages t))
@@ -135,12 +133,16 @@
   (setq projectile-enable-caching t)
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ;; Plugins
+  ;; Editing
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-  ;; escreen
-  (escreen-install)
-  (global-set-key (kbd "C-q") 'escreen-prefix)
+  ;; Set preferred indent levels
+  (setq-default js2-basic-offset 2
+                js-indent-level 2)
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;; Plugins
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
   ;; Enable evil-smartparens
   (smartparens-global-mode t)
