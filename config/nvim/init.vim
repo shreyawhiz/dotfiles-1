@@ -212,6 +212,9 @@ set wildignore+=
 " File-specific
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Highlight spacemacs as lisp
+au BufRead,BufNewFile spacemacs setfiletype lisp
+
 " Highlight Jenkinsfile as groovy
 au BufRead,BufNewFile Jenkinsfile set filetype=groovy
 
