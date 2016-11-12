@@ -132,6 +132,7 @@
 
   ;; Neotree
   (setq neo-theme (if window-system 'icons 'arrow))
+  (setq neo-hidden-regexp-list '("^\\." ".log$" "node_modules"))
 
   ;; Projectile
   (setq projectile-enable-caching t)
