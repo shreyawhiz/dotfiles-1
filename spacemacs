@@ -149,6 +149,20 @@
   ;; Plugins
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+  ;; Flycheck
+  (defun my/flycheck/use-local-eslint ()
+    (let* ((root (locate-dominating-file
+                  (or (buffer-file-name) default-directory)
+                  "node_modules"))
+           (eslint (and root
+                        (expand-file-name "node_modules/eslint/bin/eslint.js"
+                                          root))))
+      (when (and eslint (file-executable-p eslint))
+        (setq-local flycheck-javascript-eslint-executable eslint)))
+    )
+
+  (add-hook 'flycheck-mode-hook #'my/flycheck/use-local-eslint)
+
   ;; Enable evil-smartparens
   (smartparens-global-mode t)
   (add-hook 'smartparens-enabled-hook #'evil-smartparens-mode)
