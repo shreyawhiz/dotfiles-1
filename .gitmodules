@@ -13,15 +13,6 @@
 [submodule ".zprezto"]
 	path = zprezto
 	url = https://github.com/sorin-ionescu/prezto.git
-[submodule ".tmux/plugins/tmux-resurrect"]
-	path = tmux/plugins/tmux-resurrect
-	url = https://github.com/tmux-plugins/tmux-resurrect.git
-[submodule ".tmux/plugins/tmux-continuum"]
-	path = tmux/plugins/tmux-continuum
-	url = https://github.com/tmux-plugins/tmux-continuum.git
-[submodule ".tmux/plugins/tmux-urlview"]
-	path = tmux/plugins/tmux-urlview
-	url = https://github.com/tmux-plugins/tmux-urlview.git
 [submodule ".fzf"]
 	path = fzf
 	url = https://github.com/junegunn/fzf.git
