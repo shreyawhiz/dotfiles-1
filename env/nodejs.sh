@@ -19,6 +19,6 @@ npm-stable() {
 }
 
 # Load nvm
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use
 
-# export PATH="${PATH}:${NVM_DIR}/versions/node/${NODE_VERSION}/bin"
+export PATH="${PATH}:${NVM_DIR}/versions/node/${NODE_VERSION}/bin"
