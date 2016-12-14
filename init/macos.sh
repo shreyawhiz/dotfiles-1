@@ -416,10 +416,10 @@ defaults write org.herf.Flux locationType -string "Z"
 # iTerm                                                                       #
 ###############################################################################
 
-# Install hybrid theme
-open "${HOME}/dotfiles/init/files/hybrid.itermcolors"
+# Install terminal theme
+open "${HOME}/dotfiles/init/files/Dracula.itermcolors"
 
-# Install hack nerd font
+# Install terminal font
 open "${HOME}/dotfiles/init/files/Knack Regular Nerd Font Complete.ttf"
 
 ###############################################################################
