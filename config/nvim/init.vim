@@ -73,7 +73,7 @@ Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
-Plug 'triglav/vim-visual-increment',
+Plug 'triglav/vim-visual-increment'
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'vim-scripts/Align'
 Plug 'vim-scripts/Crunch'
