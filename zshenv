@@ -28,13 +28,3 @@ export LESS='-F -g -i -M -R -S -w -X -z-4'
 if (( $#commands[(i)lesspipe(|.sh)] )); then
   export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
-
-# Source environment scripts
-for file in "$HOME"/.env/*.sh; do
-  source $file
-done
-
-# Source private environment scripts
-for file in "$HOME"/.env-priv/*.sh; do
-  source $file
-done
