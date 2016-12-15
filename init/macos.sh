@@ -60,7 +60,11 @@ brew cask install \
   flux \
   google-chrome \
   iterm2-nightly \
+  keepingyouawake \
+  keybase \
+  lastpass \
   spotify \
+  ubersicht \
   vagrant \
   virtualbox
 
