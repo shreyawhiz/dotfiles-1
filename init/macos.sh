@@ -30,6 +30,7 @@ brew tap neovim/neovim
 brew tap railwaycat/emacsmacport
 
 brew install \
+  ansible \
   ccat \
   cloc \
   coreutils \
