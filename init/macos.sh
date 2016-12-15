@@ -60,6 +60,7 @@ brew cask install \
   emacs-mac \
   flux \
   google-chrome \
+  google-drive \
   iterm2-nightly \
   keepingyouawake \
   keybase \
