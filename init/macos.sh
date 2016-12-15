@@ -68,6 +68,7 @@ brew cask install \
   spotify \
   ubersicht \
   vagrant \
+  veracrypt \
   virtualbox
 
 brew cleanup
