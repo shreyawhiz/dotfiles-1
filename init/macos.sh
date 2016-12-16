@@ -38,7 +38,9 @@ brew install \
   git \
   git-extras \
   go \
+  gpg \
   imagemagick --with-webp \
+  keybase \
   moreutils \
   python3 \
   reattach-to-user-namespace \
@@ -63,7 +65,6 @@ brew cask install \
   google-drive \
   iterm2-nightly \
   keepingyouawake \
-  keybase \
   lastpass \
   spotify \
   ubersicht \
