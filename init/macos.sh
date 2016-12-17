@@ -59,6 +59,7 @@ if ! hash nvim 2> /dev/null; then
 fi
 
 brew cask install \
+  docker \
   emacs-mac \
   flux \
   google-chrome \
