@@ -35,6 +35,7 @@ brew install \
   cloc \
   coreutils \
   emacs \
+  fasd \
   git \
   git-extras \
   go \
