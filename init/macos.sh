@@ -34,6 +34,7 @@ brew install \
   ccat \
   cloc \
   coreutils \
+  direnv \
   emacs \
   fasd \
   git \
