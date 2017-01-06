@@ -19,6 +19,7 @@
      nginx
      org
      osx
+     ruby
      search-engine
      shell
      shell-scripts
