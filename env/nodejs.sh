@@ -1,4 +1,4 @@
-NODE_VERSION=6.7.0
+NODE_VERSION=v7.4.0
 
 if [[ $(uname -s) = 'Darwin' ]]; then
   export NVM_DIR="$HOME/.nvm"
@@ -7,7 +7,7 @@ fi
 alias npmp='npm --always-auth false --registry https://registry.npmjs.com'
 
 n() {
-  nvm use default
+  nvm use "${NODE_VERSION}"
 }
 
 npms() {
