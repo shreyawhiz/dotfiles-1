@@ -3,7 +3,9 @@
 GCLOUD_DIR="/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
 
 # Load direnv
-eval "$(direnv hook zsh)"
+if hash direnv &> /dev/null; then
+  eval "$(direnv hook zsh)"
+fi
 
 # Load gcloud completions
 if hash gcloud &> /dev/null; then
