@@ -92,7 +92,16 @@
    dotspacemacs-default-package-repository nil
    dotspacemacs-whitespace-cleanup 'all
    )
-  )
+
+  (setq exec-path-from-shell-variables '(
+    "PATH"
+    "MANPATH"
+
+    ;; Go path variables.
+    "GOPATH"
+    "GOROOT"
+    "GOBIN"))
+)
 
 (defun dotspacemacs/user-init ()
   ;; Externalize custom generated configuration
