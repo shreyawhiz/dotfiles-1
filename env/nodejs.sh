@@ -1,4 +1,4 @@
-NODE_VERSION=v7.4.0
+NODE_VERSION="v6.9.4"
 
 if [[ $(uname -s) = 'Darwin' ]]; then
   export NVM_DIR="$HOME/.nvm"
