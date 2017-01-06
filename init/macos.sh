@@ -73,6 +73,7 @@ brew cask install \
   ubersicht \
   vagrant \
   veracrypt \
+  unetbootin \
   virtualbox
 
 brew cleanup
