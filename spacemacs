@@ -12,6 +12,7 @@
      elixir
      evil-cleverparens
      evil-commentary
+     git
      go
      html
      javascript
