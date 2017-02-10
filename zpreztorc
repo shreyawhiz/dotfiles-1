@@ -32,7 +32,7 @@ zstyle ':prezto:load' pmodule "$prezto_modules[@]"
 
 # Module Settings
 
-zstyle ':prezto:module:prompt' theme 'sorin'
+zstyle ':prezto:module:prompt' theme 'pure'
 
 # Paths
 
