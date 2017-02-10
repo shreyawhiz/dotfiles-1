@@ -144,7 +144,7 @@
 
   ;; Neotree
   (setq neo-theme (if window-system 'icons 'arrow))
-  (setq neo-hidden-regexp-list '("^\\." ".log$" "node_modules"))
+  (setq neo-hidden-regexp-list '("^\\." ".log$" "coverage" "node_modules"))
   (setq-default neo-show-hidden-files nil)
 
   ;; Projectile
