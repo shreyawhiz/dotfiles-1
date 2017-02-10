@@ -4,20 +4,31 @@ zstyle ':prezto:*:*' color 'yes'
 
 # Load Modules
 
-zstyle ':prezto:load' pmodule \
-  'environment' \
-  'autosuggestions' \
-  'editor' \
-  'fasd' \
-  'git' \
-  'history' \
-  'homebrew' \
-  'osx' \
-  'spectrum' \
-  'syntax-highlighting' 'history-substring-search' \
-  'prompt' \
-  'tmux' \
-  'utility' 'completion'
+prezto_modules=(
+  environment
+  editor
+  fasd
+  git
+  history
+  homebrew
+  osx
+  spectrum
+  tmux
+  utility
+  completion
+)
+
+if [[ -z "$INSIDE_EMACS" ]]; then
+  prezto_modules+=(
+    autosuggestions
+    syntax-highlighting
+    history-substring-search
+  )
+fi
+
+prezto_modules+=(prompt)
+
+zstyle ':prezto:load' pmodule "$prezto_modules[@]"
 
 # Module Settings
 
