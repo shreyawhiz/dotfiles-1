@@ -5,7 +5,10 @@
    dotspacemacs-distribution 'spacemacs
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-configuration-layers '(
+     (auto-completion :variables
+                      auto-completion-enable-help-tooltip t)
      ansible
+     better-defaults
      chrome
      colors
      docker
@@ -15,8 +18,10 @@
      git
      go
      html
+     ibuffer
      javascript
-     (markdown :variables markdown-live-preview-envine 'vmd)
+     (markdown :variables
+               markdown-live-preview-engine 'vmd)
      nginx
      org
      osx
@@ -34,9 +39,9 @@
      yaml)
    dotspacemacs-additional-packages '(
      all-the-icons
+     all-the-icons-dired
      dracula-theme
-     evil-smartparens
-     nvm)
+     evil-smartparens)
    dotspacemacs-excluded-packages '()
    dotspacemacs-delete-orphan-packages t))
 
@@ -130,10 +135,6 @@
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; Navigation
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-  ;; Set C-w to delete word backward in INSERT mode
-  (with-eval-after-load 'company (define-key company-active-map (kbd "C-w") 'evil-delete-backward-word))
-  (with-eval-after-load 'helm (define-key helm-map (kbd "C-w") 'evil-delete-backward-word))
 
   ;; Easier split navigation
   (global-set-key (kbd "C-j") 'evil-window-down)
