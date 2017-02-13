@@ -73,6 +73,7 @@ brew cask install \
   ubersicht \
   vagrant \
   veracrypt \
+  ubersicht \
   unetbootin \
   virtualbox
 
@@ -85,6 +86,12 @@ brew cleanup
 if [[ ! -s "$NVM_DIR/nvm.sh" ]]; then
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.3/install.sh | bash
 fi
+
+###############################################################################
+# Übersicht
+###############################################################################
+
+ln -s "$HOME/dotfiles/init/files/Übersicht" "$HOME/Library/Application Support/"
 
 ###############################################################################
 # General UI/UX                                                               #
