@@ -91,7 +91,7 @@ fi
 # Übersicht
 ###############################################################################
 
-ln -s "$HOME/dotfiles/init/files/Übersicht" "$HOME/Library/Application Support/"
+ln -sf "$HOME/dotfiles/init/files/Übersicht" "$HOME/Library/Application Support/"
 
 ###############################################################################
 # General UI/UX                                                               #
