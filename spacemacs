@@ -41,6 +41,7 @@
      all-the-icons
      all-the-icons-dired
      dracula-theme
+     evil-easymotion
      evil-smartparens)
    dotspacemacs-excluded-packages '()
    dotspacemacs-delete-orphan-packages t))
@@ -161,6 +162,9 @@
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; Plugins
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  ;; evil-easymotion
+  (evilem-default-keybindings "SPC SPC")
 
   ;; Flycheck
   (defun my/flycheck/use-local-eslint ()
