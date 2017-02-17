@@ -438,9 +438,6 @@ defaults write org.herf.Flux locationType -string "Z"
 # Install terminal theme
 open "${HOME}/dotfiles/init/files/Dracula.itermcolors"
 
-# Install terminal font
-open "${HOME}/dotfiles/init/files/Knack Regular Nerd Font Complete.ttf"
-
 ###############################################################################
 # Shell
 ###############################################################################
