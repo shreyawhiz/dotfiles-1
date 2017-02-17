@@ -155,9 +155,26 @@
   ;; Editing
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+  ;; Never insert tabs
+  (setq-default indent-tabs-mode nil)
+
   ;; Set preferred indent levels
-  (setq-default js2-basic-offset 2
-                js-indent-level 2)
+  (defun my/set-indentationn (n)
+    (setq-default
+     css-indent-offset n
+     evil-shift-width n
+     js-indent-level n
+     js2-basic-offset n
+     sh-basic-offset n
+     sh-indentation n
+     web-mode-attr-indent-offset n
+     web-mode-code-indent-offset n
+     web-mode-css-indent-offset n
+     web-mode-markup-indent-offset n
+     )
+    )
+
+  (my/set-indentation 2)
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; Plugins
