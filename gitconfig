@@ -17,6 +17,9 @@
 [color]
   ui = auto
 
+[commit]
+  gpgsign = true
+
 [github]
   user = bentruyman
 
