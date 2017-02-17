@@ -1,8 +1,0 @@
-*
-!.gitignore
-!/nvim
-/nvim/.init.vim*
-/nvim/.netrwhist
-/nvim/plugged
-/nvim/shada
-/nvim/spell
