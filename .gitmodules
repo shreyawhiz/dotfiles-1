@@ -1,21 +1,15 @@
-[submodule ".tmux/plugins/tpm"]
-	path = tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm.git
-[submodule ".vim/bundle/neobundle.vim"]
-	path = .vim/bundle/neobundle.vim
-	url = https://github.com/Shougo/neobundle.vim.git
-[submodule ".vim/autoload/plug.vim"]
-	path = .vim/autoload/plug.vim
-	url = https://github.com/junegunn/vim-plug.git
-[submodule ".zsh/plugins/zsh-syntax-highlighting"]
-	path = zsh/plugins/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule ".zprezto"]
-	path = zprezto
-	url = https://github.com/sorin-ionescu/prezto.git
-[submodule ".fzf"]
-	path = fzf
-	url = https://github.com/junegunn/fzf.git
 [submodule "emacs.d"]
 	path = emacs.d
 	url = https://github.com/syl20bnr/spacemacs
+[submodule ".fzf"]
+	path = fzf
+	url = https://github.com/junegunn/fzf.git
+[submodule ".tmux/plugins/tpm"]
+	path = tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm.git
+[submodule ".zprezto"]
+	path = zprezto
+	url = https://github.com/sorin-ionescu/prezto.git
+[submodule ".zsh/plugins/zsh-syntax-highlighting"]
+	path = zsh/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
