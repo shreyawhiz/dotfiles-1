@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/bentruyman/dotfiles.svg?branch=master)](https://travis-ci.org/bentruyman/dotfiles)
 
-![Screenshot of my shell prompt](https://cloud.githubusercontent.com/assets/85315/15190505/10d8e504-1765-11e6-9841-afab3d554cf6.png)
+![Screenshot of my shell prompt](https://cloud.githubusercontent.com/assets/85315/23077116/0c0c2d44-f4f8-11e6-91ac-f297cf6d8203.png)
 
 ## Installation
 
@@ -14,11 +14,11 @@
 
 These dotfiles add/configure the following:
 
+- emacs/spacemacs
 - go
 - iTerm2
-- Neovim
-- node/nvm
 - macOS
+- node/nvm
 - tmux
 - zsh
 
