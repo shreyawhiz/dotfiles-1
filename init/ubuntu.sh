@@ -16,29 +16,12 @@ sudo apt-get upgrade -y
 
 sudo apt-get install -y \
   autoconf \
-  bc \
   build-essential \
   curl \
   emacs \
   git \
-  git-core \
-  libbz2-dev \
-  libcurl4-openssl-dev \
-  libexpat-dev \
-  libncurses-dev \
-  libncurses5-dev \
-  libssl-dev \
-  m4 \
-  python-dev \
-  python-pip \
-  python3-dev \
-  python3-pip \
-  ruby \
   software-properties-common \
-  telnet \
-  texinfo \
-  tree \
-  zlib1g-dev
+  tree
 
 ###############################################################################
 # Linuxbrew
@@ -48,8 +31,8 @@ if [[ ! -f "$LINUXBREW" ]]; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
 fi
 
- $LINUXBREW update
- $LINUXBREW install \
+$LINUXBREW update
+$LINUXBREW install \
   git-extras \
   htop \
   tmux \
@@ -72,4 +55,3 @@ if [[ "$SHELL" != "$ZSH_BIN" ]]; then
   sudo chsh -s "$ZSH_BIN" "$USER"
   env "$ZSH_BIN"
 fi
-
