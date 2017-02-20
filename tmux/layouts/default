@@ -1,4 +1,4 @@
 split-window -h -p 50
 split-window -v -p 50
 select-pane -t 1
-send-keys 'nvim' 'C-m'
+send-keys 'emacs' 'C-m'

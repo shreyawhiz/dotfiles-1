@@ -26,7 +26,6 @@ if ! brew cask &> /dev/null; then
 fi
 
 brew tap caskroom/versions
-brew tap neovim/neovim
 brew tap railwaycat/emacsmacport
 
 brew install \
@@ -53,12 +52,6 @@ brew install \
   watch \
   wget \
   zsh
-
-# Only install nvim if it's never been installed (requires manual updating)
-if ! hash nvim 2> /dev/null; then
-  brew install --HEAD neovim
-  pip3 install neovim
-fi
 
 brew cask install \
   docker \

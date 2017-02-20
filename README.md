@@ -36,10 +36,6 @@ descriptions for the intention/purpose for each of them.
 When running `bootstrap.sh`, any conflicting files will be backed up here in
 the case of accidental overwrites.
 
-#### `/config`
-
-Modern application configuration such as `nvim` is found here.
-
 #### `/env`
 
 Each script found in this directory will be executed during shell login.
