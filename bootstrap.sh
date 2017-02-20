@@ -104,7 +104,6 @@ copy_file "gitconfig"
 echo "$_copy_count files copied"
 
 report_header "Linking files..."
-link_file "config"
 link_file "emacs.d"
 link_file "env"
 link_file "env-priv"
