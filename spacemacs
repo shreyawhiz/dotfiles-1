@@ -56,7 +56,7 @@
    dotspacemacs-startup-lists '(recents projects)
    dotspacemacs-startup-recent-list-size 5
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(dracula spacemacs-dark monokai zenburn)
+   dotspacemacs-themes '(dracula spacemacs-dark)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '(
      "Knack Nerd Font"
