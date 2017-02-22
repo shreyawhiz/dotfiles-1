@@ -160,6 +160,7 @@
 
   ;; Set preferred indent levels
   (defun my/set-indentationn (n)
+    (setq tab-width n)
     (setq-default
      css-indent-offset n
      evil-shift-width n
