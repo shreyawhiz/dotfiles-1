@@ -125,7 +125,7 @@
   (load-theme 'dracula t)
 
   ;; Use UTF-8 characters for powerline separator
-  (setq powerline-default-separator 'slant)
+  (setq powerline-default-separator nil)
 
   ;; Add vertical bar next to line numbers
   (setq linum-format "%4d \u2502 ")
