@@ -40,9 +40,9 @@
    dotspacemacs-additional-packages '(
      all-the-icons
      all-the-icons-dired
-     dracula-theme
      evil-easymotion
-     evil-smartparens)
+     evil-smartparens
+     flatland-theme)
    dotspacemacs-excluded-packages '()
    dotspacemacs-delete-orphan-packages t))
 
@@ -56,7 +56,7 @@
    dotspacemacs-startup-lists '(recents projects)
    dotspacemacs-startup-recent-list-size 5
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(dracula spacemacs-dark)
+   dotspacemacs-themes '(flatland spacemacs-dark)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '(
      "Knack Nerd Font"
@@ -84,7 +84,7 @@
    dotspacemacs-which-key-delay 0.4
    dotspacemacs-which-key-position 'bottom
    dotspacemacs-loading-progress-bar t
-   dotspacemacs-fullscreen-at-startup t
+   dotspacemacs-fullscreen-at-startup nil ;; TODO: set back to `t`
    dotspacemacs-fullscreen-use-non-native nil
    dotspacemacs-maximized-at-startup nil
    dotspacemacs-active-transparency 90
@@ -122,13 +122,10 @@
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
   ;; Set theme
-  (load-theme 'dracula t)
+  (load-theme 'flatland t)
 
   ;; Use UTF-8 characters for powerline separator
   (setq powerline-default-separator nil)
-
-  ;; Add vertical bar next to line numbers
-  (setq linum-format "%4d \u2502 ")
 
   ;; Show current time on mode-line
   (display-time-mode t)
@@ -159,23 +156,20 @@
   (setq-default indent-tabs-mode nil)
 
   ;; Set preferred indent levels
-  (defun my/set-indentationn (n)
-    (setq tab-width n)
-    (setq-default
-     css-indent-offset n
-     evil-shift-width n
-     js-indent-level n
-     js2-basic-offset n
-     sh-basic-offset n
-     sh-indentation n
-     web-mode-attr-indent-offset n
-     web-mode-code-indent-offset n
-     web-mode-css-indent-offset n
-     web-mode-markup-indent-offset n
-     )
-    )
+  (setq tab-width 2)
+  (setq-default
+   css-indent-offset 2
+   evil-shift-width 2
+   js-indent-level 2
+   js2-basic-offset 2
+   sh-basic-offset 2
+   sh-indentation 2
+   web-mode-attr-indent-offset 2
+   web-mode-code-indent-offset 2
+   web-mode-css-indent-offset 2
+   web-mode-markup-indent-offset 2
+   )
 
-  (my/set-indentation 2)
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; Plugins

@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+
+# Opens $EMACS_BIN as emacs if defined
+if [[ -z "$EMACS_BIN" ]]; then
+  exec ${$(which -a emacs)[2]} $@
+else
+  exec $EMACS_BIN $@
+fi

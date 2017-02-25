@@ -39,7 +39,6 @@ zstyle ':prezto:module:prompt' theme 'pure'
 typeset -gU cdpath fpath mailpath path
 
 path=(
-  $HOME/bin
   /usr/local/bin
   $path
 )
