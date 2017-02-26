@@ -44,6 +44,7 @@ brew install \
   reattach-to-user-namespace \
   rename \
   the_silver_searcher \
+  tldr \
   tmux \
   tree \
   watch \
