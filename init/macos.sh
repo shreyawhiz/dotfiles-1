@@ -26,7 +26,6 @@ if ! brew cask &> /dev/null; then
 fi
 
 brew tap caskroom/versions
-brew tap railwaycat/emacsmacport
 
 brew install \
   ansible \
@@ -34,7 +33,6 @@ brew install \
   cloc \
   coreutils \
   direnv \
-  emacs \
   fasd \
   git \
   git-extras \
@@ -54,7 +52,7 @@ brew install \
 
 brew cask install \
   docker \
-  emacs-mac \
+  emacs \
   flux \
   google-chrome \
   google-drive \
