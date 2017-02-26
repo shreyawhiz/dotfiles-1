@@ -40,10 +40,6 @@ the case of accidental overwrites.
 
 Executable scripts that will appear first in a user's `$PATH`.
 
-#### `/rc`
-
-Each script found in this directory will be executed during shell login.
-
 #### `/init`
 
 Contains scripts that should initialize certain platforms after the dotfiles
@@ -51,10 +47,15 @@ have been installed.
 
 #### `/local`
 
-Each script found in this directory will be executed during shell login after
-the above `/rc` scripts. The only difference between these and the above
-scripts are that these scripts are ignored from Git, so any sensitive
-information won't accidentally be committed.
+Each script, named `<script>.zsh`, found in this directory will be executed
+during shell login after the below `/rc` scripts. The only difference between
+these and the `rc` scripts are that these scripts are ignored from Git, so any
+sensitive information won't accidentally be committed.
+
+#### `/rc`
+
+Each script, named `<script>.zsh`, found in this directory will be executed
+during shell login.
 
 ### Manual Steps
 
