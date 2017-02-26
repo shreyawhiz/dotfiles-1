@@ -36,21 +36,25 @@ descriptions for the intention/purpose for each of them.
 When running `bootstrap.sh`, any conflicting files will be backed up here in
 the case of accidental overwrites.
 
-#### `/env`
+#### `/bin`
+
+Executable scripts that will appear first in a user's `$PATH`.
+
+#### `/rc`
 
 Each script found in this directory will be executed during shell login.
-
-#### `/env-priv`
-
-Each script found in this directory will be executed during shell login after
-the above `/env` scripts. The only difference between these and the above
-scripts are that these scripts are ignored from Git, so any sensitive
-information won't accidentally be committed.
 
 #### `/init`
 
 Contains scripts that should initialize certain platforms after the dotfiles
 have been installed.
+
+#### `/local`
+
+Each script found in this directory will be executed during shell login after
+the above `/rc` scripts. The only difference between these and the above
+scripts are that these scripts are ignored from Git, so any sensitive
+information won't accidentally be committed.
 
 ### Manual Steps
 
