@@ -14,6 +14,5 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "shell", privileged: false, inline: <<-SHELL
     bash -c ~/dotfiles/bootstrap.sh
-    bash -c ~/dotfiles/init/ubuntu.sh
   SHELL
 end
