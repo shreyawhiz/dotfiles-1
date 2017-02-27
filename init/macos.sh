@@ -39,6 +39,7 @@ brew install \
   go \
   gpg \
   imagemagick --with-webp \
+  mas \
   moreutils \
   python3 \
   reattach-to-user-namespace \
