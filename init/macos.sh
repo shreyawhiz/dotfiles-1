@@ -437,7 +437,7 @@ open "$HOME/dotfiles/init/files/Flatland.itermcolors"
 ZSH_BIN=$(command -v zsh 2> /dev/null)
 
 # Add ZSH to list of valid shells
-if [[ "$ZSH_BIN" && $(grep -L "$ZSH_BIN" /etc/shells) ]]; then
+if [[ -x "$ZSH_BIN" ]] && grep -q "$ZSH_BIN" /etc/shells; then
   echo "$ZSH_BIN" | sudo tee -a /etc/shells &> /dev/null
 fi
 
