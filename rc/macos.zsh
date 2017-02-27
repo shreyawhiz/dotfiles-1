@@ -13,4 +13,7 @@ _bt_is_macos && {
         [[ -s "$GCLOUD_DIR/path.zsh.inc" ]] && . "$GCLOUD_DIR/path.zsh.inc"
         [[ -s "$GCLOUD_DIR/completion.zsh.inc" ]] && . "$GCLOUD_DIR/completion.zsh.inc"
     }
+
+    # Vagrant
+    export VAGRANT_DEFAULT_PROVIDER=virtualbox
 }
