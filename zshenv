@@ -8,9 +8,9 @@ export LESS='-F -g -i -M -R -S -w -X -z-4'
 export PAGER='less'
 
 if [[ -z "$LANG" ]]; then
-    export LANG='en_US.UTF-8'
+  export LANG='en_US.UTF-8'
 fi
 
 if (( $#commands[(i)lesspipe(|.sh)] )); then
-    export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
+  export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi

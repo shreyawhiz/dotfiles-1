@@ -28,64 +28,64 @@ fi
 brew tap caskroom/versions
 
 brew install \
-  ansible \
-  ccat \
-  cloc \
-  coreutils \
-  direnv \
-  fasd \
-  git \
-  git-extras \
-  go \
-  gpg \
-  imagemagick --with-webp \
-  mas \
-  moreutils \
-  python3 \
-  reattach-to-user-namespace \
-  rename \
-  the_silver_searcher \
-  tldr \
-  tmux \
-  tree \
-  watch \
-  wget \
-  zsh
+     ansible \
+     ccat \
+     cloc \
+     coreutils \
+     direnv \
+     fasd \
+     git \
+     git-extras \
+     go \
+     gpg \
+     imagemagick --with-webp \
+     mas \
+     moreutils \
+     python3 \
+     reattach-to-user-namespace \
+     rename \
+     the_silver_searcher \
+     tldr \
+     tmux \
+     tree \
+     watch \
+     wget \
+     zsh
 
 brew cask install \
-  docker \
-  emacs \
-  flux \
-  google-chrome \
-  google-drive \
-  iterm2-nightly \
-  keepingyouawake \
-  keybase \
-  lastpass \
-  spotify \
-  ubersicht \
-  vagrant \
-  veracrypt \
-  ubersicht \
-  unetbootin \
-  virtualbox
+     docker \
+     emacs \
+     flux \
+     google-chrome \
+     google-drive \
+     iterm2-nightly \
+     keepingyouawake \
+     keybase \
+     lastpass \
+     spotify \
+     ubersicht \
+     vagrant \
+     veracrypt \
+     ubersicht \
+     unetbootin \
+     virtualbox
 
 brew cleanup
 
 mas install \
-  `# Deliveries` 924726344 \
-  `# Fantastical 2` 975937182 \
-  `# KeePass Desktop` 1059196126 \
-  `# Keynote` 409183694 \
-  `# Magnet` 441258766 \
-  `# Numbers` 409203825 \
-  `# OmniFocus` 867299399 \
-  `# OmniGraffle` 711830901 \
-  `# Pages` 409201541 \
-  `# Quiver` 866773894 \
-  `# StreamCloud` 894578573 \
-  `# Tweetbot` 557168941 \
-  `# Xcode` 497799835
+    `# Deliveries` 924726344 \
+    `# Fantastical 2` 975937182 \
+    `# KeePass Desktop` 1059196126 \
+    `# Keynote` 409183694 \
+    `# Magnet` 441258766 \
+    `# Numbers` 409203825 \
+    `# OmniFocus` 867299399 \
+    `# OmniGraffle` 711830901 \
+    `# Pages` 409201541 \
+    `# Quiver` 866773894 \
+    `# StreamCloud` 894578573 \
+    `# Tweetbot` 557168941 \
+    `# Xcode` 497799835
 
 ###############################################################################
 # Emacs
@@ -474,7 +474,7 @@ fi
 ###############################################################################
 
 for app in "Address Book" "Calendar" "Contacts" "Dashboard" "Dock" \
-  "Flux" "Finder" "Safari" "SystemUIServer" "iCal" "iTunes"; do
+                          "Flux" "Finder" "Safari" "SystemUIServer" "iCal" "iTunes"; do
   set +e
   killall "$app" > /dev/null 2>&1
   set -e
