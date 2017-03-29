@@ -1,8 +1,6 @@
 __() {
   export NVM_DIR="$HOME/.nvm"
-  local node_version="v6.9.5"
 
-  alias n="nvm use $node_version"
   alias npmp="npm --always-auth false --registry https://registry.npmjs.com"
 
   npms() {
@@ -16,6 +14,10 @@ __() {
   # Load nvm
   [[ -s "$NVM_DIR/nvm.sh" ]] && {
     source $NVM_DIR/nvm.sh --no-use
-    _bt_suffix_path "$NVM_DIR/versions/node/$node_version/bin"
+  }
+
+  # Add global yarn bin to $PATH
+  (( $+commands[yarn] )) && {
+    _bt_prefix_path $(yarn global bin)
   }
 } && __
