@@ -16,7 +16,7 @@ rezsh() {
     [[ -v "$debug" ]] && times+="$( echo "$end - $start" | bc -l ) $rc_file"
   done
 
-  [[ -v "$debug" ]] && printf '%s\n' "${times[@]}" | sort
+  [[ -v "$debug" ]] && printf '%s\n' "${times[@]}" | sort -nr
 }
 
 rezsh
