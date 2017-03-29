@@ -1,6 +1,6 @@
 _bt_prefix_path() {
   [[ ${path[(r)$1]} ]] || {
-    [[ -d $1 ]] && path=($1 $prefix)
+    [[ -d $1 ]] && path=($1 $path)
   }
 }
 
