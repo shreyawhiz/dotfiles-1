@@ -76,7 +76,6 @@ brew cleanup
 mas install \
     `# Deliveries` 924726344 \
     `# Fantastical 2` 975937182 \
-    `# KeePass Desktop` 1059196126 \
     `# Keynote` 409183694 \
     `# Magnet` 441258766 \
     `# Numbers` 409203825 \
