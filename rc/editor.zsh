@@ -4,6 +4,7 @@ __() {
 
   export ALTERNATE_EDITOR=""
   export EDITOR="emacsclient -c -t"
+  export GIT_EDITOR="vim"
 
   ed() {
     local args
