@@ -58,6 +58,7 @@ brew cask install \
      flux \
      google-chrome \
      google-drive \
+     gpgtools \
      iterm2-nightly \
      keepingyouawake \
      keybase \
