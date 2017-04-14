@@ -470,7 +470,7 @@ defaults write org.herf.Flux locationType -string "Z"
 ###############################################################################
 
 # Install terminal theme
-open "$HOME/dotfiles/init/files/Flatland.itermcolors"
+open "$HOME/dotfiles/init/files/Dracula.itermcolors"
 
 ###############################################################################
 # Shell
