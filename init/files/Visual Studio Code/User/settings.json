@@ -1,0 +1,12 @@
+{
+  // files
+  "files.trimTrailingWhitespace": true,
+
+  // tslint
+  "tslint.autoFixOnSave": true,
+
+  // vim
+  "vim.easymotion": true,
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true
+}

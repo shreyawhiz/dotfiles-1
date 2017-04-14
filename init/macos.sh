@@ -69,7 +69,8 @@ brew cask install \
      veracrypt \
      ubersicht \
      unetbootin \
-     virtualbox
+     virtualbox \
+     visual-studio-code
 
 brew cleanup
 
@@ -100,6 +101,31 @@ fi
 ###############################################################################
 
 ln -sf "$HOME/dotfiles/init/files/Übersicht" "$HOME/Library/Application Support/"
+
+###############################################################################
+# Visual Studio Code
+###############################################################################
+
+if [[ ! -d "$HOME/Library/Application Support/Code" ]]; then
+  mkdir -p "$HOME/Library/Application Support/Code"
+fi
+
+cp -R "$HOME/dotfiles/init/files/Visual Studio Code" "$HOME/Library/Application Support/Code"
+
+VSCODE_EXTENSIONS=(
+  PeterJausovec.vscode-docker
+  dbaeumer.vscode-eslint
+  dracula-theme.theme-dracula
+  eg2.tslint
+  lukehoban.Go
+  minhthai.vscode-todo-parser
+  robertohuertasm.vscode-icons
+  vscodevim.vim
+)
+
+for EXTENSION in ${VSCODE_EXTENSIONS[@]}; do
+  code --install-extension $EXTENSION
+done
 
 ###############################################################################
 # General UI/UX                                                               #
