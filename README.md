@@ -19,6 +19,7 @@ These dotfiles add/configure the following:
 - macOS
 - node/nvm
 - tmux
+- vim
 - zsh
 
 The above list is not exhaustive of the programs installed as part of these
