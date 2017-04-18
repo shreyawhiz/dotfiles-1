@@ -14,7 +14,6 @@
 
 These dotfiles add/configure the following:
 
-- emacs/spacemacs
 - go
 - iTerm2
 - macOS

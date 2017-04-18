@@ -28,7 +28,6 @@ brew install \
   cloc \
   coreutils \
   direnv \
-  emacs \
   git \
   git-extras \
   go \

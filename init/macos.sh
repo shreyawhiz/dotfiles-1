@@ -54,7 +54,6 @@ brew install \
 
 brew cask install \
      docker \
-     emacs \
      flux \
      google-chrome \
      google-drive \
