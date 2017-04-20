@@ -122,12 +122,18 @@ done
 
 VSCODE_EXTENSIONS=(
   PeterJausovec.vscode-docker
+  aeschli.vscode-css-formatter
+  alefragnani.project-manager
+  clinyong.vscode-css-modules
   dbaeumer.vscode-eslint
   dracula-theme.theme-dracula
   eg2.tslint
+  fallenwood.vimL
+  gamunu.vscode-yarn
   lukehoban.Go
   minhthai.vscode-todo-parser
   robertohuertasm.vscode-icons
+  shinnn.stylelint
   vscodevim.vim
 )
 
