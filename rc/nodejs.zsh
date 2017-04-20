@@ -19,6 +19,11 @@ __() {
       eslint-config-standard
       eslint-plugin-promise
       eslint-plugin-standard
+      oao
+      stylelint
+      tslint
+      typescript
+      typescript-formatter
       vtop
     )
 
