@@ -109,7 +109,16 @@ if [[ ! -d "$HOME/Library/Application Support/Code" ]]; then
   mkdir -p "$HOME/Library/Application Support/Code"
 fi
 
-cp -R "$HOME/dotfiles/init/files/Visual Studio Code" "$HOME/Library/Application Support/Code"
+VSCODE_CONFIGS=(
+  keybindings
+  settings
+)
+
+for file in ${VSCODE_CONFIGS[@]}; do
+  ln -sf \
+    "$HOME/dotfiles/init/files/Visual Studio Code/User/$file.json" \
+    "$HOME/Library/Application Support/Code/User"
+done
 
 VSCODE_EXTENSIONS=(
   PeterJausovec.vscode-docker

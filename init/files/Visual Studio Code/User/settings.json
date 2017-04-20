@@ -1,12 +1,49 @@
 {
+  // editor
+  "editor.fontFamily": "'Knack Nerd Font', Menlo, Monaco, 'Courier New', monospace",
+  "editor.formatOnPaste": true,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [
+    80
+  ],
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  // eslint
+  "eslint.autoFixOnSave": true,
   // files
+  "files.exclude": {
+    "**/.vagrant": true,
+    "**/node_modules": true
+  },
+  "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-
+  // project-manager
+  "projectManager.git.ignoredFolders": [
+    "dist",
+    "node_modules",
+    "test"
+  ],
+  "projectManager.vscode.ignoredFolders": [
+    "dist",
+    "node_modules",
+    "test"
+  ],
+  // stylelint
+  "css.validate": false, // must be disabled
+  "scss.validate": false, // must be disabled
   // tslint
   "tslint.autoFixOnSave": true,
-
+  "tslint.ignoreDefinitionFiles": false,
   // vim
   "vim.easymotion": true,
   "vim.leader": "<space>",
-  "vim.useSystemClipboard": true
+  "vim.useSystemClipboard": true,
+  "vim.handleKeys": {
+    "<C-h>": false,
+    "<C-j>": false,
+    "<C-k>": false,
+    "<C-l>": false
+  },
+  // workbench
+  "workbench.colorTheme": "Dracula"
 }
