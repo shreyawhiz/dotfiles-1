@@ -14,6 +14,7 @@ __() {
   yarng() {
     local global_packages=(
       cost-of-modules
+      depcheck
       eslint
       eslint-config-semistandard
       eslint-config-standard
