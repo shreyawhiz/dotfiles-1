@@ -46,5 +46,6 @@
     "<C-l>": false
   },
   // workbench
-  "workbench.colorTheme": "Dracula"
+  "workbench.colorTheme": "Dracula",
+  "workbench.iconTheme": "vscode-icons"
 }
