@@ -9,13 +9,12 @@ style: """
 
   width: size
   margin-left: -.5 * size     //Set left edge of widget to be center so it can be easily centered on the page
+  font-smoothing: antialiased
   text-align: center
 
-
-  height: 130px
+  height: 230px
   margin-top: -.5 * 130px
   vertical-align: middle
-
 
   /*POSITION*/
   top: calc(50% - 100px)
@@ -27,7 +26,7 @@ style: """
 
 
   font-family: -apple-system
-  font-weight: 100
+  font-weight: 200
   font-size: 46px
 
   #main
@@ -36,17 +35,15 @@ style: """
 
   #suffix
     color: primaryColor
-    font-weight: 100
     margin-left: -10px         //Forces suffix to be closer to numDate
 
   #secondary
-    font-weight: 100
     color: secondaryColor
 """
 
 render: (output) -> """
   <div>
-    <span id ="main"></span>
+    <span id="main"></span>
     <sup id="suffix"></sup>
   </div>
   <div id="secondary"></div>

@@ -12,7 +12,7 @@ style: """
     padding: 5px 10px
     width: 300px
     font-size: 20px
-    font-weight: lighter
+    font-weight: 300
     font-smoothing: antialiased
 
   .author, .example, .example-meaning
