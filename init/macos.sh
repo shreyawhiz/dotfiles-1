@@ -133,6 +133,7 @@ VSCODE_EXTENSIONS=(
   minhthai.vscode-todo-parser
   robertohuertasm.vscode-icons
   shinnn.stylelint
+  stkb.rewrap
   vscodevim.vim
 )
 
