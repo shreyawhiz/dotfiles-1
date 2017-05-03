@@ -60,7 +60,6 @@ brew cask install \
      gpgtools \
      iterm2-nightly \
      keepingyouawake \
-     keybase \
      lastpass \
      spotify \
      ubersicht \
