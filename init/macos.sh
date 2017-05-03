@@ -104,8 +104,8 @@ ln -sf "$HOME/dotfiles/init/files/Übersicht" "$HOME/Library/Application Suppor
 # Visual Studio Code
 ###############################################################################
 
-if [[ ! -d "$HOME/Library/Application Support/Code" ]]; then
-  mkdir -p "$HOME/Library/Application Support/Code"
+if [[ ! -d "$HOME/Library/Application Support/Code/User" ]]; then
+  mkdir -p "$HOME/Library/Application Support/Code/User"
 fi
 
 VSCODE_CONFIGS=(
