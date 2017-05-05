@@ -8,5 +8,14 @@
     "key": "ctrl+l",
     "command": "workbench.action.focusNextGroup",
     "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.focus",
+    "when": "!terminalFocus"
   }
 ]
