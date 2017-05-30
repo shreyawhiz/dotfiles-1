@@ -15,6 +15,7 @@ set nocompatible
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'corntrace/bufexplorer'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dracula/vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'elzr/vim-json', { 'for': 'json' }
