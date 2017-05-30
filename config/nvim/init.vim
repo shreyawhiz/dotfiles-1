@@ -19,6 +19,7 @@ Plug 'dracula/vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'fatih/vim-go'
+Plug 'junegunn/vim-easy-align'
 Plug 'scrooloose/nerdtree'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-endwise'
@@ -211,6 +212,9 @@ nnoremap <leader>wq :wqa!<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" EasyAlign
+nmap ga <Plug>(EasyAlign)
 
 " NERDTree
 let NERDTreeIgnore=[
