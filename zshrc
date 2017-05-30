@@ -16,6 +16,10 @@ rezsh() {
     [[ -v "$debug" ]] && times+="$( echo "$end - $start" | bc -l ) $rc_file"
   done
 
+  for local_file in $HOME/.local/*.zsh; do
+    source $local_file
+  done
+
   [[ -v "$debug" ]] && printf '%s\n' "${times[@]}" | sort -nr
 }
 
