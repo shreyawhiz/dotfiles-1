@@ -10,7 +10,7 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ###############################################################################
-# Homebrew
+# Homebrew                                                                    *
 ###############################################################################
 
 if ! hash brew &> /dev/null; then
@@ -87,7 +87,7 @@ mas install \
     `# Xcode` 497799835
 
 ###############################################################################
-# Node.js
+# Node.js                                                                     #
 ###############################################################################
 
 if [[ ! -s "$NVM_DIR/nvm.sh" ]]; then
@@ -95,13 +95,13 @@ if [[ ! -s "$NVM_DIR/nvm.sh" ]]; then
 fi
 
 ###############################################################################
-# Übersicht
+# Übersicht                                                                   #
 ###############################################################################
 
 ln -sf "$HOME/dotfiles/init/files/Übersicht" "$HOME/Library/Application Support/"
 
 ###############################################################################
-# Visual Studio Code
+# Visual Studio Code                                                          #
 ###############################################################################
 
 if [[ ! -d "$HOME/Library/Application Support/Code/User" ]]; then
@@ -142,7 +142,7 @@ for EXTENSION in ${VSCODE_EXTENSIONS[@]}; do
 done
 
 ###############################################################################
-# General
+# General                                                                     #
 ###############################################################################
 
 # Install fonts
@@ -165,7 +165,8 @@ sudo systemsetup -setrestartfreeze on
 ###############################################################################
 
 # Use dark menu bar and Dock
-defaults write NSGlobalDomain AppleInterfaceStyle Dark
+defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
+defaults write NSGlobalDomain AppleInterfaceTheme -string "Dark"
 
 ###############################################################################
 # Input                                                                       #
@@ -181,11 +182,36 @@ set_hotkey 80 "{ enabled = 0; value = { parameters = (65535, 123, 8781824); type
 set_hotkey 81 "{ enabled = 0; value = { parameters = (65535, 124, 8650752); type = standard; }; }"
 set_hotkey 82 "{ enabled = 0; value = { parameters = (65535, 124, 8781824); type = standard; }; }"
 
+# Disable press-and-hold and just repeat key presses
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
+# Set a very fast key repeat
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
+defaults write NSGlobalDomain KeyRepeat -int 1
+
+# Remove text shortcuts
+defaults write NSGlobalDomain NSUserDictionaryReplacementItems -array
+
+# Disable automatic spelling correction
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+defaults write NSGlobalDomain WebAutomaticSpellingCorrectionEnabled -bool false
+
+# Disable automatic word capitalization
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+
+# Disable automatic period substitution
+defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+
+# Enable Tab focus for all controls
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
+
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
 
-sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '/Library/Desktop Pictures/Sierra 2.jpg'";
+# Set desired wallpaper
+sqlite3 "$HOME/Library/Application Support/Dock/desktoppicture.db" \
+  "update data set value = '/Library/Desktop Pictures/Sierra 2.jpg'";
 
 # Save screenshots to the desktop
 defaults write com.apple.screencapture location -string "$HOME/Desktop"
@@ -204,7 +230,8 @@ defaults write com.apple.screencapture disable-shadow -bool true
 defaults write com.apple.finder CreateDesktop false
 
 # Open new windows in the $HOME directory
-defaults write com.apple.finder NewWindowTargetPath -string "file://$HOME"
+defaults write com.apple.finder NewWindowTargetPath -string "file://$HOME/"
+defaults write com.apple.finder NewWindowTarget -string "PfHm"
 
 # Open new windows using column view
 defaults write com.apple.Finder FXPreferredViewStyle clmv
@@ -212,6 +239,9 @@ defaults write com.apple.Finder FXPreferredViewStyle clmv
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
+
+# Automatically hide the Dock
+defaults write com.apple.dock autohide -bool true
 
 # Disable Hot Corners
 defaults write com.apple.dock wvous-tl-corner -int 0
@@ -239,10 +269,12 @@ defaults write com.apple.Safari AutoFillPasswords -int 0
 ###############################################################################
 
 # Install terminal theme
-open "$HOME/dotfiles/init/files/Dracula.itermcolors"
+if ! defaults read com.googlecode.iterm2 "Custom Color Presets" | grep "Dracula =" > /dev/null; then
+  open "$HOME/dotfiles/init/files/Dracula.itermcolors"
+fi
 
 ###############################################################################
-# Shell
+# Shell                                                                       #
 ###############################################################################
 
 ZSH_BIN=$(command -v zsh 2> /dev/null)
@@ -262,7 +294,7 @@ fi
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in "Dashboard" "Dock" "Finder" "Safari" "SystemUIServer"; do
+for app in "cfprefsd" "Dashboard" "Dock" "Finder" "Safari" "SystemUIServer"; do
   set +e
   killall "$app" > /dev/null 2>&1
   set -e
