@@ -1,1 +1,4 @@
-plugged
+*
+!.gitignore
+!autoload
+!init.vim
