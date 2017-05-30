@@ -41,6 +41,7 @@ brew install \
      imagemagick --with-webp \
      mas \
      moreutils \
+     neovim/neovim/neovim \
      python3 \
      reattach-to-user-namespace \
      rename \
